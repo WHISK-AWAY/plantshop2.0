@@ -76,24 +76,24 @@ export default function Signup() {
   };
 
   return (
-    <div className="right-0 bg-[url('/assets/bg_img/home2.jpg')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] md:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)] portrait:absolute portrait:top-0 portrait:mt-20 portrait:h-[calc(100dvh_-_5rem)] portrait:w-full portrait:lg:mt-20 ">
-      <div className="m-auto w-full max-w-sm pt-20 md:pt-5 xl:pt-16 ">
-        <h2 className="text-center font-outfit font-semibold text-[8vw] md:text-[3.1vw]  tracking-wide 3xl:text-[3vw] 5xl:text-[2vw]">
+    <div className="right-0 bg-[url('/assets/bg_img/home2.jpg')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] md:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)]  portrait:xs:h-[calc(100dvh_-_5rem)] portrait:w-full portrait:md:h-[calc(100dvh_-_110px)] portrait:lg:h-[calc(100dvh_-_140px)]">
+      <div className='m-auto w-full max-w-sm pt-20 md:pt-5 xl:pt-16 '>
+        <h2 className='text-center font-outfit font-semibold text-[8vw] md:text-[3.1vw]  tracking-wide 3xl:text-[3vw] 5xl:text-[2vw]'>
           SIGN UP
         </h2>
-        <section className="mt-2 flex flex-col items-center justify-center  gap-1">
-          <form onSubmit={handleSubmit} className="">
-            <div className="lg:mb-1">
-              <label className="mb-1 block text-sm " htmlFor="firstName">
+        <section className='mt-2 flex flex-col items-center justify-center  gap-1'>
+          <form onSubmit={handleSubmit} className=''>
+            <div className='lg:mb-1'>
+              <label className='mb-1 block text-sm ' htmlFor='firstName'>
                 First Name
               </label>
               <input
                 className={isInvalidFirstName ? invalidClass : validClass}
-                id="firstName"
-                type="text"
-                placeholder="first name"
+                id='firstName'
+                type='text'
+                placeholder='first name'
                 value={formData.firstName}
-                name="firstName"
+                name='firstName'
                 onChange={(e) => {
                   setIsInvalidFirstName(false);
                   setIsInvalid(false);
@@ -109,17 +109,17 @@ export default function Signup() {
               </p>
             </div>
 
-            <div className="lg:mb-1">
-              <label className="mb-1 block text-sm " htmlFor="lastName">
+            <div className='lg:mb-1'>
+              <label className='mb-1 block text-sm ' htmlFor='lastName'>
                 Last Name
               </label>
               <input
                 className={isInvalidLastName ? invalidClass : validClass}
-                id="lastName"
-                type="text"
-                placeholder="last name"
+                id='lastName'
+                type='text'
+                placeholder='last name'
                 value={formData.lastName}
-                name="lastName"
+                name='lastName'
                 onChange={(e) => {
                   setIsInvalidLastName(false);
                   setIsInvalid(false);
@@ -135,16 +135,16 @@ export default function Signup() {
               </p>
             </div>
 
-            <div className="lg:mb-1">
-              <label className="mb-1 block text-sm " htmlFor="email">
+            <div className='lg:mb-1'>
+              <label className='mb-1 block text-sm ' htmlFor='email'>
                 Email
               </label>
               <input
                 className={isInvalidEmail ? invalidClass : validClass}
-                id="email"
-                placeholder="email"
+                id='email'
+                placeholder='email'
                 value={formData.email}
-                name="email"
+                name='email'
                 onChange={(e) => {
                   setIsInvalidEmail(false);
                   setIsInvalid(false);
@@ -160,17 +160,17 @@ export default function Signup() {
               </p>
             </div>
 
-            <div className="lg:mb-1">
-              <label className="mb-1 block text-sm " htmlFor="password">
+            <div className='lg:mb-1'>
+              <label className='mb-1 block text-sm ' htmlFor='password'>
                 Password
               </label>
               <input
                 className={isInvalidPassword ? invalidClass : validClass}
-                id="password"
-                type="password"
-                placeholder="password"
+                id='password'
+                type='password'
+                placeholder='password'
                 value={formData.password}
-                name="password"
+                name='password'
                 onChange={(e) => {
                   setIsInvalidPassword(false);
                   setIsInvalid(false);
@@ -188,17 +188,17 @@ export default function Signup() {
 
             <div>
               <button
-                className="mx-auto block w-full bg-green-gray py-2 text-[4vw] text-white hover:bg-primary-button-hover hover:transition-all md:text-[2.6vw] lg:py-1 lg:text-[2.1vw]  3xl:py-1 3xl:text-[2.2vw] 4xl:text-[1.6vw] 5xl:text-[1.2vw] 6xl:text-[1vw]"
-                type="submit"
+                className='mx-auto block w-full bg-green-gray py-2 text-[4vw] text-white hover:bg-primary-button-hover hover:transition-all md:text-[2.6vw] lg:py-1 lg:text-[2.1vw]  3xl:py-1 3xl:text-[2.2vw] 4xl:text-[1.6vw] 5xl:text-[1.2vw] 6xl:text-[1vw]'
+                type='submit'
               >
                 sign up
               </button>
             </div>
           </form>
-          <div className="flex justify-center">
-            <button className="inline-block align-baseline text-[3vw] md:text-[1.6vw] xl:text-[1.2vw] 3xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] ">
+          <div className='flex justify-center'>
+            <button className='inline-block align-baseline text-[3vw] md:text-[1.6vw] xl:text-[1.2vw] 3xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] '>
               already have an account? log in{' '}
-              <Link to={'/login'} className="underline">
+              <Link to={'/login'} className='underline'>
                 here
               </Link>
             </button>
