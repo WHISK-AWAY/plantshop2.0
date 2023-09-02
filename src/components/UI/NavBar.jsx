@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import searchIcon from '../../assets/search-icon.svg';
+import searchIcon from '../../../public/assets/search-icon.svg';
 import { useDispatch, useSelector } from 'react-redux';
-import decoratedLine from '../../assets/line.svg';
+import decoratedLine from '../../../public/assets/line.svg';
 import { Toaster } from 'react-hot-toast';
 import {
   selectSearchedItems,
@@ -10,7 +10,7 @@ import {
   selectSearchBy,
   adjustFilter,
 } from '../../slices/product/productSlice';
-import menu from '../../assets/menu.svg';
+import menu from '../../../public/assets/menu.svg';
 import MobileNav from './MobileNav.jsx';
 import CartLink from './CartLink.jsx';
 
@@ -41,7 +41,7 @@ const NavBar = (props) => {
 
   return (
     <header>
-      <nav className='relative z-50 flex h-20 w-screen items-center justify-between px-5 tracking-tighter text-green-gray  md:h-16 md:flex-col md:justify-around lg:h-[82px] xl:h-[100px] 2xl:h-[105px] 5xl:h-[159px]  6xl:h-[200px] '>
+      <nav className='relative z-50 flex h-20 w-screen items-center justify-between px-5 tracking-tighter text-green-gray  md:h-16 md:flex-col md:justify-around lg:h-[82px] xl:h-[100px] 2xl:h-[105px] 5xl:h-[159px]  6xl:h-[200px] portrait:md:h-[110px] portrait:lg:h-[140px]'>
         <Toaster
           position='top-right'
           toastOptions={{
@@ -59,13 +59,12 @@ const NavBar = (props) => {
             },
           }}
         />
-        <div>
-          <Link to={'/'}>
-            <h1 className='mt-2 font-tabac text-[8vw] leading-none md:mt-3 md:text-[1.6rem] lg:mt-4 xl:mt-5 xl:text-[2.2rem]  2xl:mt-6 4xl:mt-5 5xl:mt-10 5xl:text-[2.5rem] 6xl:text-[3.1rem]'>
-              plants&co
-            </h1>
-          </Link>
-        </div>
+
+        <Link to={'/'}>
+          <h1 className='mt-2 font-tabac text-[8vw] leading-none md:mt-3 md:text-[1.6rem] lg:mt-4 xl:mt-5 xl:text-[2.2rem]  2xl:mt-6 4xl:mt-5 5xl:mt-10 5xl:text-[2.5rem] 6xl:text-[3.1rem] portrait:md:text-[4.3vw] portrait:md:mt-6'>
+            plants&co
+          </h1>
+        </Link>
 
         <div className='hidden gap-10 md:flex'>
           {/**
@@ -85,7 +84,7 @@ const NavBar = (props) => {
       </div>
     */}
 
-          <ul className='flex gap-16 font-outfit md:text-[.7rem] lg:text-[1.2vw] xl:gap-20 2xl:gap-28 4xl:text-[1.3rem] 5xl:text-[1.6rem] 6xl:gap-40 '>
+          <ul className='flex gap-16 font-outfit md:text-[.7rem]  lg:text-[1.2vw] xl:gap-20 2xl:gap-28 4xl:text-[1.3rem] 5xl:text-[1.6rem] 6xl:gap-40 portrait:md:text-[2.6vw]'>
             <Link to={`/products`}>
               <li onClick={() => dispatch(adjustFilter(''))}>SHOP</li>
             </Link>
