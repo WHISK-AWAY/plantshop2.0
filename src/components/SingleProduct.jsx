@@ -144,7 +144,7 @@ btnHover()
                     notify();
                     addToCart();
                   }}
-                  className='btn ease mx-auto block w-full transition-all duration-700 hover:scale-[1.04]  py-2 font-light font-outfit text-[3.8vw] text-white md:text-[2vw] 4xl:text-[1.5vw] 5xl:text-[1.2vw] '
+                  className='btn ease mx-auto block w-full transition-all duration-500 hover:scale-[1.02]  py-2 font-light font-outfit text-[3.8vw] text-white md:text-[2vw] 4xl:text-[1.5vw] 5xl:text-[1.2vw] '
                 >
                   <span>ADD TO CART</span>
                 </button>
@@ -167,8 +167,7 @@ btnHover()
       )}
       {/* <div className="hidden md:block"> */}
       <SimilarProducts />
-      {/* </div> */}
-      {/* <Toaster /> */}
+
     </>
   );
 };
