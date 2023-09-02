@@ -8,6 +8,7 @@ import {
 } from '../slices/users/authSlice';
 import { updateSingleUser, selectUsers } from '../slices/users/userSlice';
 import toast, { Toaster } from 'react-hot-toast';
+import btnHover from '../style_utils'
 
 const EditProfile = () => {
   const dispatch = useDispatch();
@@ -47,6 +48,8 @@ const EditProfile = () => {
   const goBack = () => {
     navigate('/account');
   };
+
+  btnHover()
 
   return (
     <div className=" bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center font-outfit md:h-[calc(100dvh_-_4rem)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)]  2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)] 6xl:h-[calc(100dvh_-_200px)] portrait:h-[calc(100dvh_-_5rem)] portrait:md:h-[calc(100dvh_-_110px)] portrait:lg:h-[calc(100dvh_-_140px)] ">
@@ -111,9 +114,11 @@ const EditProfile = () => {
               <div className='flex items-center justify-between'>
                 <button
                   type='submit'
-                  className='mx-auto mt-5 block w-full  bg-green-gray py-2 text-xl text-white hover:bg-btn-hover hover:transition-all duration-700 ease'
+                  className='btn mx-auto mt-5 block w-full  bg-green-gray py-2 text-xl text-white hover:scale-[1.04] ease transition-all duration-700 '
                 >
+                  <span>
                   save
+                  </span>
                 </button>
               </div>
             </form>
