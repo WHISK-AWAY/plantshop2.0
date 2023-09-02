@@ -27,7 +27,7 @@ export default function OrderConfirmation() {
   }, [orderId, status]);
 
   return (
-    <div className="relative bg-[url('/assets/bg_img/order_conf_page.webp')] bg-cover bg-center font-outfit md:h-[calc(100vh_-_4rem)]  lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)] 6xl:h-[calc(100dvh_-_200px)] portrait:h-[calc(100dvh_-_4rem)] portrait:xs:h-[calc(100dvh_-_5rem)]">
+    <div className="relative bg-[url('/assets/bg_img/order_conf_page.webp')] bg-cover bg-center font-outfit md:h-[calc(100vh_-_4rem)]  lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)] 6xl:h-[calc(100dvh_-_200px)] portrait:h-[calc(100dvh_-_5rem)] portrait:xs:h-[calc(100dvh_-_5rem)] portrait:md:h-[calc(100dvh_-_110px)] portrait:lg:h-[calc(100dvh_-_140px)]">
       <div className='flex h-full items-center justify-center pb-20 xl:pb-36 5xl:pb-56 '>
         <div className='relative z-10 w-4/6 bg-green-gray bg-opacity-60 p-[3%]  3xl:w-fit portrait:xs:w-full portrait:md:w-4/5 portrait:md:py-8'>
           {status && status === 'complete' ? (
