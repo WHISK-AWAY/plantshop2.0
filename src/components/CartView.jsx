@@ -5,7 +5,7 @@ import { selectCart, purgeCart } from '../slices/users/cartSlice';
 import CartCard from './CartCard.jsx';
 import CartSubtotal from './CartSubtotal.jsx';
 
-import btnHover from '../style_utils'
+import btnHover from '../style_utils';
 
 export default function CartView() {
   const dispatch = useDispatch();
@@ -15,9 +15,7 @@ export default function CartView() {
     dispatch(purgeCart());
   }
 
-
-  btnHover()
-
+  btnHover();
 
   if (cart.loading) {
     return (
@@ -101,9 +99,7 @@ export default function CartView() {
                   className='btn mx-auto block w-full py-2 text-center text-[1.4vw] text-white duration-700 ease hover:scale-[1.04] transition-all md:w-3/4 2xl:w-2/4 5xl:w-2/4 5xl:text-[.8vw] 6xl:text-[.7vw] portrait:xs:text-[4vw] portrait:md:text-[2.4vw]'
                   to='/shipping'
                 >
-                  <span>
-                  PROCEED TO PAYMENT
-                  </span>
+                  <span>PROCEED TO PAYMENT</span>
                 </Link>
                 <button
                   onClick={emptyCart}
@@ -125,10 +121,7 @@ export default function CartView() {
                 className='btn mt-8 self-center  py-1 px-4 text-[1.3vw] text-white hover:scale-[1.04] transition-all ease duration-700 2xl:text-[1vw] 4xl:text-[.8vw] portrait:px-6 portrait:xs:text-[4vw] portrait:md:text-[2.8vw] '
                 to={'/products'}
               >
-              <span>
-              shop now
-              
-              </span>
+                <span>shop now</span>
               </Link>
             </div>
           )}
