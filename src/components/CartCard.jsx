@@ -38,7 +38,7 @@ const CartCard = (props) => {
             className="h-36 2xl:h-40"
           />
         </div>
-        <div className="min-w-48 flex flex-col gap-2 ">
+        <div className="min-w-48 flex flex-col gap-2  justify-center items-center">
           <Link to={`/products/${product.id}`}>
             <h1 className="cursor-pointer text-[1.5vw] uppercase hover:underline xl:text-[1.4vw] 2xl:text-[1.2vw] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:text-center  portrait:xs:text-[3.8vw] portrait:md:text-[2.5vw]">
               {product.name}
