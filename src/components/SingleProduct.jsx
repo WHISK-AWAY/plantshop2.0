@@ -68,7 +68,7 @@ btnHover()
       {/**
       <PromoBanner />
     */}
-      {!productLoading ? (
+      {imageBaseURL ? (
         <main className='flex justify-center font-raleway text-[#212922] md:h-[470px] 3xl:mt-[4%] 4xl:mx-auto 4xl:min-h-[690px] 4xl:w-[1700px] 6xl:w-[2200px]'>
           <section className='mt-8 flex flex-col justify-center md:flex-row md:gap-20'>
             {/**mobile header only */}

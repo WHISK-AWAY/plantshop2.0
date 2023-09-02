@@ -35,7 +35,8 @@ import NotFound from './components/NotFound.jsx';
 import OrderHistoryDetails from './components/OrderHistoryDetails.jsx';
 import Checkout from './components/Checkout.jsx';
 import OrderConfirmation from './components/OrderConfirmation.jsx';
-import Wishlist from './components/Wishlist.jsx';
+// import Wishlist from './components/Wishlist.jsx';
+const Wishlist = lazy(() => import('./components/Wishlist.jsx'));
 
 import AdminDashboard from './components/Admin/AdminDashboard.jsx';
 import AddNewProduct from './components/Admin/AddNewProduct.jsx';
@@ -71,31 +72,38 @@ export default function App() {
         <NavBar auth={auth} />
         <Cart />
         <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/products" element={<AllProducts />} />
-          <Route path="/products/:productId" element={<SingleProduct />} />
-          <Route path="/account" element={<UserAccount />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/account/editprofile" element={<EditProfile />} />
-          <Route path="/account/orderhistory" element={<OrderHistory />} />
-          <Route path="/account/wishlist" element={<Wishlist />} />
-          <Route path="/cart" element={<CartView />} />
-          <Route path="/shipping" element={<Checkout />} />
-          <Route path="/confirmation" element={<OrderConfirmation />} />
+          <Route path='/' element={<Homepage />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/products' element={<AllProducts />} />
+          <Route path='/products/:productId' element={<SingleProduct />} />
+          <Route path='/account' element={<UserAccount />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/account/editprofile' element={<EditProfile />} />
+          <Route path='/account/orderhistory' element={<OrderHistory />} />
           <Route
-            path="/account/orderhistory/:orderId"
+            path='/account/wishlist'
+            element={
+              <Suspense fallback={<p>yep</p>}>
+                <Wishlist />
+              </Suspense>
+            }
+          />
+          <Route path='/cart' element={<CartView />} />
+          <Route path='/shipping' element={<Checkout />} />
+          <Route path='/confirmation' element={<OrderConfirmation />} />
+          <Route
+            path='/account/orderhistory/:orderId'
             element={<OrderHistoryDetails />}
           />
-          <Route path="/*" element={<NotFound />} />
-          <Route path="/account/admin" element={<AdminDashboard />}>
-            <Route path="products" element={<AdminProductView />} />
-            <Route path="addproduct" element={<AddNewProduct />} />
-            <Route path="promos" element={<AdminPromoCodeView />} />
-            <Route path="addpromo" element={<AddNewPromo />} />
-            <Route path="users" element={<AdminUserMgmt />} />
-            <Route path="editpromos/:promoId" element={<EditPromos />} />
-            <Route path="editproduct/:productId" element={<EditProduct />} />
+          <Route path='/*' element={<NotFound />} />
+          <Route path='/account/admin' element={<AdminDashboard />}>
+            <Route path='products' element={<AdminProductView />} />
+            <Route path='addproduct' element={<AddNewProduct />} />
+            <Route path='promos' element={<AdminPromoCodeView />} />
+            <Route path='addpromo' element={<AddNewPromo />} />
+            <Route path='users' element={<AdminUserMgmt />} />
+            <Route path='editpromos/:promoId' element={<EditPromos />} />
+            <Route path='editproduct/:productId' element={<EditProduct />} />
           </Route>
         </Routes>
       </div>

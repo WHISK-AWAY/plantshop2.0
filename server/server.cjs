@@ -3,24 +3,22 @@ const app = express();
 const path = require('path');
 const dotenv = require('dotenv').config();
 const volleyball = require('volleyball');
-const config = require('config');
-const PORT = process.env.PORT_NUMBER || 3000;
+const PORT = process.env.PORT_NUMBER;
 const cors = require('cors');
 
 // Static middleware
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-// logging middleware - disable during test
-if (config.util.getEnv('NODE_ENV') !== 'test') {
-  app.use(volleyball);
-}
+app.use(volleyball);
 
 // Body parsing middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// TODO: tighten this up - all-permissive at the moment
-app.use(cors());
+// CORS setup
+const allowedCorsOrigins = process.env.CORS_ORIGINS?.split('|');
+console.log('allowed CORS origins:', allowedCorsOrigins);
+app.use(cors({ origin: allowedCorsOrigins }));
 
 // Start of API routes
 app.use('/api', require('./API/index.cjs'));
