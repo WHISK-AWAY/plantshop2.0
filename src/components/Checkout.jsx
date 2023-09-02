@@ -218,15 +218,15 @@ export default function Checkout() {
   }, [checkoutState]);
 
   return (
-    <div className="relative bg-[url('/assets/misc_bg/ship1.webp')] bg-cover bg-center bg-no-repeat font-outfit md:h-[calc(100vh_-_4rem)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)]  portrait:h-[calc(100dvh_-_5rem)] portrait:w-full portrait:md:h-[calc(100dvh_-_90px)]">
-      <h2 className='pt-5 pb-1 text-center text-[2.3vw] font-bold text-white lg:pb-5 xl:pt-9 5xl:text-[2vw]'>
+    <div className="relative bg-[url('/assets/misc_bg/ship1.webp')] bg-cover bg-center bg-no-repeat font-outfit md:h-[calc(100vh_-_4rem)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)]  portrait:h-[calc(100dvh_-_5rem)] portrait:w-full portrait:md:h-[calc(100dvh_-_110px)] portrait:lg:h-[calc(100dvh_-_140px)]">
+      <h2 className='pt-5 pb-1 text-center text-[2.3vw] font-bold text-white lg:pb-5 xl:pt-9 5xl:text-[2vw] portrait:text-[5vw] portrait:pb-3 portrait:md:text-[3vw]'>
         SHIPPING INFORMATION
       </h2>
       <div className='flex w-full justify-center'>
-        <div className='max-h-[72vh] border border-white/80 bg-white bg-opacity-50  md:py-3 lg:py-5 px-10 6xl:py-8 5xl:py-5 md:w-2/5 3xl:w-3/12 5xl:w-5/6 5xl:max-w-2xl'>
+        <div className='max-h-[72vh] border border-white/80 bg-white bg-opacity-50  md:py-3 lg:py-5 px-10 6xl:py-8 5xl:py-5 md:w-2/5 3xl:w-3/12 5xl:w-5/6 5xl:max-w-2xl portrait:w-[90vw] portrait:h-[90vh] portrait:min-h-[80vh] portrait:py-7'>
           <section className=' flex flex-col'>
             <form onSubmit={handleSubmit}>
-              <div className='mb-2 text-[1vw] 5xl:text-[.8vw]'>
+              <div className='mb-2 text-[1vw] 5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
                 <label
                   className='mb-[1px] block text-green-gray'
                   htmlFor='firstName'
@@ -244,7 +244,7 @@ export default function Checkout() {
                 />
               </div>
 
-              <div className='mb-2 text-[1vw]  5xl:text-[.8vw]'>
+              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
                 <label
                   className='mb-[1px]  block  text-green-gray'
                   htmlFor='lastName'
@@ -262,7 +262,7 @@ export default function Checkout() {
                 />
               </div>
 
-              <div className='mb-2 text-[1vw]  5xl:text-[.8vw]'>
+              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
                 <label
                   className='mb-[1px]  block  text-green-gray'
                   htmlFor='email'
@@ -280,7 +280,7 @@ export default function Checkout() {
                 />
               </div>
 
-              <div className='mb-2 text-[1vw]  5xl:text-[.8vw]'>
+              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
                 <label
                   className='mb-[1px]  block  text-green-gray'
                   htmlFor='street1'
@@ -298,7 +298,7 @@ export default function Checkout() {
                 />
               </div>
 
-              <div className='mb-2 text-[1vw]  5xl:text-[.8vw]'>
+              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
                 <label
                   className='mb-[1px]  block  text-green-gray'
                   htmlFor='street1'
@@ -315,7 +315,7 @@ export default function Checkout() {
                 />
               </div>
 
-              <div className='mb-2 text-[1vw]  5xl:text-[.8vw]'>
+              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
                 <label
                   className='mb-[1px]  block  text-green-gray'
                   htmlFor='city'
@@ -333,7 +333,7 @@ export default function Checkout() {
                 />
               </div>
 
-              <div className='mb-2 text-[1vw]  5xl:text-[.8vw]'>
+              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
                 <label
                   className='mb-[1px]  block text-green-gray'
                   htmlFor='state'
@@ -356,7 +356,7 @@ export default function Checkout() {
                 </select>
               </div>
 
-              <div className='mb-2 text-[1vw]  5xl:text-[.8vw]'>
+              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
                 <label
                   className='mb-[1px] block  text-green-gray'
                   htmlFor='state'
@@ -376,7 +376,7 @@ export default function Checkout() {
                 />
               </div>
 
-              <div className='mb-2 text-[1vw]  5xl:text-[.8vw]'>
+              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
                 <label
                   className='mb-[1px] block  text-green-gray'
                   htmlFor='state'
@@ -399,9 +399,9 @@ export default function Checkout() {
               </div>
             </form>
 
-            <div className='lg:pt-4'>
+            <div className='lg:pt-4 portrait:pt-4 portrait:md:w-3/5 self-center'>
               <button
-                className='5xl:text-[.9vw] text-[1.2vw]  mx-auto block  w-full bg-green-gray  py-1 text-white duration-500 ease-out hover:bg-primary-button-hover hover:transition-all'
+                className='5xl:text-[.9vw] text-[1.2vw]  mx-auto block  w-full bg-green-gray portrait:md:text-[2.9vw] py-1 text-white duration-500 ease-out hover:bg-primary-button-hover hover:transition-all portrait:text-[4.3vw] '
                 type='submit'
                 onClick={handleSubmit}
               >
