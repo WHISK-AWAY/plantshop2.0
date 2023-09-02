@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "/src/index.html",
-    "src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['/src/index.html', 'src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
       fraunces: ['Fraunces', 'serif'],
@@ -12,14 +9,14 @@ export default {
       outfit: ['Outfit', 'sans-serif'],
       montserrat: ['Montserrat', 'monospace'],
       hubbali: ['Hubballi', 'sans-serif'],
-      tabac: 'Tabac Big Glam Black',
+      tabac: ['Tabac Big Glam Black', 'sans-serif'],
       osvald: ['Osvald', 'sans-serif'],
       quicksand: ['Quicksand', 'sans-serif'],
       archivo: ['Archivo Black', 'monospace'],
       josefin: ['Josefinn Sans', 'monospace'],
       chonburi: ['Chonburi', 'monospace'],
       fam: ['Familjen Grotesk', 'sans-serif'],
-      marcellus: ['Marcellus', 'serif']
+      marcellus: ['Marcellus', 'serif'],
     },
     fontWeight: {
       thin: 100,
@@ -59,5 +56,4 @@ export default {
     },
   },
   plugins: [],
-}
-
+};

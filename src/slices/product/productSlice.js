@@ -1,4 +1,8 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import {
+  createSlice,
+  createAsyncThunk,
+  createSelector,
+} from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const { VITE_API_URL } = import.meta.env;
@@ -254,45 +258,47 @@ export const selectSearchBy = (state) => state.products.searchBy;
 
 export const selectUseSearch = (state) => state.products.useSearch;
 
-export const selectFilteredProducts = (state) => {
-  const allProducts = state.products.products;
-  if (state.products.filterBy.length === 0) return allProducts;
-  return allProducts.filter((product) => {
-    return product.tags.some(({ tagName }) => {
-      return state.products.filterBy.includes(tagName);
+export const selectFilteredProducts = createSelector(
+  [(state) => state.products.products, (state) => state.products.filterBy],
+  (allProducts, filterBy) => {
+    if (filterBy.length === 0) return allProducts;
+
+    return allProducts.filter((product) => {
+      return product.tags.some(({ tagName }) => {
+        return filterBy.includes(tagName);
+      });
     });
-  });
-};
+  }
+);
 
-export const selectSearchedItems = (state) => {
-  const allProducts = state.products.products;
-
-  const filteredProducts = allProducts.filter((product) => {
-    return (
-      product?.name.toLowerCase().includes(state.products.searchBy) ||
-      product?.tags.some(({ tagName }) =>
-        tagName.toLowerCase().includes(state.products.searchBy?.toLowerCase())
-      )
-    );
-  });
-
-  console.log('filteredProducts:', filteredProducts);
-
-  return filteredProducts;
-};
+export const selectSearchedItems = createSelector(
+  [(state) => state.products.products, (state) => state.products.searchBy],
+  (allProducts, searchBy) => {
+    return allProducts.filter((product) => {
+      return (
+        product?.name.toLowerCase().includes(searchBy) ||
+        product?.tags.some(({ tagName }) =>
+          tagName.toLowerCase().includes(searchBy?.toLowerCase())
+        )
+      );
+    });
+  }
+);
 
 // Selects all products that have a matching tag to current product
-export const selectSimilar = (state) => {
-  const allProducts = state.products.products;
-  const currentProd = state.products.singleProduct;
-  const currentProdTags = currentProd.tags?.map(({ tagName }) => tagName);
+export const selectSimilar = createSelector(
+  [(state) => state.products.products, (state) => state.products.singleProduct],
+  (allProducts, currentProd) => {
+    const currentProdTags = currentProd.tags?.map(({ tagName }) => tagName);
 
-  return allProducts.filter((product) => {
-    return (
-      product?.tags.some(({ tagName }) => currentProdTags?.includes(tagName)) &&
-      product?.id !== currentProd.id
-    );
-  });
-};
+    return allProducts.filter((product) => {
+      return (
+        product?.tags.some(({ tagName }) =>
+          currentProdTags?.includes(tagName)
+        ) && product?.id !== currentProd.id
+      );
+    });
+  }
+);
 
 export default productSlice.reducer;
