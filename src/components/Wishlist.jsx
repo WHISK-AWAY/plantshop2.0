@@ -22,7 +22,7 @@ export default function Wishlist() {
           WISHLIST
         </h1>
         <Link to={'/account'} className='flex justify-center'>
-          <p className='bottom-2 absolute transition-all duration-500 hover:bg-primary-bright-white/20 border border-white text-[1.3vw] text-white w-36 flex items-center justify-center xl:text-[1.5vw] 3xl:text-[1.2vw] 4xl:text[1vw] 5xl:text-[.8vw] 4xl:w-48 6xl:w-52 5xl:bottom-16 portrait:xs:text-[5vw] portrait:md:text-[3vw] portrait:md:bottom-7 portrait:md:w-52 portrait:lg:w-64'>
+          <p className='bottom-2 absolute transition-all duration-700 hover:bg-primary-bright-white border border-green-gray text-[1.3vw] text-green-gray bg-white/80 w-36 flex items-center justify-center xl:text-[1.5vw] 3xl:text-[1.2vw] 4xl:text[1vw] 5xl:text-[.8vw] 4xl:w-48 6xl:w-52 5xl:bottom-16 portrait:xs:text-[5vw] portrait:md:text-[3vw] portrait:md:bottom-7 portrait:md:w-52 portrait:lg:w-64'>
             go back
           </p>
         </Link>
