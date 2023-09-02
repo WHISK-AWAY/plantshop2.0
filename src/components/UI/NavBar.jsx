@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import searchIcon from '../../../public/assets/search-icon.svg';
+// import searchIcon from '../../assets/search-icon.svg';
 import { useDispatch, useSelector } from 'react-redux';
-import decoratedLine from '../../../public/assets/line.svg';
+import decoratedLine from '../../assets/line.svg';
 import { Toaster } from 'react-hot-toast';
 import {
   selectSearchedItems,
@@ -10,7 +10,7 @@ import {
   selectSearchBy,
   adjustFilter,
 } from '../../slices/product/productSlice';
-import menu from '../../../public/assets/menu.svg';
+import menu from '../../assets/menu.svg';
 import MobileNav from './MobileNav.jsx';
 import CartLink from './CartLink.jsx';
 
