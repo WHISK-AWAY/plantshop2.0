@@ -44,7 +44,7 @@ const WishlistCard = ({ product }) => {
         <div className="ml-8">
           <button
             onClick={() => handleRemove(product.id)}
-            className="block   border border-green-gray/30 py-1 px-2 text-[1.2vw] transition-all duration-300 hover:bg-gray-100 3xl:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.6vw] 6xl:text-[.5vw] portrait:text-[2vw] portrait:xs:text-[3.1vw] portrait:md:text-[2.2vw]"
+            className="block   border border-green-gray/50 py-1 px-2 text-[1.2vw] transition-all duration-500 hover:bg-gray-200 3xl:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.6vw] 6xl:text-[.5vw] portrait:text-[2vw] portrait:xs:text-[3.1vw] portrait:md:text-[2.2vw]"
           >
             remove
           </button>
