@@ -5,6 +5,8 @@ import { selectCart, purgeCart } from '../slices/users/cartSlice';
 import CartCard from './CartCard.jsx';
 import CartSubtotal from './CartSubtotal.jsx';
 
+import btnHover from '../style_utils'
+
 export default function CartView() {
   const dispatch = useDispatch();
   const cart = useSelector(selectCart);
@@ -12,6 +14,10 @@ export default function CartView() {
   function emptyCart() {
     dispatch(purgeCart());
   }
+
+
+  btnHover()
+
 
   if (cart.loading) {
     return (
@@ -92,10 +98,12 @@ export default function CartView() {
               <CartSubtotal />
               <div className='mx-auto my-3 mb-6 flex w-full  flex-col items-center md:w-2/5 lg:w-3/5 2xl:w-full portrait:md:w-4/5 portrait:lg:w-3/4'>
                 <Link
-                  className='mx-auto block w-full bg-green-gray py-2 text-center text-[1.4vw] text-white duration-500 ease-in hover:bg-primary-button-hover hover:transition-all md:w-3/4 2xl:w-2/4 5xl:w-2/4 5xl:text-[.8vw] 6xl:text-[.7vw] portrait:xs:text-[4vw] portrait:md:text-[2.4vw]'
+                  className='btn mx-auto block w-full py-2 text-center text-[1.4vw] text-white duration-700 ease hover:scale-[1.04] transition-all md:w-3/4 2xl:w-2/4 5xl:w-2/4 5xl:text-[.8vw] 6xl:text-[.7vw] portrait:xs:text-[4vw] portrait:md:text-[2.4vw]'
                   to='/shipping'
                 >
+                  <span>
                   PROCEED TO PAYMENT
+                  </span>
                 </Link>
                 <button
                   onClick={emptyCart}
@@ -114,10 +122,13 @@ export default function CartView() {
                 Can we recommend something from our shop?
               </p>
               <Link
-                className='mt-8 self-center bg-green-gray py-1 px-4 text-[1.3vw] text-white hover:bg-primary-button-hover 2xl:text-[1vw] 4xl:text-[.8vw] portrait:px-6 portrait:xs:text-[4vw] portrait:md:text-[2.8vw] '
+                className='btn mt-8 self-center  py-1 px-4 text-[1.3vw] text-white hover:scale-[1.04] transition-all ease duration-700 2xl:text-[1vw] 4xl:text-[.8vw] portrait:px-6 portrait:xs:text-[4vw] portrait:md:text-[2.8vw] '
                 to={'/products'}
               >
-                shop now
+              <span>
+              shop now
+              
+              </span>
               </Link>
             </div>
           )}
