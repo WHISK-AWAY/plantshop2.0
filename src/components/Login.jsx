@@ -71,14 +71,14 @@ const Login = () => {
 
 
   return (
-    <div className="right-0 h-[calc(100dvh_-_5rem)] bg-[url('/assets/bg_img/home2.jpg')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] md:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)]  5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)] portrait:absolute portrait:top-0 portrait:mt-20 portrait:h-[calc(100dvh_-_5rem)] portrait:w-full portrait:lg:mt-20">
-      <div className="m-auto w-full max-w-sm  pt-14">
-        <h2 className="text-center font-outfit text-[7vw] font-semibold tracking-wide md:text-[4vw] 3xl:text-[3vw] 5xl:text-[2vw]">
+    <div className="right-0 h-[calc(100dvh_-_5rem)] bg-[url('/assets/bg_img/home2.jpg')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] md:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)]  5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)]   portrait:xs:h-[calc(100dvh_-_5rem)] portrait:md:h-[calc(100dvh-_-110px)] portrait:lg:h-[calc(100dvh_-_140px)] portrait:w-full ">
+      <div className='m-auto w-full max-w-sm  pt-14 '>
+        <h2 className='text-center font-outfit text-[7vw] font-semibold tracking-wide md:text-[4vw] 3xl:text-[3vw] 5xl:text-[2vw]'>
           LOGIN
         </h2>
-        <section className="mt-2 flex flex-col items-center justify-center  gap-5 ">
-          <form onSubmit={onSubmit} className="">
-            <div className="mb-2 ">
+        <section className='mt-2 flex flex-col items-center justify-center  gap-5 '>
+          <form onSubmit={onSubmit} className=''>
+            <div className='mb-2 '>
               <p
                 className={
                   logInFail ? 'text-xs text-red-700' : 'collapse text-xs'
@@ -86,22 +86,22 @@ const Login = () => {
               >
                 Invalid login credentials!
               </p>
-              <label className="mb-1 block text-sm " htmlFor="email">
+              <label className='mb-1 block text-sm ' htmlFor='email'>
                 Email
               </label>
               <input
                 className={
                   isInvalidEmail || logInFail ? invalidClass : validClass
                 }
-                id="email"
-                placeholder="email"
+                id='email'
+                placeholder='email'
                 value={email}
                 onChange={(evt) => {
                   setIsInvalidEmail(false);
                   setLogInFail(false);
                   setEmail(evt.target.value);
                 }}
-                name="email"
+                name='email'
               />
               <p
                 className={
@@ -112,24 +112,24 @@ const Login = () => {
               </p>
             </div>
 
-            <div className="mb-6">
-              <label className="mb-1 block text-sm  " htmlFor="password">
+            <div className='mb-6'>
+              <label className='mb-1 block text-sm  ' htmlFor='password'>
                 Password
               </label>
               <input
                 className={
                   isInvalidPassword || logInFail ? invalidClass : validClass
                 }
-                id="password"
-                type="password"
-                placeholder="password"
+                id='password'
+                type='password'
+                placeholder='password'
                 value={password}
                 onChange={(evt) => {
                   setIsInvalidPassword(false);
                   setLogInFail(false);
                   setPassword(evt.target.value);
                 }}
-                name="password"
+                name='password'
               />
               <p
                 className={
@@ -141,19 +141,19 @@ const Login = () => {
                 Invalid password!
               </p>
             </div>
-            <div className="flex items-center justify-between">
+            <div className='flex items-center justify-between'>
               <button
-                type="submit"
-                className="mx-auto block w-full bg-green-gray py-2 text-[4vw] text-white hover:bg-primary-button-hover hover:transition-all md:text-[2.6vw] lg:py-1 lg:text-[2.1vw]  3xl:py-1 3xl:text-[2.2vw] 4xl:text-[1.6vw] 5xl:text-[1.2vw] 6xl:text-[1vw]"
+                type='submit'
+                className='mx-auto block w-full bg-green-gray py-2 text-[4vw] text-white hover:bg-primary-button-hover hover:transition-all md:text-[2.6vw] lg:py-1 lg:text-[2.1vw]  3xl:py-1 3xl:text-[2.2vw] 4xl:text-[1.6vw] 5xl:text-[1.2vw] 6xl:text-[1vw]'
               >
                 {authLoading ? 'loading..' : 'login'}
               </button>
             </div>
           </form>
-          <div className="flex justify-center">
-            <button className="inline-block align-baseline text-[3vw] md:text-[1.6vw] xl:text-[1.2vw] 3xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] ">
+          <div className='flex justify-center'>
+            <button className='inline-block align-baseline text-[3vw] md:text-[1.6vw] xl:text-[1.2vw] 3xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] '>
               don't have an account? sign up{' '}
-              <Link to={'/signup'} className="underline ">
+              <Link to={'/signup'} className='underline '>
                 {' '}
                 here
               </Link>
