@@ -18,12 +18,12 @@ const ProductPagination = () => {
   };
 
   return (
-    <div className="flex max-h-[7%] items-center justify-center gap-4 text-[1.4vw] font-raleway pt-[3%] md:pb-[3%] pb-[5%]">
+    <div className="flex max-h-[7%] items-center justify-center gap-4  font-raleway pt-[3%] md:pb-[3%] pb-[5%]">
       <button
         className="block h-full min-w-[52px] max-w-sm"
         onClick={() => handlePageChange('previous')}
       >
-        <img src={leftArrow} alt="left arrow icon" className="w-6" />
+        <img src={leftArrow} alt="left arrow icon" className="w-4 lg:w-5 3xl:w-6" />
       </button>
       
     
@@ -31,7 +31,7 @@ const ProductPagination = () => {
         className="block h-full min-w-[52px] max-w-sm"
         onClick={() => handlePageChange(['next', filteredProducts?.length])}
       >
-        <img src={rightArrow} alt="right arrow icon" className="w-6" />
+        <img src={rightArrow} alt="right arrow icon" className="w-4 lg:w-5 3xl:w-6" />
       </button>
     </div>
   );
