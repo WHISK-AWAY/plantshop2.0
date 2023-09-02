@@ -38,6 +38,7 @@ export default {
         'primary-bright-white': '#FFFFFF',
         'primary-button-hover': '#4d783c',
         'green-gray': '#354f52',
+        'btn-hover': '#283f3b',
       },
       display: ['group-hover'],
       screens: {
