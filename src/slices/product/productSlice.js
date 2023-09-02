@@ -1,4 +1,8 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import {
+  createSlice,
+  createAsyncThunk,
+  createSelector,
+} from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const { VITE_API_URL } = import.meta.env;
@@ -264,35 +268,63 @@ export const selectFilteredProducts = (state) => {
   });
 };
 
-export const selectSearchedItems = (state) => {
-  const allProducts = state.products.products;
+export const selectSearchedItems = createSelector(
+  [(state) => state.products.products, (state) => state.products.searchBy],
+  (allProducts, searchBy) => {
+    return allProducts.filter((product) => {
+      return (
+        product?.name.toLowerCase().includes(searchBy) ||
+        product?.tags.some(({ tagName }) =>
+          tagName.toLowerCase().includes(searchBy?.toLowerCase())
+        )
+      );
+    });
+  }
+);
 
-  const filteredProducts = allProducts.filter((product) => {
-    return (
-      product?.name.toLowerCase().includes(state.products.searchBy) ||
-      product?.tags.some(({ tagName }) =>
-        tagName.toLowerCase().includes(state.products.searchBy?.toLowerCase())
-      )
-    );
-  });
+// export const selectSearchedItems = (state) => {
+//   const allProducts = state.products.products;
 
-  console.log('filteredProducts:', filteredProducts);
+//   const filteredProducts = allProducts.filter((product) => {
+//     return (
+//       product?.name.toLowerCase().includes(state.products.searchBy) ||
+//       product?.tags.some(({ tagName }) =>
+//         tagName.toLowerCase().includes(state.products.searchBy?.toLowerCase())
+//       )
+//     );
+//   });
 
-  return filteredProducts;
-};
+//   console.log('filteredProducts:', filteredProducts);
+
+//   return filteredProducts;
+// };
 
 // Selects all products that have a matching tag to current product
-export const selectSimilar = (state) => {
-  const allProducts = state.products.products;
-  const currentProd = state.products.singleProduct;
-  const currentProdTags = currentProd.tags?.map(({ tagName }) => tagName);
+export const selectSimilar = createSelector(
+  [(state) => state.products.products, (state) => state.products.singleProduct],
+  (allProducts, currentProd) => {
+    const currentProdTags = currentProd.tags?.map(({ tagName }) => tagName);
 
-  return allProducts.filter((product) => {
-    return (
-      product?.tags.some(({ tagName }) => currentProdTags?.includes(tagName)) &&
-      product?.id !== currentProd.id
-    );
-  });
-};
+    return allProducts.filter((product) => {
+      return (
+        product?.tags.some(({ tagName }) =>
+          currentProdTags?.includes(tagName)
+        ) && product?.id !== currentProd.id
+      );
+    });
+  }
+);
+// export const selectSimilar = (state) => {
+//   const allProducts = state.products.products;
+//   const currentProd = state.products.singleProduct;
+//   const currentProdTags = currentProd.tags?.map(({ tagName }) => tagName);
+
+//   return allProducts.filter((product) => {
+//     return (
+//       product?.tags.some(({ tagName }) => currentProdTags?.includes(tagName)) &&
+//       product?.id !== currentProd.id
+//     );
+//   });
+// };
 
 export default productSlice.reducer;
