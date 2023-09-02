@@ -25,3 +25,4 @@ dist-ssr
 
 tailwind.css
 .env
+docker-compose.yaml
