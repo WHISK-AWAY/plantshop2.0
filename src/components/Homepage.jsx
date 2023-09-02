@@ -31,29 +31,30 @@ export default function Homepage() {
 
   return (
     <>
-      <div className={`absolute top-0 mx-auto h-screen w-[100vw] bg-[url('/assets/bg_img/home1.jpg')]  bg-cover text-white md:bg-[url('/assets/bg_img/homepage13.jpg')] md:bg-right md:text-green-gray portrait:bg-[url('/assets/bg_img/home1.jpg')]`}>
+      <div
+        className={`absolute top-0 mx-auto  h-screen w-[100vw] bg-[url('/assets/bg_img/home1.jpg')]  bg-cover text-white md:bg-[url('/assets/bg_img/homepage13.jpg')] md:bg-right md:text-green-gray portrait:bg-[url('/assets/bg_img/home1.jpg')] portrait:md:h-screen portrait:lg:h-screen`}
+      >
         {/**homepage txt section */}
-        <div className="absolute top-64 left-1/2 w-[80vw] -translate-x-1/2 flex-col gap-5 text-center md:top-48 md:bottom-auto md:min-w-[500px]   lg:top-72 lg:left-32 lg:translate-x-0 lg:text-left portrait:lg:left-1/4">
-          <div className="mb-4 w-full font-quicksand">
-            <p className="mb-2 font-archivo  text-[9vw] font-light uppercase leading-none md:font-quicksand md:text-[7vw] lg:text-[4.8vw] portrait:lg:font-archivo portrait:lg:text-[7vw]">
+        <div className='absolute top-64 left-1/2 w-[80vw] -translate-x-1/2 flex-col gap-5 text-center md:top-40 md:bottom-auto md:min-w-[500px] 4xl:top-80  lg:top-56 lg:left-32 lg:translate-x-0  portrait:lg:self-center portrait:lg:w-[80vw] portrait:xs:top-36 portrait:md:top-56 lg:text-left'>
+          <div className='mb-4 w-full  portrait:lg:w-full '>
+            <p className='mb-2 font-archivo  text-[9vw] font-bold uppercase leading-none md:font-outfit md:text-[7vw] 5xl:text-[5vw] lg:text-[6vw] portrait:lg:font-archivo portrait:md:font-archivo portrait:lg:text-[7vw] '>
               Your perfect plant
             </p>
-            <p className="text-[4vw] font-semibold leading-none md:text-[1.5vw] portrait:lg:text-[wvw]">
+            <p className='text-[4vw] font-medium 5xl:text-[.9vw] leading-none md:text-[1.5vw] portrait:md:text-[2.5vw] lg:mt-5'>
               one click away
             </p>
           </div>
-          <div className="mb-[10%] mt-[40%] flex flex-col font-quicksand text-[5vw] md:mt-0 md:mb-16   md:pt-0  md:text-[2vw]  md:font-semibold portrait:lg:text-[4vw]">
-            <p>Transform your space.</p>
-            <p>No green thumb needed</p>
+          <div className='mb-[10%] lg:mt-12 flex flex-col  6xl:text-[1.2vw] 5xl:text-[1.5vw] text-[5vw] md:mt-0 md:mb-16 lg:mb-20  md:pt-0  md:text-[2vw]  md:font-light portrait:font-light portrait:md:text-[3.2vw] portrait:mt-16 portrait:xs:text-[6vw]'>
+            <p>transform your space,</p>
+            <p>no green thumb needed</p>
           </div>
 
-          <Link to="/products">
-            <button className=" w-full max-w-xs 5xl:max-w-lg bg-green-gray py-2 font-tabac text-xl font-semibold tracking-widest text-white shadow-xl md:bg-[#6f9283] portrait:lg:py-5 portrait:lg:text-[3.6vw] 5xl:text-[1.1vw] 5xl:py-5 6xl:py-6">
+          <Link to='/products'>
+            <button className=' w-full md:w-3/12 max-w-xs 5xl:max-w-lg bg-green-gray py-2 font-outfit text-[1vw] tracking-widest text-white shadow-xl portrait:bg-[#6f9283] portrait:lg:py-5 portrait:lg:text-[3.2vw] 5xl:text-[1.1vw] 5xl:py-5 6xl:py-6 portrait:xs:w-3/4 font-semibold 2xl:text-[1vw] 6xl:text-[1vw]'>
               SHOP NOW
             </button>
           </Link>
         </div>
-
       </div>
     </>
   );
