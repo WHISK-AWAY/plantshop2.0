@@ -86,16 +86,16 @@ const ProductCard = (props) => {
         </Link>
         <button
           onClick={addToCart}
-          className='ease bottom-0 mx-auto flex w-full justify-center bg-green-gray py-1  font-medium text-white opacity-80 transition duration-500 hover:opacity-100 group-hover:visible md:invisible md:absolute md:opacity-60'
+          className='ease bottom-0 mx-auto flex w-full justify-center bg-green-gray py-1  font-medium text-white opacity-80 transition duration-500 hover:opacity-100 group-hover:visible md:invisible md:absolute md:opacity-60 portrait:visible'
         >
           ADD TO CART
         </button>
       </div>
       <Link to={`/products/${product.id}`}>
-        <p className='pt-3 portrait:xs:pt-1 portrait:md:pt-3 text-center text-[3.9vw] font-medium-light uppercase md:mb-1 md:text-[2vw] lg:text-[1.5vw] 3xl:text-[1vw] 6xl:text-[.8vw] portrait:xs:text-[4vw] portrait:md:text-[2.2vw]'>
+        <p className='pt-3 portrait:xs:pt-1 portrait:md:pt-3 text-center text-[3.9vw] font-medium-light uppercase md:mb-1 md:text-[1.3vw] 5xl:text-[.8vw] lg:text-[1.2vw] 3xl:text-[1vw] 6xl:text-[.7vw] portrait:xs:text-[4vw] portrait:md:text-[2.2vw] portrait:lg:text-[2vw]'>
           {product.name}
         </p>
-        <p className='text-center text-[3.7vw] md:text-[1.3vw] 3xl:text-[.9vw] 6xl:text-[.7vw] portrait:xs:text-[4vw] portrait:md:text-[2.3vw]'>
+        <p className='text-center text-[3.7vw] md:text-[1.3vw] 3xl:text-[.9vw] 6xl:text-[.7vw] portrait:xs:text-[4vw]  portrait:md:text-[2.3vw] 5xl:text-[.4]'>
           ${product.price}
         </p>
       </Link>
