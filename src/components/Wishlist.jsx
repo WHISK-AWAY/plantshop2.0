@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { selectWishlist, fetchWishlist } from '../slices/users/wishlistSlice';
 import WishlistCard from './WishlistCard.jsx';
 
+import btnHover from '../style_utils'
+
 export default function Wishlist() {
   const dispatch = useDispatch();
 
@@ -13,6 +15,8 @@ export default function Wishlist() {
 
   const wishlist = useSelector(selectWishlist);
 
+
+  btnHover()
   if (!wishlist) return <h2>Loading...</h2>;
 
   return (
@@ -40,10 +44,12 @@ export default function Wishlist() {
                 Click the heart icon on a product to add one!
               </p>
               <Link
-                className='mt-8 self-center bg-green-gray py-1 px-4 text-[1.3vw] text-white hover:bg-primary-button-hover 2xl:text-[1vw] 4xl:text-[.8vw] portrait:px-6 portrait:xs:text-[4vw] portrait:md:text-[2.8vw]'
+                className='btn mt-8 self-center  py-1 px-4 text-[1.3vw] text-white hover:scale-[1.04] transition-all duration-700 2xl:text-[1vw] 4xl:text-[.8vw] portrait:px-6 portrait:xs:text-[4vw] portrait:md:text-[2.8vw]'
                 to={'/products'}
               >
-                shop now
+              <span>
+              shop now
+              </span>
               </Link>
             </div>
           )}
