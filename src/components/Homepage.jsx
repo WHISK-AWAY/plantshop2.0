@@ -8,6 +8,7 @@ import {
 import toast, { Toaster } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import PromoBanner from './UI/PromoBanner.jsx';
+import btnHover from '../style_utils'
 
 // import mobileBg from '../assets/bg_img/home1.jpg';
 // import desktopBg from '../assets/bg_img/homepage13.jpg';
@@ -29,6 +30,7 @@ export default function Homepage() {
     return () => dispatch(resetStatus());
   }, []);
 
+  btnHover()
   return (
     <>
       <div
@@ -50,8 +52,10 @@ export default function Homepage() {
           </div>
 
           <Link to='/products'>
-            <button className=' w-full md:w-3/12 max-w-xs 5xl:max-w-lg bg-green-gray py-2 font-outfit text-[1vw] tracking-widest text-white shadow-xl portrait:bg-[#6f9283] portrait:lg:py-5 portrait:md:text-[2.4vw] 5xl:text-[1.1vw] 5xl:py-5 6xl:py-6 portrait:xs:w-3/4 font-semibold 2xl:text-[1vw] 6xl:text-[1vw] portrait:text-[3.2vw] hover:bg-btn-hover transition-all duration-700 ease'>
+            <button className='btn w-full md:w-3/12 max-w-xs 5xl:max-w-lg bg-green-gray py-2 font-outfit text-[1vw] tracking-widest text-white shadow-xl portrait:bg-[#6f9283] portrait:lg:py-5 portrait:md:text-[2.4vw] 5xl:text-[1.1vw] 5xl:py-5 6xl:py-6 portrait:xs:w-3/4 font-semibold 2xl:text-[1vw] 6xl:text-[1vw] portrait:text-[3.2vw] hover:scale-[1.04] ease transition-all duration-700 '>
+              <span>
               SHOP NOW
+              </span>
             </button>
           </Link>
         </div>
