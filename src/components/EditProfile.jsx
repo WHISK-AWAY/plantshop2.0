@@ -111,7 +111,7 @@ const EditProfile = () => {
               <div className='flex items-center justify-between'>
                 <button
                   type='submit'
-                  className='mx-auto mt-5 block w-full  bg-green-gray py-2 text-xl text-white hover:bg-primary-button-hover hover:transition-all'
+                  className='mx-auto mt-5 block w-full  bg-green-gray py-2 text-xl text-white hover:bg-btn-hover hover:transition-all duration-700 ease'
                 >
                   save
                 </button>
