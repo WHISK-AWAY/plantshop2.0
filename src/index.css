@@ -19,6 +19,9 @@
   border: 1px solid rgb(20 83 45);
 }
 
+
+
+/*spinner animation*/
 @keyframes spinner {
   0% {
     transform: rotate(0deg);
@@ -35,3 +38,41 @@
   border-radius: 50%;
   animation: spinner 1.5s linear infinite;
 }
+
+
+
+/*bnt hover animation*/
+
+.btn {
+  background-color: #354f52;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.btn span{
+  position: relative;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  background-color: #224148;
+  width: 0;
+  height: 0;
+  left: var(--xPos);
+  top: var(--yPos);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width .5s, height .5s, ease 1.2s;
+
+}
+
+.btn:hover::before {
+  width: 1750px;
+  height: 1750px;
+}
+/* #5d777a; */
+ /* #344549; */
