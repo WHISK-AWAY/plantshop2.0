@@ -92,7 +92,7 @@ const ProductCard = (props) => {
         </button>
       </div>
       <Link to={`/products/${product.id}`}>
-        <p className='pt-1 text-center text-[3.9vw] font-medium-light uppercase md:mb-1 md:text-[2vw] lg:text-[1.5vw] 3xl:text-[1vw] 6xl:text-[.8vw]'>
+        <p className='pt-3 portrait:xs:pt-1 portrait:md:pt-3 text-center text-[3.9vw] font-medium-light uppercase md:mb-1 md:text-[2vw] lg:text-[1.5vw] 3xl:text-[1vw] 6xl:text-[.8vw]'>
           {product.name}
         </p>
         <p className='text-center text-[3.7vw] md:text-[1.3vw] 3xl:text-[.9vw] 6xl:text-[.7vw]'>
