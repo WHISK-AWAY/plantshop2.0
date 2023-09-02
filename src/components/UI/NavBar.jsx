@@ -51,11 +51,11 @@ const NavBar = (props) => {
             },
             style: {
               border: '1px solid #121212',
-              'border-radius': '1px',
+              borderRadius: '1px',
               padding: '16px',
               color: '#121212',
-              'font-size': '1rem',
-              'text-transform': 'uppercase',
+              fontSize: '1rem',
+              textTransform: 'uppercase',
             },
           }}
         />
