@@ -19,7 +19,7 @@ export default function Spinner() {
   // }, [])
 
   return (
-    <section className="h-screen w-screen bg-white/50 absolute top-0 right-0 z-[100] backdrop-blur-sm flex justify-center items-center  ">
+    <section className="h-screen w-screen bg-white/90 absolute top-0 right-0 z-[100] backdrop-blur-sm flex justify-center items-center  ">
       <div className="spinner-container">
         <div className="loading-spinner"></div>
       </div>
