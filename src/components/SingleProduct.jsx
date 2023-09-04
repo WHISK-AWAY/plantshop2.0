@@ -15,13 +15,16 @@ import { addOneToCart } from '../slices/users/cartSlice.js';
 import SimilarProducts from './SimilarProducts.jsx';
 import toast, { Toaster } from 'react-hot-toast';
 import ProductSkeleton from './UI/ProductSkeleton.jsx';
-import btnHover from '../style_utils.js'
+import btnHover from '../style_utils.js';
+
+import Spinner from './UI/Spinner.jsx';
 
 const singleProduct = () => {
   const dispatch = useDispatch();
   const { productId } = useParams();
 
   const productLoading = useSelector(selectProductLoading);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -60,114 +63,119 @@ const singleProduct = () => {
   // strip the extension from the product image filename to be re-used as [.webp|.png]
   const imageBaseURL = singleProduct?.imageURL?.split('.').at(0);
 
+  btnHover();
 
-btnHover()
 
   return (
     <>
       {/**
       <PromoBanner />
     */}
-      {imageBaseURL ? (
-        <main className='flex justify-center font-raleway text-[#212922] md:h-[470px] 3xl:mt-[4%] 4xl:mx-auto 4xl:min-h-[690px] 4xl:w-[1700px] 6xl:w-[2200px]'>
-          <section className='mt-8 flex flex-col justify-center md:flex-row md:gap-20'>
-            {/**mobile header only */}
-            <div className='mx-auto w-fit md:mx-0'>
-              <header className='flex justify-center pb-4 text-center  font-outfit text-[4.9vw] font-medium-light uppercase text-green-gray md:hidden '>
-                {singleProduct.name}
-              </header>
-              <div className='relative'>
-                <div className='absolute top-4 right-4 md:hidden'>
-                  <LikedProduct />
-                </div>
-                <picture className='h-96 md:h-full '>
-                  <source
-                    type='image/webp'
-                    srcSet={imageBaseURL + '.webp'}
-                    width={1070}
-                    height={1400}
-                  />
-                  <source
-                    type='image/png'
-                    srcSet={singleProduct?.imageURL}
-                    width={1070}
-                    height={1400}
-                  />
-                  <img
-                    className='h-96 w-80 md:h-full 4xl:w-[460px]'
-                    src={`${singleProduct.imageURL}`}
-                    alt='error showing photo'
-                    width={1070}
-                    height={1400}
-                  />
-                </picture>
-              </div>
-            </div>
-            {/**desktop header */}
-            <div className='mx-8 md:mx-0 md:w-1/3'>
-              <div className='mb-[5%] hidden flex-col  items-end justify-center md:flex'>
-                <header className=' font-meduim-light self-center pr-6 font-outfit text-[2.3vw] uppercase text-green-gray 3xl:text-[2vw] 4xl:text-[1.5vw]'>
+      {imageBaseURL && !productLoading ? (
+        <>
+        {loading && <Spinner/>}
+          <main className='flex justify-center font-raleway text-[#212922] md:h-[470px] 3xl:mt-[4%] 4xl:mx-auto 4xl:min-h-[690px] 4xl:w-[1700px] 6xl:w-[2200px]'>
+            <section className='mt-8 flex flex-col justify-center md:flex-row md:gap-20'>
+              {/**mobile header only */}
+              <div className='mx-auto w-fit md:mx-0'>
+                <header className='flex justify-center pb-4 text-center  font-outfit text-[4.9vw] font-medium-light uppercase text-green-gray md:hidden '>
                   {singleProduct.name}
                 </header>
-                <LikedProduct />
+                <div className='relative'>
+                  <div className='absolute top-4 right-4 md:hidden'>
+                    <LikedProduct />
+                  </div>
+                  <picture
+                    onLoad={() => setLoading(false)}
+                    className='h-96 md:h-full picture-wrapper'
+                  >
+                    <source
+                      type='image/webp'
+                      srcSet={imageBaseURL + '.webp'}
+                      width={1070}
+                      height={1400}
+                    />
+                    <source
+                      type='image/png'
+                      srcSet={singleProduct?.imageURL}
+                      width={1070}
+                      height={1400}
+                    />
+                    <img
+                      className='h-96 w-80 md:h-full 4xl:w-[460px]'
+                      src={`${singleProduct.imageURL}`}
+                      alt='error showing photo'
+                      width={1070}
+                      height={1400}
+                    />
+                  </picture>
+                </div>
               </div>
+              {/**desktop header */}
+              <div className='mx-8 md:mx-0 md:w-1/3'>
+                <div className='mb-[5%] hidden flex-col  items-end justify-center md:flex'>
+                  <header className=' font-meduim-light self-center pr-6 font-outfit text-[2.3vw] uppercase text-green-gray 3xl:text-[2vw] 4xl:text-[1.5vw]'>
+                    {singleProduct.name}
+                  </header>
+                  <LikedProduct />
+                </div>
 
-              <div className='mb-0 flex justify-between p-2 text-[2.5vw] md:mb-4 md:border-b-4 md:p-0 md:text-[1vw] 3xl:text-[.7vw]'>
-                <p>
-                  {singleProduct?.tags
-                    ?.map(({ tagName }) => tagName)
-                    .join(', ')}
+                <div className='mb-0 flex justify-between p-2 text-[2.5vw] md:mb-4 md:border-b-4 md:p-0 md:text-[1vw] 3xl:text-[.7vw]'>
+                  <p>
+                    {singleProduct?.tags
+                      ?.map(({ tagName }) => tagName)
+                      .join(', ')}
+                  </p>
+                </div>
+                <p className='mb-2 text-[3.7vw] font-bold text-[#212922] md:mb-4 md:text-[2vw] xl:text-[1.6vw] 4xl:text-[1.3vw]'>
+                  ${singleProduct.price}
                 </p>
-              </div>
-              <p className='mb-2 text-[3.7vw] font-bold text-[#212922] md:mb-4 md:text-[2vw] xl:text-[1.6vw] 4xl:text-[1.3vw]'>
-                ${singleProduct.price}
-              </p>
 
-              {fullDescription && (
-                <p
-                  className='mb-8 min-w-full cursor-pointer text-justify text-[2.8vw] leading-tight md:text-[1vw] 4xl:text-[.7vw]'
-                  onClick={handleFullDescription}
-                >
-                  {fullDescription}
+                {fullDescription && (
+                  <p
+                    className='mb-8 min-w-full cursor-pointer text-justify text-[2.8vw] leading-tight md:text-[1vw] 4xl:text-[.7vw]'
+                    onClick={handleFullDescription}
+                  >
+                    {fullDescription}
 
-                  {fullDescription === singleProduct.shortDescription ? (
-                    <span className='font-bold'> see more</span>
-                  ) : (
-                    <span className='font-bold'> see less</span>
-                  )}
-                </p>
-              )}
+                    {fullDescription === singleProduct.shortDescription ? (
+                      <span className='font-bold'> see more</span>
+                    ) : (
+                      <span className='font-bold'> see less</span>
+                    )}
+                  </p>
+                )}
 
-              <div className=' mb-3 md:border-b-4 md:pb-4'>
-                <button
-                  onClick={() => {
-                    notify();
-                    addToCart();
-                  }}
-                  className='btn ease mx-auto block w-full transition-all duration-500 hover:scale-[1.02]  py-2 font-light font-outfit text-[3.8vw] text-white md:text-[2vw] 4xl:text-[1.5vw] 5xl:text-[1.2vw] '
-                >
-                  <span>ADD TO CART</span>
-                </button>
+                <div className=' mb-3 md:border-b-4 md:pb-4'>
+                  <button
+                    onClick={() => {
+                      notify();
+                      addToCart();
+                    }}
+                    className='btn ease mx-auto block w-full transition-all duration-500 hover:scale-[1.02]  py-2 font-light font-outfit text-[3.8vw] text-white md:text-[2vw] 4xl:text-[1.5vw] 5xl:text-[1.2vw] '
+                  >
+                    <span>ADD TO CART</span>
+                  </button>
+                </div>
+                <div className='flex items-center gap-2'>
+                  <img
+                    src={box}
+                    alt='shipping box icon'
+                    className='w-4 4xl:w-[6]'
+                  />
+                  <p className='text-[2.5vw] md:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.7vw]'>
+                    Free shipping in the USA
+                  </p>
+                </div>
               </div>
-              <div className='flex items-center gap-2'>
-                <img
-                  src={box}
-                  alt='shipping box icon'
-                  className='w-4 4xl:w-[6]'
-                />
-                <p className='text-[2.5vw] md:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.7vw]'>
-                  Free shipping in the USA
-                </p>
-              </div>
-            </div>
-          </section>
-        </main>
+            </section>
+          </main>
+          {/* <div className="hidden md:block"> */}
+          <SimilarProducts />
+        </>
       ) : (
-        <ProductSkeleton />
+        <Spinner />
       )}
-      {/* <div className="hidden md:block"> */}
-      <SimilarProducts />
-
     </>
   );
 };
