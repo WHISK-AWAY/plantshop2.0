@@ -53,11 +53,11 @@ export default function Wishlist() {
               WISHLIST
             </h1>
             <Link to={'/account'} className='flex justify-center '>
-              <p className='bottom-2 absolute transition-all duration-700 hover:bg-primary-bright-white border border-green-gray text-[1.3vw] text-green-gray bg-white/80 w-36 flex items-center justify-center xl:text-[1.5vw] 3xl:text-[1.2vw] 4xl:text[1vw] 5xl:text-[.8vw] 4xl:w-48 6xl:w-52 5xl:bottom-16 portrait:xs:text-[5vw] portrait:md:text-[3vw] portrait:md:bottom-7 portrait:md:w-52 portrait:lg:w-64'>
+              <p className='bottom-2 absolute transition-all duration-700 hover:bg-primary-bright-white border border-green-gray text-[1.3vw] text-green-gray bg-white/80 w-36 flex items-center justify-center xl:text-[1.5vw] 3xl:text-[1.2vw] 4xl:text-[1vw] 5xl:text-[.8vw] 4xl:w-48 6xl:w-52 5xl:bottom-16 portrait:xs:text-[5vw] portrait:md:text-[2.7vw] portrait:md:bottom-7 portrait:md:w-52 portrait:lg:w-64'>
                 go back
               </p>
             </Link>
-            <div className='mx-auto max-h-[70vh] w-fit max-w-[1200px] overflow-y-auto border border-green-gray bg-white/80 p-4 md:min-w-[700px] lg:text-[2.8vw] 4xl:min-w-[1000px] 5xl:max-h-[65vh] 5xl:min-w-[900px]  portrait:w-[90vw] portrait:border-green-gray portrait:xs:min-h-[75vh] portrait:xs:max-w-[90vw] portrait:xs:p-2 portrait:md:min-h-[75vh] portrait:lg:h-[90vh]'>
+            <div className='mx-auto max-h-[70vh] w-fit max-w-[1200px] overflow-y-auto border border-green-gray bg-white/80 p-4 md:min-w-[700px] lg:text-[2.8vw] 4xl:min-w-[900px] 5xl:max-h-[65vh] 5xl:min-w-[900px]  portrait:w-[90vw] portrait:border-green-gray portrait:xs:min-h-[75vh] portrait:xs:max-w-[90vw] portrait:xs:p-2 portrait:md:min-h-[75vh] portrait:lg:h-[90vh]'>
               {wishlist[0]?.products.length > 0 ? (
                 wishlist[0]?.products.map((product) => {
                   return <WishlistCard key={product.id} product={product} />;
