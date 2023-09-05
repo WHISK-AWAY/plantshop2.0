@@ -100,27 +100,33 @@ const authSlice = createSlice({
         state.status = 'success';
         state.error = '';
         state.token = payload.token;
+        state.loading = false;
       })
       .addCase(attemptTokenLogin.pending, (state, { payload }) => {
         state.status = 'loading';
         state.error = '';
+        state.loading = true;
       })
       .addCase(attemptTokenLogin.rejected, (state, { payload }) => {
         state.status = 'failed';
         state.error = payload.message;
+        state.loading = false;
       })
       .addCase(signUp.fulfilled, (state, { payload }) => {
         state.status = 'success';
         state.token = payload.token;
         state.error = '';
+        state.loading = false;
       })
       .addCase(signUp.pending, (state, { payload }) => {
         state.status = 'loading';
         state.error = '';
+        state.loading = true;
       })
       .addCase(signUp.rejected, (state, { payload }) => {
         state.status = 'failed';
         state.error = payload.message;
+        state.loading = false;
       });
   },
 });
