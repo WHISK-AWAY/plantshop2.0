@@ -41,17 +41,16 @@ const UserAccount = () => {
     };
   }, []);
 
-  if (!auth) return <Spinner loading={loading} />;
+  // if (!auth) return <Spinner loading={loading} />;
 
   return (
     <>
     {/**
-    {loading && <Spinner loading={loading} />}
+    <Spinner loading={loading} />
   */}
 
       <div
         className=" h-[calc(100dvh_-_5rem)] w-screen bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center font-outfit text-green-gray  md:h-[calc(100dvh_-_4rem)] portrait:md:h-[calc(100dvh_-_110px)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)] 6xl:h-[calc(100dvh_-_200px)] portrait:lg:h-[calc(100dvh_-_140px)] "
-        // onLoad={() => console.log('loaded')}
       >
         <motion.div
           initial={{ opacity: 0 }}
