@@ -1,11 +1,9 @@
-import React, { useEffect, Suspense, useState, lazy } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-const AllProds = lazy(() => import('./AllProductsSection.jsx'));
 import {
   adjustFilter,
   fetchAllProducts,
   resetStatusError,
-  selectAllProducts,
 } from '../slices/product/productSlice';
 import FilterSection from './FilterSection.jsx';
 import AllProductsSection from './AllProductsSection.jsx';
@@ -18,7 +16,6 @@ const AllProducts = () => {
   const dispatch = useDispatch();
 
   const productsLoading = useSelector(selectProductLoading);
-  const allProducts = useSelector(selectAllProducts)
 
   useEffect(() => {
     dispatch(fetchAllProducts());
@@ -32,11 +29,7 @@ const AllProducts = () => {
 
 
   return !productsLoading ? (
-    // return !true ? (
     <>
-      {/**
-    <PromoBanner />
-  */}
       <div className='flex justify-center'>
         <section>
           <FilterSection />
