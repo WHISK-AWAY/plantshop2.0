@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import box from '../assets/box.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import {
