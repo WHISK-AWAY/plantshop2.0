@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import {
-  fetchCart,
   addOneToCart,
   removeOneFromCart,
   removeCartRow,
@@ -11,7 +10,7 @@ import plus from '../assets/plus.svg';
 import { Link } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion';
 
 const CartCard = (props) => {
   const dispatch = useDispatch();
@@ -25,7 +24,7 @@ const CartCard = (props) => {
   function incrementCart(productId) {
     dispatch(addOneToCart(productId));
   }
-    function removeFromCart(productId) {
+  function removeFromCart(productId) {
     toast.error('Product removed from cart!');
     dispatch(removeCartRow(productId));
   }

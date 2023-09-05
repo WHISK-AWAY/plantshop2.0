@@ -46,7 +46,6 @@ const FilterSection = () => {
         <button onClick={() => handleFilter('')}>
           <li>ALL</li>
         </button>
-        {/* <li>Popular</li> */}
         <div
           onMouseEnter={handleHover}
           onMouseLeave={handleHide}
