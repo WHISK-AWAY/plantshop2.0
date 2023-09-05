@@ -112,6 +112,19 @@ export const deleteSingleProduct = createAsyncThunk(
   }
 );
 
+// export const selectFilteredProducts = createSelector(
+//   [(state) => state.products.products, (state) => state.products.filterBy],
+//   (allProducts, filterBy) => {
+//     if (filterBy.length === 0) return allProducts;
+
+//     return allProducts.filter((product) => {
+//       return product.tags.some(({ tagName }) => {
+//         return filterBy.includes(tagName);
+//       });
+//     });
+//   }
+// );
+
 const productSlice = createSlice({
   name: 'products',
   initialState,
@@ -128,14 +141,31 @@ const productSlice = createSlice({
         state.similarPage = Math.max(0, state.similarPage - 4);
     },
     productPageChange(state, { payload }) {
-      if (payload[0] === 'next')
-        state.productPage = Math.min(
-          payload[1] - PRODUCTS_PER_PAGE,
-          state.productPage + PRODUCTS_PER_PAGE
-        );
+      let productCount;
+
+      if (state.filterBy.length === 0) {
+        productCount = state.products.length;
+      } else {
+        productCount = state.products.filter((prod) => {
+          return prod.tags.some(({ tagName }) => {
+            if (!state.filterBy.length) return state.products;
+            return state.filterBy.includes(tagName);
+          });
+        }).length;
+      }
+
+      if (payload[0] === 'next') {
+        if (state.productPage + PRODUCTS_PER_PAGE >= productCount) {
+          return;
+        } else {
+          state.productPage = state.productPage + PRODUCTS_PER_PAGE;
+        }
+      }
+
       if (payload === 'previous')
         state.productPage = Math.max(0, state.productPage - PRODUCTS_PER_PAGE);
     },
+
     adjustFilter(state, { payload }) {
       state.productPage = 0;
       if (payload) state.filterBy = [payload];
