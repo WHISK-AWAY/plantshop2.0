@@ -27,7 +27,11 @@ const singleProduct = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
   }, []);
 
   useEffect(() => {
@@ -63,8 +67,11 @@ const singleProduct = () => {
   // strip the extension from the product image filename to be re-used as [.webp|.png]
   const imageBaseURL = singleProduct?.imageURL?.split('.').at(0);
 
-  btnHover();
+  useEffect(() => {
+    setLoading(true);
+  }, [productId]);
 
+  btnHover();
 
   return (
     <>
@@ -73,7 +80,7 @@ const singleProduct = () => {
     */}
       {imageBaseURL && !productLoading ? (
         <>
-        {loading && <Spinner/>}
+          {loading && <Spinner loading={loading} />}
           <main className='flex justify-center font-raleway text-[#212922] md:h-[470px] 3xl:mt-[4%] 4xl:mx-auto 4xl:min-h-[690px] 4xl:w-[1700px] 6xl:w-[2200px]'>
             <section className='mt-8 flex flex-col justify-center md:flex-row md:gap-20'>
               {/**mobile header only */}
@@ -85,36 +92,36 @@ const singleProduct = () => {
                   <div className='absolute top-4 right-4 md:hidden'>
                     <LikedProduct />
                   </div>
-                  <picture
-                    onLoad={() => setLoading(false)}
-                    className='h-96 md:h-full picture-wrapper'
-                  >
-                    <source
-                      type='image/webp'
-                      srcSet={imageBaseURL + '.webp'}
-                      width={1070}
-                      height={1400}
-                    />
-                    <source
-                      type='image/png'
-                      srcSet={singleProduct?.imageURL}
-                      width={1070}
-                      height={1400}
-                    />
-                    <img
-                      className='h-96 w-80 md:h-full 4xl:w-[460px]'
-                      src={`${singleProduct.imageURL}`}
-                      alt='error showing photo'
-                      width={1070}
-                      height={1400}
-                    />
-                  </picture>
                 </div>
+                <picture
+                  onLoad={() => setLoading(false)}
+                  className='h-96 md:h-full picture-wrapper'
+                >
+                  <source
+                    type='image/webp'
+                    srcSet={imageBaseURL + '.webp'}
+                    width={1070}
+                    height={1400}
+                  />
+                  <source
+                    type='image/png'
+                    srcSet={singleProduct?.imageURL}
+                    width={1070}
+                    height={1400}
+                  />
+                  <img
+                    className='h-96 w-80 md:h-full 4xl:w-[460px]'
+                    src={`${singleProduct.imageURL}`}
+                    alt='error showing photo'
+                    width={1070}
+                    height={1400}
+                  />
+                </picture>
               </div>
               {/**desktop header */}
               <div className='mx-8 md:mx-0 md:w-1/3'>
                 <div className='mb-[5%] hidden flex-col  items-end justify-center md:flex'>
-                  <header className=' font-meduim-light self-center pr-6 font-outfit text-[2.3vw] uppercase text-green-gray 3xl:text-[2vw] 4xl:text-[1.5vw]'>
+                  <header className=' self-center pr-6 font-outfit text-[2.3vw] uppercase text-green-gray 3xl:text-[2vw] 4xl:text-[1.5vw]'>
                     {singleProduct.name}
                   </header>
                   <LikedProduct />
