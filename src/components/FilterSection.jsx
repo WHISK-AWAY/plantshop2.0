@@ -23,7 +23,9 @@ const FilterSection = () => {
     }
   };
   const handleHide = () => {
-    timeout.current = setTimeout(() => setDisplay('hidden'), 500);
+    // timeout.current = setTimeout(() => 
+    setDisplay('hidden')
+    // , 500);
   };
 
   const handleFilter = (filter) => {
