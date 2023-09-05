@@ -21,7 +21,7 @@ const SimilarProducts = () => {
 
   return (
     <section className="min-h-96  mx-auto mt-[16%] w-screen max-w-6xl pb-[5%] md:mt-[9%] 4xl:mt-[6%] 5xl:mt-[4%] 6xl:mt-[3%]">
-      <h2 className="my-4 ml-4 text-center font-outfit text-[3.6vw] text-[#212922] md:text-[2vw] xl:text-[1.7vw] 4xl:text-[1.5vw]  5xl:text-[1.2vw] 6xl:text-[1vw] ">
+      <h2 className="my-4 ml-4 text-center font-outfit text-[3.6vw] text-[#212922] md:text-[2vw] xl:text-[1.7vw] 4xl:text-[1.5vw]  5xl:text-[1.2vw] 6xl:text-[1vw] portrait:md:text-[2.6vw]">
         YOU MIGHT ALSO LIKE
       </h2>
       <div className="flex md:items-center">
