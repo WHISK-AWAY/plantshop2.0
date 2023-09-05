@@ -5,9 +5,9 @@ import { addOneToCart } from '../slices/users/cartSlice';
 import toast from 'react-hot-toast';
 import { selectProductLoading } from '../slices/product/productSlice';
 import Spinner from './UI/Spinner.jsx';
-import 'lazysizes';
+// import 'lazysizes';
 
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
 // import testImg from '../../public/assets/product_img/';
 
 const ProductCard = (props) => {
@@ -51,7 +51,7 @@ const ProductCard = (props) => {
 
               <source
                 type='image/webp'
-                srcSet={`${imageBaseURL}.webp`}
+                srcSet={product.imageURL.split('.').at(0) + '.webp'}
                 width={1070}
                 height={1400}
                 // loading='lazy'
@@ -66,7 +66,7 @@ const ProductCard = (props) => {
 
               <img
                 src={product.imageURL}
-                loading='lazy'
+                // loading='lazy'
                 alt=''
                 className='opacity-0'
                 onLoad={(e) => e.target.classList.remove('opacity-0')}
