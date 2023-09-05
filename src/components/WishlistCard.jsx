@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { adjustWishlist, selectWishlist } from '../slices/users/wishlistSlice';
 import { Link } from 'react-router-dom';
 
+import {motion} from 'framer-motion'
+
 const WishlistCard = ({ product }) => {
   const dispatch = useDispatch();
 
@@ -20,37 +22,47 @@ const WishlistCard = ({ product }) => {
 
   return (
     <>
-      <div className="flex h-52 items-center justify-around gap-6 md:mx-4 portrait:xs:gap-3 portrait:xs:px-1">
-        <div className="h-36 2xl:h-40">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          delay: 0.1,
+          duration: 0.5,
+          ease: [0.17, 0.67, 0.83, 0.67],
+        }}
+        className='flex h-52 items-center justify-around gap-6 md:mx-4 portrait:xs:gap-3 portrait:xs:px-1'
+      >
+        <div className='h-36 2xl:h-40'>
           <img
             src={`${product.imageURL}`}
             alt={`product photo of ${product.name}`}
-            className="h-36 2xl:h-40"
+            className='h-36 2xl:h-40'
           />
         </div>
-        <div className=" min-w-48 flex flex-col  gap-2 justify-center items-center">
+        <div className=' min-w-48 flex flex-col  gap-2 justify-center items-center'>
           <Link to={`/products/${product.id}`}>
-            <h1 className="cursor-pointer text-[1.5vw] uppercase hover:underline xl:text-[1.4vw] 2xl:text-[1.2vw] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:xs:text-[3.8vw]  portrait:md:text-[2.5vw] portrait:text-center">
+            <h1 className='cursor-pointer text-[1.5vw] uppercase hover:underline xl:text-[1.4vw] 2xl:text-[1.2vw] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:xs:text-[3.8vw]  portrait:md:text-[2.5vw] portrait:text-center'>
               {product.name}
             </h1>
           </Link>
-          <p className="portrait:text-center text-[1.2vw] italic text-gray-600 xl:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.6vw] 6xl:text-[.5vw] portrait:text-[1.8vw] portrait:xs:text-[2.7vw] portrait:md:text-[2vw]">
+          <p className='portrait:text-center text-[1.2vw] italic text-gray-600 xl:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.6vw] 6xl:text-[.5vw] portrait:text-[1.8vw] portrait:xs:text-[2.7vw] portrait:md:text-[2vw]'>
             {product?.tags?.map(({ tagName }) => tagName).join(', ')}
           </p>
-          <p className="text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.1vw] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:text-[2.3vw] portrait:xs:text-[3.2vw] portrait:md:text-[2.5vw] portrait:text-center">
+          <p className='text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.1vw] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:text-[2.3vw] portrait:xs:text-[3.2vw] portrait:md:text-[2.5vw] portrait:text-center'>
             ${product.price}
           </p>
         </div>
-        <div className="ml-8">
+        <div className='ml-8'>
           <button
             onClick={() => handleRemove(product.id)}
-            className="block   border border-green-gray/50 py-1 px-2 text-[1.2vw] transition-all duration-500 hover:bg-gray-200 3xl:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.6vw] 6xl:text-[.5vw] portrait:text-[2vw] portrait:xs:text-[3.1vw] portrait:md:text-[2.2vw]"
+            className='block   border border-green-gray/50 py-1 px-2 text-[1.2vw] transition-all duration-500 hover:bg-gray-200 3xl:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.6vw] 6xl:text-[.5vw] portrait:text-[2vw] portrait:xs:text-[3.1vw] portrait:md:text-[2.2vw]'
           >
             remove
           </button>
         </div>
-      </div>
-      <div className="mx-auto w-5/6 border-b-2 border-gray-300"></div>
+      </motion.div>
+      <div className='mx-auto w-5/6 border-b-2 border-gray-300'></div>
     </>
   );
 };
