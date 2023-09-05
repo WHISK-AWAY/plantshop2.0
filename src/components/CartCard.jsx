@@ -44,9 +44,9 @@ const CartCard = ({ product, item }) => {
           duration: 0.5,
           ease: [0.17, 0.67, 0.83, 0.67],
         }}
-        className='flex h-52 items-center justify-around gap-6 md:mx-4 portrait:xs:gap-3 portrait:xs:px-1'
+        className='flex h-52 items-center justify-between gap-6 md:mx-16 portrait:xs:gap-3 portrait:xs:mx-1 portrait:md:mx-10 portrait:md:my-8'
       >
-      <picture className='h-36 2xl:h-40 aspect-[3/4]'>
+      <picture className='h-36 2xl:h-40 aspect-[3/4] portrait:md:h-full'>
           <source
             type='image/webp'
             srcSet={`${imageBaseURL.current}.webp`}
@@ -69,7 +69,7 @@ const CartCard = ({ product, item }) => {
         </picture>
         <div className='min-w-48 flex flex-col gap-2  justify-center items-center'>
           <Link to={`/products/${product.id}`}>
-            <h1 className='cursor-pointer text-[1.5vw] uppercase hover:underline xl:text-[1.4vw] 2xl:text-[1.2vw] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:text-center  portrait:xs:text-[3.8vw] portrait:md:text-[2.5vw]'>
+            <h1 className='cursor-pointer text-[1.5vw] uppercase hover:underline xl:text-[1.4vw] 2xl:text-[1.2vw] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:text-center  portrait:xs:text-[3.5vw] portrait:md:text-[2.5vw]'>
               {product.name}
             </h1>
           </Link>
