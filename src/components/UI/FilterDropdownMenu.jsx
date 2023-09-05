@@ -11,7 +11,7 @@ const FilterDropdownMenu = (props) => {
       onClick={handleHide}
       onMouseEnter={handleHover}
       onMouseLeave={handleHide}
-      className={`absolute 6xl:top-8 top-5  md:top-4 xl:top-6 h-[15dvh] md:h-[17dvh] 5xl:h-[16dvh] w-full portrait:w-full md:w-[40%] ${display} z-10 flex justify-center gap-10 bg-green-gray/90 text-center font-outfit text-white font-light 4xl:h-[15dvh] 5xl:w-[45%] 6xl:w-[50%] portrait:md:top-7`}
+      className={`absolute 6xl:top-8 top-5 3xl:top-5 5xl:top-6 md:top-3 lg:top-4 xl:top-6 h-[15dvh] md:h-[17dvh] 5xl:h-[16dvh] w-full portrait:w-full md:w-[40%] ${display} z-10 flex justify-center gap-10 bg-green-gray/90 text-center font-outfit text-white font-light 4xl:h-[15dvh] 5xl:w-[45%] 6xl:w-[50%] portrait:md:top-7 `}
     >
       <div className='flex  items-center justify-center gap-6 text-center'>
         <div className=''>
