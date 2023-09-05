@@ -46,7 +46,7 @@ const MobileNav = ({ expand, setExpand }) => {
     >
       {/**search section and X btn section*/}
       <div className="flex flex-row-reverse justify-between p-5">
-        <img src={whiteX} alt="x icon" className="w-6" onClick={handleClick} />
+        <img src={whiteX} alt="x icon" className="w-4" onClick={handleClick} />
 
         <div className="flex h-9 flex-row-reverse  gap-2 ">
           <button onClick={handleSearch}>

@@ -49,26 +49,26 @@ const OrderHistory = () => {
 
   return (
     <div className="portrait:h-[calc(100dvh_-_5rem)] portrait:lg:h-[calc(100dvh_-_140px)] h-[calc(100vh_-_5rem)] w-screen  bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center pt-36 font-outfit md:h-[calc(100dvh_-_4rem)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)] 6xl:h-[calc(100dvh_-_200px)]">
-      <div className="min-w-xxs portrait:lg:mt-16 w-sm 5xl:min-w-xl  absolute  top-16 mx-auto  w-full pt-16 2xl:top-28 5xl:top-44 6xl:top-64  ">
-        <p className="font-extrabold pb-3 text-center text-xl font-bold text-white md:text-4xl">
+      <div className='min-w-xxs portrait:lg:mt-16 w-sm 5xl:min-w-xl  absolute  top-16 mx-auto  w-full pt-16 2xl:top-28 5xl:top-44 6xl:top-64  '>
+        <p className='font-extrabold pb-3 text-center text-xl font-bold text-white md:text-4xl'>
           PREVIOUS ORDERS
         </p>
 
         {userOrders?.length > 0 ? (
-          <div className=" flex  flex-col items-center justify-center  overflow-x-auto font-outfit font-thin ">
-            <table className="w-5/6  bg-white text-center text-xs text-gray-500 dark:text-gray-400">
-              <thead className="bg-green-gray text-[2vw] uppercase text-white md:text-[1vw] ">
-                <tr className="">
-                  <th scope="col" className="px-6 py-3 ">
+          <div className=' flex  flex-col items-center justify-center  overflow-x-auto font-outfit font-thin '>
+            <table className='w-5/6  bg-white text-center text-xs text-gray-500 dark:text-gray-400'>
+              <thead className='bg-green-gray text-[2vw] uppercase text-white md:text-[1vw] '>
+                <tr className=''>
+                  <th scope='col' className='px-6 py-3 '>
                     Order Id
                   </th>
-                  <th scope="col" className="px-6 py-3">
+                  <th scope='col' className='px-6 py-3'>
                     Date of Order
                   </th>
-                  <th scope="col" className="px-6 py-3 text-center">
+                  <th scope='col' className='px-6 py-3 text-center'>
                     Item Qty
                   </th>
-                  <th scope="col" className="px-6 py-3 text-right">
+                  <th scope='col' className='px-6 py-3 text-right'>
                     Total
                   </th>
                 </tr>
@@ -79,18 +79,18 @@ const OrderHistory = () => {
                     <tr
                       onClick={() => orderDetails(order.id)}
                       key={order.id}
-                      className="cursor-pointer hover:text-primary-promo-banner"
+                      className='cursor-pointer hover:text-primary-promo-banner'
                     >
-                      <th scope="col" className="px-6 py-3">
+                      <th scope='col' className='px-6 py-3'>
                         {order.id}
                       </th>
-                      <th scope="col" className="px-6 py-3">
+                      <th scope='col' className='px-6 py-3'>
                         {order.createdAt.slice(0, 10)}
                       </th>
-                      <th scope="col" className="px-6 py-3 text-center">
+                      <th scope='col' className='px-6 py-3 text-center'>
                         {order.totalQty}
                       </th>
-                      <th scope="col" className="px-6 py-3 text-right">
+                      <th scope='col' className='px-6 py-3 text-right'>
                         ${order.finalPrice}
                       </th>
                     </tr>
@@ -100,15 +100,18 @@ const OrderHistory = () => {
             </table>
           </div>
         ) : (
-          <p className="mx-auto text-center text-lg text-white">
+          <p className='mx-auto text-center text-lg text-white'>
             No previous orders
           </p>
         )}
 
-        <div className=" m-auto flex justify-center pt-4">
-          <button className="inline-block w-1/4 border border-white py-1 align-baseline text-sm text-white transition-all duration-500 hover:bg-primary-bright-white/20  portrait:xxs:w-[80%] portrait:md:w-2/5">
-            <Link to="/account">back</Link>
-          </button>
+        <div className=' m-auto flex justify-center text-center pt-4'>
+          <Link
+            to='/account'
+            className='inline-block w-1/4 border border-white py-1 align-baseline text-sm text-white transition-all duration-500 hover:bg-primary-bright-white/20  portrait:xxs:w-[80%] portrait:md:w-2/5'
+          >
+            back
+          </Link>
         </div>
       </div>
     </div>

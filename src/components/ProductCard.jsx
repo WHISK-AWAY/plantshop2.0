@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addOneToCart } from '../slices/users/cartSlice';
 import toast from 'react-hot-toast';
 import { selectProductLoading } from '../slices/product/productSlice';
 import Spinner from './UI/Spinner.jsx';
+import 'lazysizes';
+
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+// import testImg from '../../public/assets/product_img/';
 
 const ProductCard = (props) => {
-  const { product } = props;
+  const { product, loading, setLoading, reportIn } = props;
   const dispatch = useDispatch();
 
   const productsLoading = useSelector(selectProductLoading);
@@ -18,41 +22,9 @@ const ProductCard = (props) => {
   }
 
   const imageBaseURL = product?.imageURL.split('.').at(0);
-  const [loading, setLoading] = useState(false);
-  const images = document.querySelectorAll('img');
-  let imagesLoaded = 0;
+  const lqImg = imageBaseURL + '-lq_1.wepb';
 
-  // function imageLoaded() {
-  //   setLoading(true)
-  //   imagesLoaded++;
-  //   if (imagesLoaded === images.length) {
-  //     console.log(imagesLoaded)
-  //     // All images have loaded, reveal the content
-  //     setLoading(false)
-  //   }
-  // }
-
-  // console.log(window.onloadedmetadata);
-
-  // useEffect(() => {
-  //   console.log('start');
-  //   setLoading(true);
-  //   window.onloadedmetadata = function () {
-  //     console.log('meta loaded');
-  //     setLoading(false);
-  //     console.log('finsih');
-  //   };
-  // }, []);
-
-  //  images.forEach((image) => {
-  //       image.addEventListener('load', imageLoaded);
-  //       return () => {
-  //         image.removeEventListener('load', imageLoaded)
-  //       }
-  //     });
-
-  // imageLoaded()
-  return !loading ? (
+  return !productsLoading ? (
     <div key={product.id} className='group font-raleway'>
       <div className='relative'>
         <Link
@@ -61,28 +33,58 @@ const ProductCard = (props) => {
           }}
           to={`/products/${product.id}`}
         >
-          <picture className='group relative w-full'>
-            {/* Product images are a few pixels off of given h/w below, but this is good enough for preventing layout shift */}
-            <source
-              type='image/webp'
-              srcSet={imageBaseURL + '.webp'}
-              width={1070}
-              height={1400}
-            />
-            <source
-              type='image/png'
-              srcSet={product.imageURL}
-              width={1070}
-              height={1400}
-            />
-            <img
-              src={`${product.imageURL}`}
-              alt='Picture of plant on a counter'
-              width={1070}
-              height={1400}
-              // className="group relative w-full"
-            />
-          </picture>
+          <div
+            className={` w-full h-full`}
+            style={{
+              backgroundImage: `url(${imageBaseURL}-lq_1.webp)`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <picture
+              id={product.id}
+              className='group relative w-full product-picture-wrapper'
+              onLoad={() => reportIn !== undefined && reportIn(product.id)}
+            >
+              {/* Product images are a few pixels off of given h/w below, but this is good enough for preventing layout shift */}
+
+              <source
+                type='image/webp'
+                srcSet={`${imageBaseURL}.webp`}
+                width={1070}
+                height={1400}
+                // loading='lazy'
+              />
+              <source
+                type='image/png'
+                srcSet={product.imageURL}
+                // loading='lazy'
+                width={1070}
+                height={1400}
+              />
+
+              <img
+                src={product.imageURL}
+                loading='lazy'
+                alt=''
+                className='opacity-0'
+                onLoad={(e) => e.target.classList.remove('opacity-0')}
+              />
+            </picture>
+          </div>
+          {/**
+          <LazyLoadImage
+          src={`${product.imageURL}`}
+          alt='Picture of plant on a counter'
+          placeholderSrc={lqImg}
+          effect='opacity'
+          // visibleByDefault={true}
+          // width={1070}
+          // height={1400}
+          // className="group relative w-full"
+          />
+        */}
         </Link>
         <button
           onClick={addToCart}

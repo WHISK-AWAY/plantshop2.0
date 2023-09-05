@@ -68,7 +68,7 @@ export default function App() {
 
   return (
     <React.Fragment>
-      <div className="font-outfit text-green-gray">
+      <div className='font-outfit text-green-gray'>
         <NavBar auth={auth} />
         <Cart />
         <Routes>

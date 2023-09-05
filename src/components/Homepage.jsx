@@ -34,7 +34,7 @@ export default function Homepage() {
   return (
     <>
       <div
-        className={`absolute top-0 mx-auto  h-screen w-[100vw] bg-[url('/assets/bg_img/home1.jpg')]  bg-cover text-white md:bg-[url('/assets/bg_img/homepage13.jpg')] md:bg-right md:text-green-gray portrait:bg-[url('/assets/bg_img/home1.jpg')] portrait:md:h-screen portrait:lg:h-screen`}
+        className={`absolute top-0 mx-auto  h-screen w-[100vw] bg-[url('/assets/bg_img/home1.webp')]  bg-cover text-white md:bg-[url('/assets/bg_img/homepage13.webp')] md:bg-right md:text-green-gray portrait:bg-[url('/assets/bg_img/home1.webp')] portrait:md:h-screen portrait:lg:h-screen`}
       >
         {/**homepage txt section */}
         <div className='absolute top-64 left-1/2 w-[80vw] -translate-x-1/2 flex-col gap-5 text-center md:top-40 md:bottom-auto md:min-w-[500px] 4xl:top-80  lg:top-56 lg:left-32 lg:translate-x-0  portrait:lg:text-center portrait:lg:w-[80vw] portrait:xs:top-36 portrait:md:top-56 lg:text-left'>

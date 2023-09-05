@@ -13,7 +13,7 @@ const ProductPagination = () => {
   const filteredProducts = useSelector(selectFilteredProducts);
 
   const handlePageChange = (pageInfo) => {
-    if (filteredProducts.length < 8) return;
+    if (filteredProducts.length < 12) return;
     dispatch(productPageChange(pageInfo));
   };
 
