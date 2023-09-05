@@ -41,7 +41,7 @@ const FilterSection = () => {
 
 
   return (
-    <div className='relative my-[6%] flex items-center justify-center md:my-[3%] 5xl:mt-[7%] 6xl:mt-[10%]'>
+    <div className='relative my-[6%] flex items-center justify-center md:my-[3%] 5xl:mt-[4%] 6xl:mt-[3%]'>
       <ul className='flex justify-center gap-12 font-raleway text-[4vw] md:text-[1.1vw] 3xl:text-[.9vw] 5xl:text-[.7vw] portrait:lg:text-[1.7vw] portrait:md:text-[2vw]'>
         <button onClick={() => handleFilter('')}>
           <li>ALL</li>
