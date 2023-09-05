@@ -4,11 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addOneToCart } from '../slices/users/cartSlice';
 import toast from 'react-hot-toast';
 import { selectProductLoading } from '../slices/product/productSlice';
-import Spinner from './UI/Spinner.jsx';
-import 'lazysizes';
 
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-// import testImg from '../../public/assets/product_img/';
 
 const ProductCard = (props) => {
   const { product, loading, setLoading, reportIn } = props;
@@ -24,7 +20,7 @@ const ProductCard = (props) => {
   const imageBaseURL = product?.imageURL.split('.').at(0);
   const lqImg = imageBaseURL + '-lq_1.wepb';
 
-  return !productsLoading ? (
+  return !productsLoading && (
     <div key={product.id} className='group font-raleway'>
       <div className='relative'>
         <Link
@@ -54,37 +50,23 @@ const ProductCard = (props) => {
                 srcSet={`${imageBaseURL}.webp`}
                 width={1070}
                 height={1400}
-                // loading='lazy'
               />
               <source
                 type='image/png'
                 srcSet={product.imageURL}
-                // loading='lazy'
                 width={1070}
                 height={1400}
               />
 
               <img
                 src={product.imageURL}
-                loading='lazy'
-                alt=''
+                alt='`image of the ${product}`'
                 className='opacity-0'
                 onLoad={(e) => e.target.classList.remove('opacity-0')}
               />
             </picture>
           </div>
-          {/**
-          <LazyLoadImage
-          src={`${product.imageURL}`}
-          alt='Picture of plant on a counter'
-          placeholderSrc={lqImg}
-          effect='opacity'
-          // visibleByDefault={true}
-          // width={1070}
-          // height={1400}
-          // className="group relative w-full"
-          />
-        */}
+   
         </Link>
         <button
           onClick={addToCart}
@@ -102,8 +84,7 @@ const ProductCard = (props) => {
         </p>
       </Link>
     </div>
-  ) : (
-    <Spinner />
+  
   );
 };
 

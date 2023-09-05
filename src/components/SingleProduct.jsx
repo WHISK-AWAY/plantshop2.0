@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-import PromoBanner from './UI/PromoBanner.jsx';
 import box from '../assets/box.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -14,10 +13,10 @@ import LikedProduct from './UI/LikedProduct.jsx';
 import { addOneToCart } from '../slices/users/cartSlice.js';
 import SimilarProducts from './SimilarProducts.jsx';
 import toast, { Toaster } from 'react-hot-toast';
-import ProductSkeleton from './UI/ProductSkeleton.jsx';
 import btnHover from '../style_utils.js';
 
 import Spinner from './UI/Spinner.jsx';
+import { motion } from 'framer-motion';
 
 const singleProduct = () => {
   const dispatch = useDispatch();
@@ -71,18 +70,26 @@ const singleProduct = () => {
     setLoading(true);
   }, [productId]);
 
+
   btnHover();
 
   return (
     <>
-      {/**
-      <PromoBanner />
-    */}
-      {imageBaseURL && !productLoading ? (
+      {imageBaseURL && !productLoading && (
         <>
-          {loading && <Spinner loading={loading} />}
+      <Spinner loading={loading} />
           <main className='flex justify-center font-raleway text-[#212922] md:h-[470px] 3xl:mt-[4%] 4xl:mx-auto 4xl:min-h-[690px] 4xl:w-[1700px] 6xl:w-[2200px]'>
-            <section className='mt-8 flex flex-col justify-center md:flex-row md:gap-20'>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                delay: 0.3,
+                duration: 0.5,
+                ease: [0.17, 0.67, 0.83, 0.67],
+              }}
+              className='mt-8 flex flex-col justify-center md:flex-row md:gap-20'
+            >
               {/**mobile header only */}
               <div className='mx-auto w-fit md:mx-0'>
                 <header className='flex justify-center pb-4 text-center  font-outfit text-[4.9vw] font-medium-light uppercase text-green-gray md:hidden '>
@@ -92,36 +99,36 @@ const singleProduct = () => {
                   <div className='absolute top-4 right-4 md:hidden'>
                     <LikedProduct />
                   </div>
+                  <picture
+                    onLoad={() => setLoading(false)}
+                    className='h-96 md:h-full picture-wrapper'
+                  >
+                    <source
+                      type='image/webp'
+                      srcSet={imageBaseURL + '.webp'}
+                      width={1070}
+                      height={1400}
+                    />
+                    <source
+                      type='image/png'
+                      srcSet={singleProduct?.imageURL}
+                      width={1070}
+                      height={1400}
+                    />
+                    <img
+                      className='h-96 w-80 md:h-full 4xl:w-[460px]'
+                      src={`${singleProduct.imageURL}`}
+                      alt='error showing photo'
+                      width={1070}
+                      height={1400}
+                    />
+                  </picture>
                 </div>
-                <picture
-                  onLoad={() => setLoading(false)}
-                  className='h-96 md:h-full picture-wrapper'
-                >
-                  <source
-                    type='image/webp'
-                    srcSet={imageBaseURL + '.webp'}
-                    width={1070}
-                    height={1400}
-                  />
-                  <source
-                    type='image/png'
-                    srcSet={singleProduct?.imageURL}
-                    width={1070}
-                    height={1400}
-                  />
-                  <img
-                    className='h-96 w-80 md:h-full 4xl:w-[460px]'
-                    src={`${singleProduct.imageURL}`}
-                    alt='error showing photo'
-                    width={1070}
-                    height={1400}
-                  />
-                </picture>
               </div>
               {/**desktop header */}
               <div className='mx-8 md:mx-0 md:w-1/3'>
                 <div className='mb-[5%] hidden flex-col  items-end justify-center md:flex'>
-                  <header className=' self-center pr-6 font-outfit text-[2.3vw] uppercase text-green-gray 3xl:text-[2vw] 4xl:text-[1.5vw]'>
+                  <header className=' self-center pr-6 font-outfit text-[2.3vw] lg:text-[1.7vw] uppercase text-green-gray 3xl:text-[2vw] 4xl:text-[1.5vw]'>
                     {singleProduct.name}
                   </header>
                   <LikedProduct />
@@ -159,7 +166,7 @@ const singleProduct = () => {
                       notify();
                       addToCart();
                     }}
-                    className='btn ease mx-auto block w-full transition-all duration-500 hover:scale-[1.02]  py-2 font-light font-outfit text-[3.8vw] text-white md:text-[2vw] 4xl:text-[1.5vw] 5xl:text-[1.2vw] '
+                    className='btn ease mx-auto block w-full transition-all duration-500 hover:scale-[1.02]  py-2 font-light font-outfit text-[3.8vw] text-white md:text-[2vw] lg:text-[1.7vw] 4xl:text-[1.5vw] 5xl:text-[1.2vw] '
                   >
                     <span>ADD TO CART</span>
                   </button>
@@ -175,13 +182,10 @@ const singleProduct = () => {
                   </p>
                 </div>
               </div>
-            </section>
+            </motion.div>
           </main>
-          {/* <div className="hidden md:block"> */}
           <SimilarProducts />
         </>
-      ) : (
-        <Spinner />
       )}
     </>
   );
