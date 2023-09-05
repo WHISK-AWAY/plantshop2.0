@@ -11,20 +11,18 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 // import testImg from '../../public/assets/product_img/';
 
 const ProductCard = (props) => {
-  const { product, loading, setLoading } = props;
+  const { product, loading, setLoading, reportIn } = props;
   const dispatch = useDispatch();
 
   const productsLoading = useSelector(selectProductLoading);
 
-  
   function addToCart() {
     dispatch(addOneToCart(product.id));
     toast.success('Product added to cart!');
   }
-  
+
   const imageBaseURL = product?.imageURL.split('.').at(0);
   const lqImg = imageBaseURL + '-lq_1.wepb';
-
 
   return !productsLoading ? (
     <div key={product.id} className='group font-raleway'>
@@ -35,8 +33,6 @@ const ProductCard = (props) => {
           }}
           to={`/products/${product.id}`}
         >
-
-
           <div
             className={` w-full h-full`}
             style={{
@@ -46,8 +42,10 @@ const ProductCard = (props) => {
               backgroundPosition: 'center',
             }}
           >
-            <picture id={product.id} className='group relative w-full product-picture-wrapper'
-            onLoad={() => setLoading(false)}
+            <picture
+              id={product.id}
+              className='group relative w-full product-picture-wrapper'
+              onLoad={() => reportIn !== undefined && reportIn(product.id)}
             >
               {/* Product images are a few pixels off of given h/w below, but this is good enough for preventing layout shift */}
 
@@ -66,7 +64,13 @@ const ProductCard = (props) => {
                 height={1400}
               />
 
-              <img src={product.imageURL} loading='lazy' alt='' className='opacity-0' onLoad={(e) => e.target.classList.remove('opacity-0')}/>
+              <img
+                src={product.imageURL}
+                loading='lazy'
+                alt=''
+                className='opacity-0'
+                onLoad={(e) => e.target.classList.remove('opacity-0')}
+              />
             </picture>
           </div>
           {/**
