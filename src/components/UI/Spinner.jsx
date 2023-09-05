@@ -1,9 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react';
 
-export default function Spinner({loading}) {
+import {motion} from 'framer-motion'
+
+export default function Spinner({ loading }) {
   //prevent scroll on overflow when the menu is open
 
-  // const [isSpinnerUsed, setIsSpinnerUsed] = useState(false)
   useEffect(() => {
     if (loading) {
       window.scrollTo({
@@ -12,27 +13,29 @@ export default function Spinner({loading}) {
         behavior: 'smooth',
       });
 
-      
       document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'auto'
+      document.body.style.overflow = 'auto';
     }
-    
   }, [loading]);
 
-  // useEffect(() => {
 
-  //   setTimeout((e) => {
-
-  //   }, 2000)
-  // }, [])
-
-  return (
-    !loading ? (<div className='hidden'></div>) : (<section className="h-screen w-screen bg-white/90 fixed top-0 right-0 z-[100] backdrop-blur-sm flex justify-center items-center">
-      <div className="spinner-container">
-        <div className="loading-spinner"></div>
+  return !loading ? (
+    <div className='hidden'></div>
+  ) : (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{
+        duration: 0.2,
+        ease: [0.17, 0.67, 0.83, 0.67],
+      }}
+      className='h-screen w-screen bg-white/90 fixed top-0 right-0 z-[100] backdrop-blur-sm flex justify-center items-center'
+    >
+      <div className='spinner-container'>
+        <div className='loading-spinner'></div>
       </div>
-    </section>)
-    
+    </motion.div>
   );
 }
