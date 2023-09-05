@@ -10,7 +10,7 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: Tabac Big Glam Black;
+  font-family: 'Tabac Big Glam Black';
   src: url('./fonts/Tabac Big Glam Black.otf') format('opentype');
   font-display: 'swap';
 }

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { adjustWishlist, selectWishlist } from '../slices/users/wishlistSlice';
 import { Link } from 'react-router-dom';
 
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion';
 
 const WishlistCard = ({ product }) => {
   const dispatch = useDispatch();
@@ -33,13 +33,29 @@ const WishlistCard = ({ product }) => {
         }}
         className='flex h-52 items-center justify-between gap-6 md:mx-16 portrait:xs:gap-3 portrait:xs:px-1 '
       >
-        <div className='h-36 2xl:h-40 '>
+        <picture className='h-36 2xl:h-40 aspect-[3/4]'>
+          <source
+            type='image/webp'
+            srcSet={`${product.imageURL.split('.').at(0)}.webp`}
+            width={1070}
+            height={1400}
+            // loading='lazy'
+          />
+          <source
+            type='image/png'
+            srcSet={product.imageURL}
+            // loading='lazy'
+            width={1070}
+            height={1400}
+          />
           <img
             src={`${product.imageURL}`}
             alt={`product photo of ${product.name}`}
-            className='h-36 2xl:h-40'
+            width={1070}
+            height={1400}
+            // className='h-36 2xl:h-40'
           />
-        </div>
+        </picture>
         <div className=' min-w-48 flex flex-col  gap-2 justify-center items-center'>
           <Link to={`/products/${product.id}`}>
             <h1 className='cursor-pointer text-[1.5vw] uppercase hover:underline xl:text-[1.4vw] 2xl:text-[1.2vw] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:xs:text-[3.8vw]  portrait:md:text-[2.5vw] portrait:text-center'>

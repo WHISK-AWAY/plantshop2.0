@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import {
   addOneToCart,
@@ -14,11 +14,6 @@ import { motion } from 'framer-motion';
 
 const CartCard = ({ product, item }) => {
   const dispatch = useDispatch();
-  const imageBaseURL = useRef(null);
-
-  useEffect(() => {
-    imageBaseURL.current = product.imageURL.split('.').at(0);
-  }, [product]);
 
   function decrementCart(productId) {
     dispatch(removeOneFromCart(productId));
@@ -49,13 +44,13 @@ const CartCard = ({ product, item }) => {
       <picture className='h-36 2xl:h-40 aspect-[3/4] portrait:md:h-full'>
           <source
             type='image/webp'
-            srcSet={`${imageBaseURL.current}.webp`}
+            srcSet={`${product.imageURL.split('.').at(0)}.webp`}
             width={1070}
             height={1400}
           />
           <source
             type='image/png'
-            srcSet={`${imageBaseURL.current}.png`}
+            srcSet={`${product.imageURL.split('.').at(0)}.png`}
             width={1070}
             height={1400}
           />
