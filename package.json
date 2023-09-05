@@ -31,7 +31,6 @@
     "react-router-dom": "^6.15.0",
     "sequelize": "^6.32.1",
     "stripe": "^13.4.0",
-    "swup": "^4.3.4",
     "volleyball": "^1.5.1"
   },
   "devDependencies": {
