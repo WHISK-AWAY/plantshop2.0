@@ -31,9 +31,9 @@ const WishlistCard = ({ product }) => {
           duration: 0.5,
           ease: [0.17, 0.67, 0.83, 0.67],
         }}
-        className='flex h-52 items-center justify-around gap-6 md:mx-4 portrait:xs:gap-3 portrait:xs:px-1'
+        className='flex h-52 items-center justify-between gap-6 md:mx-16 portrait:xs:gap-3 portrait:xs:px-1 '
       >
-        <div className='h-36 2xl:h-40'>
+        <div className='h-36 2xl:h-40 '>
           <img
             src={`${product.imageURL}`}
             alt={`product photo of ${product.name}`}
