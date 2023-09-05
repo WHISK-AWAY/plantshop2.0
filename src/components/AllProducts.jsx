@@ -30,15 +30,14 @@ const AllProducts = () => {
 
   return !productsLoading ? (
     <>
-      <div className='flex justify-center'>
-        <section>
-          <FilterSection />
-          <Sort />
-          <AllProductsSection />
-
-          <ProductPagination />
-        </section>
+      <div className='flex flex-col justify-center items-center'>
+      <FilterSection />
+      <Sort />
+      <AllProductsSection />
+      
+      <ProductPagination />
       </div>
+  
     </>
   ) : (
     <Spinner />
