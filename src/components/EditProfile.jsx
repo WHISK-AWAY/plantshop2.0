@@ -9,6 +9,7 @@ import {
 import { updateSingleUser, selectUsers } from '../slices/users/userSlice';
 import toast, { Toaster } from 'react-hot-toast';
 import btnHover from '../style_utils'
+import { motion } from 'framer-motion';
 
 const EditProfile = () => {
   const dispatch = useDispatch();
@@ -54,7 +55,17 @@ const EditProfile = () => {
   return (
     <div className=" bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center font-outfit md:h-[calc(100dvh_-_4rem)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)]  2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)] 6xl:h-[calc(100dvh_-_200px)] portrait:h-[calc(100dvh_-_5rem)] portrait:md:h-[calc(100dvh_-_110px)] portrait:lg:h-[calc(100dvh_-_140px)] ">
       <div className='absolute top-10 left-1/2 mx-auto w-full max-w-sm -translate-x-1/2 pt-16 2xl:top-28 5xl:top-44 5xl:max-w-xl 6xl:top-64 portrait:lg:mt-16'>
-        <div className='mt-8 flex flex-col gap-3'>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            delay: 0.1,
+            duration: 0.5,
+            ease: [0.17, 0.67, 0.83, 0.67],
+          }}
+          className='mt-8 flex flex-col gap-3'
+        >
           <h2 className='mt-3 mb-3 text-center text-3xl font-bold text-white'>
             EDIT PROFILE
           </h2>
@@ -116,9 +127,7 @@ const EditProfile = () => {
                   type='submit'
                   className='btn mx-auto mt-5 block w-full  bg-green-gray py-2 text-xl text-white hover:scale-[1.04] ease transition-all duration-700 '
                 >
-                  <span>
-                  save
-                  </span>
+                  <span>save</span>
                 </button>
               </div>
             </form>
@@ -131,7 +140,7 @@ const EditProfile = () => {
               back
             </button>
           </div>
-        </div>
+        </motion.div>
         {/* <Toaster /> */}
       </div>
     </div>

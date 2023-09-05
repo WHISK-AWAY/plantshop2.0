@@ -10,6 +10,7 @@ import {
 import { useSelector } from 'react-redux';
 
 import Spinner from './UI/Spinner.jsx';
+import {motion} from 'framer-motion'
 
 const AllProductsSection = () => {
   const filteredProducts = useSelector(selectFilteredProducts);
@@ -25,7 +26,6 @@ const AllProductsSection = () => {
   const [prevPage, setPrevPage] = useState(null);
 
 
-  const images = document.querySelectorAll('.product-picture-wrapper');
 
   const productsPerPage = shownProducts?.slice(productPage, productPage + 12);
 
@@ -33,64 +33,57 @@ const AllProductsSection = () => {
     return product.id;
   });
 
-  // let imgId = [];
 
-  // const idTracker = () =>
-  //   Array.from(images).map((img) => {
-  //     if (visibleProducts.includes(+img.id)) imgId.push(+img.id);
-  //   });
-
-  // console.log(imgId);
 
   const reportIn = (childId) => {
     setReportId((prev) => [...prev, childId]);
   };
 
 
-  // console.log('report in', reportId)
   useEffect(() => {
     if (reportId.length === visibleProducts.length) {
       setLoading(false);
-      // setReportId([])
     } 
   }, [reportId.length]);
 
   useEffect(() => {
-    // setReportId([]);
 
     if(productPage !== prevPage) {
-      // console.log('report before', reportId)
       setLoading(true);
       setPrevPage(productPage);
       setReportId([])
     }
-    // console.log('pp', productPage)
   }, [productPage])
 
-
-  // console.log('visible prods', visibleProducts)
-  // console.log('product page', productPage)
   
   useEffect(() => {
-    // console.log('report after', reportId)
-    // console.log('loading', loading)
   }, [loading])
 
   return (
     !productsLoading && (
-      <main className='mx-6 mb-4 grid max-w-7xl grid-cols-1 justify-items-center gap-x-4 gap-y-8 xs:grid-cols-2 sm:mx-12 md:grid-cols-3 md:gap-x-8 lg:grid-cols-4'>
+      <main className='mx-6 mb-4 grid max-w-7xl 2xl:max-w-[90rem] grid-cols-1 justify-items-center gap-x-4 gap-y-8 xs:grid-cols-2 sm:mx-12 md:grid-cols-3 md:gap-x-8 lg:grid-cols-4'>
       <Spinner loading={loading}/>
 
         {productsPerPage.map((product) => {
           return (
-            <div key={product.id}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                delay: 0.1,
+                duration: 0.5,
+                ease: [0.17, 0.67, 0.83, 0.67],
+              }}
+              key={product.id}
+            >
               <ProductCard
                 product={product}
                 loading={loading}
                 setLoading={setLoading}
                 reportIn={reportIn}
               />
-            </div>
+            </motion.div>
           );
         })}
       </main>

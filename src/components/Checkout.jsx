@@ -7,6 +7,8 @@ import { fetchSingleUser } from '../slices/users/userSlice';
 import { selectAuth } from '../slices/users/authSlice';
 import axios from 'axios';
 
+import btnHover from '../style_utils'
+
 const { VITE_API_URL } = import.meta.env;
 
 export default function Checkout() {
@@ -217,9 +219,12 @@ export default function Checkout() {
     }
   }, [checkoutState]);
 
+
+  btnHover()
+
   return (
     <div className="relative bg-[url('/assets/misc_bg/ship1.webp')] bg-cover bg-center bg-no-repeat font-outfit md:h-[calc(100vh_-_4rem)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)]  portrait:h-[calc(100dvh_-_5rem)] portrait:w-full portrait:md:h-[calc(100dvh_-_110px)] portrait:lg:h-[calc(100dvh_-_140px)]">
-      <h2 className='pt-5 pb-1 text-center text-[2.3vw] font-bold text-white lg:pb-5 xl:pt-9 5xl:text-[2vw] portrait:text-[5vw] portrait:pb-3 portrait:md:text-[3vw]'>
+      <h2 className='pt-5 pb-1 text-center text-[2.3vw] font-bold text-white lg:pb-5 xl:pt-9 5xl:text-[2vw] portrait:text-[5vw] portrait:pb-3 portrait:md:text-[3vw] portrait:lg:text-[4vw]'>
         SHIPPING INFORMATION
       </h2>
       <div className='flex w-full justify-center'>
@@ -399,13 +404,16 @@ export default function Checkout() {
               </div>
             </form>
 
-            <div className='lg:pt-4 portrait:pt-4 portrait:md:w-3/5 self-center'>
+            <div className='lg:pt-4 portrait:pt-4  self-center w-full'>
               <button
-                className='5xl:text-[.9vw] text-[1.2vw]  mx-auto block  w-full bg-green-gray portrait:md:text-[2.9vw] py-1 text-white duration-500 ease-out hover:bg-primary-button-hover hover:transition-all portrait:text-[4.3vw] '
+                className='btn 5xl:text-[.9vw] text-[1.2vw]  mx-auto block  w-full  portrait:md:text-[2.9vw] py-1 text-white ease-out  transition-all duration-700 portrait:text-[4.3vw] '
                 type='submit'
                 onClick={handleSubmit}
               >
+                <span>
                 proceed to payment
+                
+                </span>
               </button>
             </div>
           </section>

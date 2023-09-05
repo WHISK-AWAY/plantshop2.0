@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { adjustWishlist, selectWishlist } from '../slices/users/wishlistSlice';
 import { Link } from 'react-router-dom';
 
+import { motion } from 'framer-motion';
+
 const WishlistCard = ({ product }) => {
   const dispatch = useDispatch();
 
@@ -20,7 +22,17 @@ const WishlistCard = ({ product }) => {
 
   return (
     <>
-      <div className='flex h-52 items-center justify-between gap-6 md:mx-4 portrait:xs:gap-3 portrait:xs:px-1'>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          delay: 0.1,
+          duration: 0.5,
+          ease: [0.17, 0.67, 0.83, 0.67],
+        }}
+        className='flex h-52 items-center justify-between gap-6 md:mx-16 portrait:xs:gap-3 portrait:xs:px-1 '
+      >
         <picture className='h-36 2xl:h-40 aspect-[3/4]'>
           <source
             type='image/webp'
@@ -65,7 +77,7 @@ const WishlistCard = ({ product }) => {
             remove
           </button>
         </div>
-      </div>
+      </motion.div>
       <div className='mx-auto w-5/6 border-b-2 border-gray-300'></div>
     </>
   );

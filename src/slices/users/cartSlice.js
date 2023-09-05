@@ -316,6 +316,7 @@ const cartSlice = createSlice({
 });
 
 export const selectCart = (state) => state.cart;
+export const selectCartLoading = (state) => state.cart.loading;
 export const selectCartSubtotal = (state) =>
   state.cart.expandedCart.reduce(
     (acc, cv) => (acc += +cv.product.price * cv.qty),

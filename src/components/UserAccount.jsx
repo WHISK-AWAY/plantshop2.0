@@ -9,6 +9,7 @@ import {
 } from '../slices/users/authSlice';
 
 import Spinner from './UI/Spinner';
+import { motion } from 'framer-motion';
 
 const UserAccount = () => {
   const dispatch = useDispatch();
@@ -31,28 +32,37 @@ const UserAccount = () => {
     };
   }, []);
 
-
+  const img = new Image();
   useEffect(() => {
-    const img = new Image();
-    img.src = '/assets/misc_bg/acc5.webp'
+    img.src = '/assets/misc_bg/acc5.webp';
 
     img.onload = () => {
-      setLoading(false)
-    }
-
+      setLoading(false);
+    };
   }, []);
 
-
-  if (!auth) return <Spinner loading={loading}/>;
+  // if (!auth) return <Spinner loading={loading} />;
 
   return (
     <>
-    {loading && <Spinner loading={loading} />}
+    {/**
+    <Spinner loading={loading} />
+  */}
+
       <div
         className=" h-[calc(100dvh_-_5rem)] w-screen bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center font-outfit text-green-gray  md:h-[calc(100dvh_-_4rem)] portrait:md:h-[calc(100dvh_-_110px)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)] 6xl:h-[calc(100dvh_-_200px)] portrait:lg:h-[calc(100dvh_-_140px)] "
-        // onLoad={() => console.log('loaded')}
       >
-        <div className=' absolute top-16 left-1/2 mx-auto w-full max-w-sm -translate-x-1/2 pt-16 2xl:top-28 5xl:top-44 5xl:max-w-xl 6xl:top-64 portrait:lg:mt-16 '>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            delay: 0.1,
+            duration: 0.5,
+            ease: [0.17, 0.67, 0.83, 0.67],
+          }}
+          className=' absolute top-16 left-1/2 mx-auto w-full max-w-sm -translate-x-1/2 pt-16 2xl:top-28 5xl:top-44 5xl:max-w-xl 6xl:top-64 portrait:lg:mt-16 '
+        >
           <p className='font-extrabold pb-2 text-center text-4xl font-bold text-white '>
             WELCOME BACK,
           </p>
@@ -94,7 +104,7 @@ const UserAccount = () => {
               log out
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

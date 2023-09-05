@@ -7,11 +7,12 @@ import {
 } from '../slices/users/authSlice';
 import toast, { Toaster } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
-import PromoBanner from './UI/PromoBanner.jsx';
 import btnHover from '../style_utils'
 
-// import mobileBg from '../assets/bg_img/home1.jpg';
-// import desktopBg from '../assets/bg_img/homepage13.jpg';
+
+import {motion} from 'framer-motion'
+
+
 
 export default function Homepage() {
   const dispatch = useDispatch();
@@ -33,7 +34,15 @@ export default function Homepage() {
   btnHover()
   return (
     <>
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          delay: 0.1,
+          duration: 0.5,
+          ease: [0.17, 0.67, 0.83, 0.67],
+        }}
         className={`absolute top-0 mx-auto  h-screen w-[100vw] bg-[url('/assets/bg_img/home1.webp')]  bg-cover text-white md:bg-[url('/assets/bg_img/homepage13.webp')] md:bg-right md:text-green-gray portrait:bg-[url('/assets/bg_img/home1.webp')] portrait:md:h-screen portrait:lg:h-screen`}
       >
         {/**homepage txt section */}
@@ -53,13 +62,11 @@ export default function Homepage() {
 
           <Link to='/products'>
             <button className='btn w-full md:w-3/12 max-w-xs 5xl:max-w-lg bg-green-gray py-2 font-outfit text-[1vw] tracking-widest text-white shadow-xl portrait:bg-[#6f9283] portrait:lg:py-5 portrait:md:text-[2.4vw] 5xl:text-[1.1vw] 5xl:py-5 6xl:py-6 portrait:xs:w-3/4 font-semibold 2xl:text-[1vw] 6xl:text-[1vw] portrait:text-[3.2vw] hover:scale-[1.04] ease transition-all duration-700 '>
-              <span>
-              SHOP NOW
-              </span>
+              <span>SHOP NOW</span>
             </button>
           </Link>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

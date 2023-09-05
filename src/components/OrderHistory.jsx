@@ -8,6 +8,8 @@ import {
 } from '../slices/users/orderSlice';
 import { selectAuth } from '../slices/users/authSlice';
 
+import { motion } from 'framer-motion';
+
 const OrderHistory = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -35,21 +37,20 @@ const OrderHistory = () => {
     navigate(`/account/orderhistory/${orderId}`);
   };
 
-  // <div className="absolute top-0 right-0 bg-[url('/assets/bg_img/cart.webp')] bg-cover bg-center pt-36">
-  //   <div className="top-30 absolute left-10 flex w-full max-w-xl flex-col gap-10 pt-16">
-  //     <p className="font-extrabold text-center text-4xl text-primary-deep-green">
-  //       No orders found...
-  //     </p>
-  //     <button className="font-bold inline-block py-1 align-baseline text-sm hover:text-primary-promo-banner">
-  //       <Link to="/account">Back</Link>
-  //     </button>
-  //   </div>
-  //   <div className="pt-50 m-auto"></div>
-  // </div>
 
   return (
-    <div className="portrait:h-[calc(100dvh_-_5rem)] portrait:lg:h-[calc(100dvh_-_140px)] h-[calc(100vh_-_5rem)] w-screen  bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center pt-36 font-outfit md:h-[calc(100dvh_-_4rem)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)] 6xl:h-[calc(100dvh_-_200px)]">
-      <div className='min-w-xxs portrait:lg:mt-16 w-sm 5xl:min-w-xl  absolute  top-16 mx-auto  w-full pt-16 2xl:top-28 5xl:top-44 6xl:top-64  '>
+    <div className=" portrait:h-[calc(100dvh_-_5rem)] portrait:lg:h-[calc(100dvh_-_140px)] h-[calc(100vh_-_5rem)] w-screen  bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center pt-36 font-outfit md:h-[calc(100dvh_-_4rem)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)] 6xl:h-[calc(100dvh_-_200px)]">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          delay: 0.1,
+          duration: 0.5,
+          ease: [0.17, 0.67, 0.83, 0.67],
+        }}
+        className='min-w-xxs portrait:lg:mt-16 w-sm 5xl:min-w-xl  absolute  top-16 mx-auto  w-full pt-16 2xl:top-28 5xl:top-44 6xl:top-64  '
+      >
         <p className='font-extrabold pb-3 text-center text-xl font-bold text-white md:text-4xl'>
           PREVIOUS ORDERS
         </p>
@@ -113,7 +114,7 @@ const OrderHistory = () => {
             back
           </Link>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

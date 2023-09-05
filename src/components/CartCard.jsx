@@ -10,6 +10,8 @@ import plus from '../assets/plus.svg';
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
+import { motion } from 'framer-motion';
+
 const CartCard = ({ product, item }) => {
   const dispatch = useDispatch();
 
@@ -28,9 +30,18 @@ const CartCard = ({ product, item }) => {
 
   return (
     <>
-      <div className='flex h-52 items-center justify-between gap-6 md:mx-4 portrait:xs:gap-3 portrait:xs:px-1'>
-        {/* <div className='h-36 2xl:h-40'> */}
-        <picture className='h-36 2xl:h-40 aspect-[3/4]'>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          delay: 0.1,
+          duration: 0.5,
+          ease: [0.17, 0.67, 0.83, 0.67],
+        }}
+        className='flex h-52 items-center justify-between gap-6 md:mx-16 portrait:xs:gap-3 portrait:xs:mx-1 portrait:md:mx-10 portrait:md:my-8'
+      >
+      <picture className='h-36 2xl:h-40 aspect-[3/4] portrait:md:h-full'>
           <source
             type='image/webp'
             srcSet={`${product.imageURL.split('.').at(0)}.webp`}
@@ -51,10 +62,9 @@ const CartCard = ({ product, item }) => {
             // className='h-36 2xl:h-40'
           />
         </picture>
-        {/* </div> */}
         <div className='min-w-48 flex flex-col gap-2  justify-center items-center'>
           <Link to={`/products/${product.id}`}>
-            <h1 className='cursor-pointer text-[1.5vw] uppercase hover:underline xl:text-[1.4vw] 2xl:text-[1.2vw] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:text-center  portrait:xs:text-[3.8vw] portrait:md:text-[2.5vw]'>
+            <h1 className='cursor-pointer text-[1.5vw] uppercase hover:underline xl:text-[1.4vw] 2xl:text-[1.2vw] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:text-center  portrait:xs:text-[3.5vw] portrait:md:text-[2.5vw]'>
               {product.name}
             </h1>
           </Link>
@@ -94,9 +104,8 @@ const CartCard = ({ product, item }) => {
             remove
           </button>
         </div>
-      </div>
+      </motion.div>
       <div className='mx-auto w-5/6 border-b-2 border-gray-300'></div>
-      {/* <Toaster /> */}
     </>
   );
 };
