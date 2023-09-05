@@ -5,6 +5,7 @@ const { VITE_API_URL } = import.meta.env;
 
 const initialState = {
   wishlist: [],
+  loading: false,
 };
 
 export const fetchWishlist = createAsyncThunk(
@@ -77,9 +78,14 @@ const wishlistSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchWishlist.fulfilled, (state, { payload }) => {
       state.wishlist = payload;
+      state.loading = false;
     });
     builder.addCase(fetchWishlist.rejected, (state, action) => {
       console.log(action.error);
+      state.loading = false;
+    });
+    builder.addCase(fetchWishlist.pending, (state, { payload }) => {
+      state.loading = true;
     });
     builder.addCase(adjustWishlist.fulfilled, (state, { payload }) => {
       state.wishlist = [payload];
@@ -88,6 +94,7 @@ const wishlistSlice = createSlice({
 });
 
 export const selectWishlist = (state) => state.wishlist.wishlist;
+export const selectWishlistLoading = (state) => state.wishlist.loading
 
 export const {} = wishlistSlice.actions;
 
