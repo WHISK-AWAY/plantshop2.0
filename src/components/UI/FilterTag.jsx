@@ -6,7 +6,6 @@ const FilterTag = (props) => {
   const dispatch = useDispatch();
 
   const handleFilterClick = (e) => {
-    // console.log(e.target.innerHTML === 'Medium');
     dispatch(adjustFilter(e.target.innerHTML));
   };
 
