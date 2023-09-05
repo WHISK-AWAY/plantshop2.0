@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import {
   addOneToCart,
@@ -8,14 +8,17 @@ import {
 import minus from '../assets/minus.svg';
 import plus from '../assets/plus.svg';
 import { Link } from 'react-router-dom';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 import { motion } from 'framer-motion';
 
-const CartCard = (props) => {
+const CartCard = ({ product, item }) => {
   const dispatch = useDispatch();
+  const imageBaseURL = useRef(null);
 
-  const { product, item } = props;
+  useEffect(() => {
+    imageBaseURL.current = product.imageURL.split('.').at(0);
+  }, [product]);
 
   function decrementCart(productId) {
     dispatch(removeOneFromCart(productId));
@@ -24,6 +27,7 @@ const CartCard = (props) => {
   function incrementCart(productId) {
     dispatch(addOneToCart(productId));
   }
+
   function removeFromCart(productId) {
     toast.error('Product removed from cart!');
     dispatch(removeCartRow(productId));
@@ -42,13 +46,27 @@ const CartCard = (props) => {
         }}
         className='flex h-52 items-center justify-around gap-6 md:mx-4 portrait:xs:gap-3 portrait:xs:px-1'
       >
-        <div className='h-36 2xl:h-40'>
+      <picture className='h-36 2xl:h-40 aspect-[3/4]'>
+          <source
+            type='image/webp'
+            srcSet={`${imageBaseURL.current}.webp`}
+            width={1070}
+            height={1400}
+          />
+          <source
+            type='image/png'
+            srcSet={`${imageBaseURL.current}.png`}
+            width={1070}
+            height={1400}
+          />
           <img
             src={`${product.imageURL}`}
             alt={`product photo of ${product.name}`}
-            className='h-36 2xl:h-40'
+            width={1070}
+            height={1400}
+            // className='h-36 2xl:h-40'
           />
-        </div>
+        </picture>
         <div className='min-w-48 flex flex-col gap-2  justify-center items-center'>
           <Link to={`/products/${product.id}`}>
             <h1 className='cursor-pointer text-[1.5vw] uppercase hover:underline xl:text-[1.4vw] 2xl:text-[1.2vw] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:text-center  portrait:xs:text-[3.8vw] portrait:md:text-[2.5vw]'>
