@@ -36,14 +36,17 @@ router.post('/', async (req, res, next) => {
     const newUser = await User.create({
       firstName,
       lastName,
-      email,
+      email: email.trim().toLowerCase(),
       imageURL: imageURL || 'Default-Avatar.svg',
-      password,
+      password: password.trim(),
     });
     if (newUser.id) {
-      res
-        .status(201)
-        .send({ token: await User.authenticate({ email, password }) });
+      res.status(201).send({
+        token: await User.authenticate({
+          email: email.trim().toLowerCase(),
+          password: password.trim(),
+        }),
+      });
     }
   } catch (err) {
     if (err.name === 'SequelizeUniqueConstraintError') {
@@ -161,7 +164,7 @@ router.put('/:userId', requireToken, async (req, res, next) => {
     await user.update({
       firstName,
       lastName,
-      email,
+      email: email.trim().toLowerCase(),
       imageURL,
       password,
       role,
