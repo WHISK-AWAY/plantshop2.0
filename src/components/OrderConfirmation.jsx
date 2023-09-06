@@ -33,21 +33,21 @@ export default function OrderConfirmation() {
           {status && status === 'complete' ? (
             <>
               <div className=''>
-                <h1 className='pb-4 text-center text-[2.3vw] font-bold tracking-wide text-primary-bright-white  3xl:text-[2.1vw] 4xl:text-[1.9vw] portrait:xs:text-[6vw] portrait:md:text-[3vw]'>
+                <h1 className='pb-4 text-center text-[2.3vw] font-bold tracking-wide text-primary-bright-white  3xl:text-[2.1vw] 4xl:text-[1.9vw] portrait:xs:text-[6vw] portrait:md:text-[3vw] portrait:xxs:text-[5vw]'>
                   THANK YOU FOR YOUR PURCHASE!
                 </h1>
                 <div>
-                  <p className='text-center text-[1.5vw] tracking-wide text-primary-bright-white 3xl:text-[1.3vw] 4xl:text-[1.1vw] 5xl:text-[.8vw] portrait:xs:text-[3.8vw] portrait:md:text-[2vw]'>
+                  <p className='text-center text-[1.5vw] tracking-wide text-primary-bright-white 3xl:text-[1.3vw] 4xl:text-[1.1vw] 5xl:text-[.8vw] portrait:xs:text-[3.8vw] portrait:md:text-[2vw] portrait:xxs:text-[4.3vw]'>
                     Your order confirmation is #{orderId}
                   </p>
                 </div>
-                <p className='text-center text-[1.3vw] text-primary-bright-white 3xl:text-[1vw] 4xl:text-[.9vw] 5xl:text-[.7vw] portrait:xs:text-[3.8vw] portrait:md:text-[1.8vw]'>
+                <p className='text-center text-[1.3vw] text-primary-bright-white 3xl:text-[1vw] 4xl:text-[.9vw] 5xl:text-[.7vw] portrait:xs:text-[3.8vw] portrait:md:text-[1.8vw] portrait:xxs:text-[3.5vw] portrait:xxs:pt-3'>
                   We are starting on your order right away, and you should
                   receive your order confirmation email shortly!
                 </p>
               </div>
 
-              <div className='mt-2 portrait:xs:mt-4 text-center text-[1.3vw] tracking-wide text-primary-bright-white 3xl:text-[1vw]  4xl:text-[.9vw] 5xl:text-[.7vw] portrait:md:text-[1.8vw] portrait:xs:text-[3.5vw]'>
+              <div className='mt-2 portrait:xs:mt-4 text-center text-[1.3vw] tracking-wide text-primary-bright-white 3xl:text-[1vw]  4xl:text-[.9vw] 5xl:text-[.7vw] portrait:md:text-[1.8vw] portrait:xs:text-[3.5vw] portrait:xxs:text-[3.5vw]'>
                 <p className='font-light'>
                   While you are waiting on your order, take a look at our new{' '}
                   <Link to={'/products'} className='font-semibold underline'>

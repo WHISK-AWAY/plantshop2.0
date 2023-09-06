@@ -59,10 +59,10 @@ export default function CartView() {
 
         <div className='relative xl:pt-28 5xl:pt-44 6xl:pt-56'>
           <main className="cart-page-wrapper font-green-gray absolute top-0 left-0 h-screen w-screen overflow-hidden bg-opacity-90 bg-[url('/assets/bg_img/cart.webp')] bg-cover bg-fixed bg-bottom bg-no-repeat font-outfit  md:h-[calc(100vh_-_4rem)] md:pt-3 lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)]  portrait:h-[calc(100dvh_-_5rem)] portrait:w-full portrait:md:h-[calc(100dvh_-_110px)] portrait:lg:h-[calc(100dvh_-_140px)]">
-            <h1 className='mb-4 text-center text-[2.7vw] font-bold text-green-gray mix-blend-multiply lg:text-[2.6vw] xl:text-[2.3vw] 3xl:text-[2.3vw] 4xl:text-[2.1vw] 5xl:text-[1.8vw] 6xl:text-[1.5vw] portrait:text-center portrait:xs:text-[5vw] portrait:md:text-[4vw] portrait:xs:pt-3'>
+            <h1 className='mb-4 text-center text-[2.7vw] font-bold text-green-gray mix-blend-multiply lg:text-[2.6vw] xl:text-[2.3vw] 3xl:text-[2.3vw] 4xl:text-[2.1vw] 5xl:text-[1.8vw] 6xl:text-[1.5vw] portrait:text-center portrait:xs:text-[5vw] portrait:md:text-[4vw] portrait:xs:pt-3 portrait:xxs:text-[5.8vw]'>
               CART
             </h1>
-            <div className='mx-auto max-h-[70vh] w-fit max-w-[1200px] overflow-y-auto border border-green-gray bg-white/80 p-4 md:min-w-[700px] 4xl:min-w-[1000px] 5xl:max-h-[65vh] 5xl:min-w-[900px] portrait:w-[90vw] portrait:border-green-gray portrait:xs:min-h-[80vh] portrait:xs:w-[94vw] portrait:xs:p-2 portrait:md:min-h-[80vh] portrait:lg:max-h-[70vh]'>
+            <div className='mx-auto max-h-[70vh] w-fit max-w-[1200px] overflow-y-auto border border-green-gray bg-white/80 p-4 md:min-w-[700px] 4xl:min-w-[1000px] 5xl:max-h-[65vh] 5xl:min-w-[900px] portrait:w-[90vw] portrait:border-green-gray portrait:xs:min-h-[80vh] portrait:xxs:w-[96vw] portrait:xs:w-[94vw] portrait:xs:p-2 portrait:md:min-h-[80vh] portrait:lg:max-h-[70vh]'>
               {cart?.expandedCart && cart?.expandedCart.length > 0 ? (
                 <>
                   <div className='h-full overflow-y-auto'>
@@ -77,14 +77,14 @@ export default function CartView() {
                   <CartSubtotal />
                   <div className='mx-auto my-3 mb-6 flex w-full  flex-col items-center md:w-2/5 lg:w-3/5 2xl:w-full portrait:md:w-4/5 portrait:lg:w-3/4'>
                     <Link
-                      className='btn mx-auto block w-full py-2 text-center text-[1.4vw] text-white duration-700 ease hover:scale-[1.04] transition-all md:w-3/4 2xl:w-2/4 5xl:w-2/4 5xl:text-[.8vw] 6xl:text-[.7vw] portrait:xs:text-[4vw] portrait:md:text-[2.4vw]'
+                      className='btn mx-auto block w-full py-2 text-center text-[1.4vw] text-white duration-700 ease hover:scale-[1.04] transition-all md:w-3/4 2xl:w-2/4 5xl:w-2/4 5xl:text-[.8vw] 6xl:text-[.7vw] portrait:xs:text-[4vw] portrait:md:text-[2.4vw] portrait:xxs:text-[4vw]'
                       to='/shipping'
                     >
                       <span>PROCEED TO PAYMENT</span>
                     </Link>
                     <button
                       onClick={emptyCart}
-                      className='text-[1.3vw] 5xl:text-[.8vw] 6xl:text-[.7vw] portrait:xs:text-[4vw] portrait:md:text-[2.5vw]'
+                      className='text-[1.3vw] 5xl:text-[.8vw] 6xl:text-[.7vw] portrait:xs:text-[4vw] portrait:md:text-[2.5vw] portrait:xxs:text-[4vw] portrait:xxs:pt-3'
                     >
                       empty cart
                     </button>

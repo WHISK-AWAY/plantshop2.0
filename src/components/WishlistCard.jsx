@@ -31,7 +31,7 @@ const WishlistCard = ({ product }) => {
           duration: 0.5,
           ease: [0.17, 0.67, 0.83, 0.67],
         }}
-        className='flex h-52 items-center justify-between gap-6 md:mx-16 portrait:xs:gap-3 portrait:xs:px-1 '
+        className='flex h-52 items-center justify-between gap-6 md:mx-16 portrait:xs:gap-3 portrait:xs:px-1 portrait:xxs:gap-1'
       >
         <picture className='h-36 2xl:h-40 aspect-[3/4]'>
           <source
@@ -39,12 +39,10 @@ const WishlistCard = ({ product }) => {
             srcSet={`${product.imageURL.split('.').at(0)}.webp`}
             width={1070}
             height={1400}
-            // loading='lazy'
           />
           <source
             type='image/png'
             srcSet={product.imageURL}
-            // loading='lazy'
             width={1070}
             height={1400}
           />
@@ -53,26 +51,25 @@ const WishlistCard = ({ product }) => {
             alt={`product photo of ${product.name}`}
             width={1070}
             height={1400}
-            // className='h-36 2xl:h-40'
           />
         </picture>
         <div className=' min-w-48 flex flex-col  gap-2 justify-center items-center'>
           <Link to={`/products/${product.id}`}>
-            <h1 className='cursor-pointer text-[1.5vw] uppercase hover:underline xl:text-[1.4vw] 2xl:text-[1.2vw] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:xs:text-[3.8vw]  portrait:md:text-[2.5vw] portrait:text-center'>
+            <h1 className='cursor-pointer text-[1.5vw] uppercase hover:underline xl:text-[1.4vw] 2xl:text-[1.2vw] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:xs:text-[3.8vw]  portrait:md:text-[2.5vw] portrait:text-center portrait:xxs:text-[4vw] portrait:xxs:w-full'>
               {product.name}
             </h1>
           </Link>
-          <p className='portrait:text-center text-[1.2vw] italic text-gray-600 xl:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.6vw] 6xl:text-[.5vw] portrait:text-[1.8vw] portrait:xs:text-[2.7vw] portrait:md:text-[2vw]'>
+          <p className='portrait:text-center text-[1.2vw] italic text-gray-600 xl:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.6vw] 6xl:text-[.5vw] portrait:text-[1.8vw] portrait:xs:text-[2.7vw] portrait:md:text-[2vw] portrait:xxs:text-[2.7vw]'>
             {product?.tags?.map(({ tagName }) => tagName).join(', ')}
           </p>
-          <p className='text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.1vw] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:text-[2.3vw] portrait:xs:text-[3.2vw] portrait:md:text-[2.5vw] portrait:text-center'>
+          <p className='text-[1.5vw] xl:text-[1.3vw] 2xl:text-[1.1vw] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:text-[2.3vw] portrait:xs:text-[3.2vw] portrait:md:text-[2.5vw] portrait:text-center portrait:xxs:text-[3.6vw]'>
             ${product.price}
           </p>
         </div>
-        <div className='ml-8'>
+        <div className='ml-8 portrait:xxs:ml-1'>
           <button
             onClick={() => handleRemove(product.id)}
-            className='block   border border-green-gray/50 py-1 px-2 text-[1.2vw] transition-all duration-500 hover:bg-gray-200 3xl:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.6vw] 6xl:text-[.5vw] portrait:text-[2vw] portrait:xs:text-[3.1vw] portrait:md:text-[2.2vw]'
+            className='block   border border-green-gray/50 py-1 px-2 text-[1.2vw] transition-all duration-500 hover:bg-gray-200 3xl:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.6vw] 6xl:text-[.5vw] portrait:text-[2vw] portrait:xs:text-[3.1vw] portrait:md:text-[2.2vw] portrait:xxs:text-[3vw]'
           >
             remove
           </button>

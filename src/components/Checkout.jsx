@@ -223,12 +223,12 @@ export default function Checkout() {
   btnHover()
 
   return (
-    <div className="relative bg-[url('/assets/misc_bg/ship1.webp')] bg-cover bg-center bg-no-repeat font-outfit md:h-[calc(100vh_-_4rem)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)]  portrait:h-[calc(100dvh_-_5rem)] portrait:w-full portrait:md:h-[calc(100dvh_-_110px)] portrait:lg:h-[calc(100dvh_-_140px)]">
-      <h2 className='pt-5 pb-1 text-center text-[2.3vw] 2xl:text-[2vw] 2xl:py-4 font-bold text-white lg:pb-5 xl:pt-9 5xl:text-[2vw] portrait:text-[5vw] portrait:pb-3 portrait:md:text-[3vw] portrait:lg:text-[4vw]'>
+    <div className="relative bg-[url('/assets/misc_bg/ship1.webp')] bg-cover bg-center bg-no-repeat font-outfit md:h-[calc(100vh_-_4rem)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)]  portrait:h-[calc(100dvh_-_5rem)] portrait:w-full portrait:md:h-[calc(100dvh_-_110px)] portrait:lg:h-[calc(100dvh_-_140px)] portrait:xxs:overflow-y-auto ">
+      <h2 className='pt-5 pb-1 text-center text-[2.3vw] 2xl:text-[2vw] 2xl:py-4 font-bold text-white lg:pb-5 xl:pt-9 5xl:text-[2vw] portrait:text-[5vw] portrait:pb-3 portrait:md:text-[3vw] portrait:lg:text-[4vw] '>
         SHIPPING INFORMATION
       </h2>
       <div className='flex w-full justify-center'>
-        <div className='max-h-[72vh] border border-white/80 bg-white bg-opacity-50  md:py-3 lg:py-5  px-10 6xl:py-8 5xl:py-5 md:w-2/5 3xl:w-3/12 5xl:w-5/6 5xl:max-w-2xl portrait:w-[90vw] portrait:h-[90vh] portrait:min-h-[80vh] portrait:py-7 '>
+        <div className='max-h-[72vh] border border-white/80 bg-white bg-opacity-50  md:py-3 lg:py-5  px-10 6xl:py-8 5xl:py-5 md:w-2/5 3xl:w-3/12 5xl:w-5/6 5xl:max-w-2xl portrait:w-[90vw] portrait:h-[90vh] portrait:min-h-[80vh] portrait:py-7 portrait:xxs:min-h-[101vh]'>
           <section className=' flex flex-col'>
             <form onSubmit={handleSubmit}>
               <div className='mb-2 text-[1vw] 5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw] '>
