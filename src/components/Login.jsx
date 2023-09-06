@@ -8,6 +8,11 @@ import {
   selectAuthLoading,
 } from '../slices/users/authSlice';
 
+
+import btnHover from '../style_utils'
+
+
+
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -70,6 +75,10 @@ const Login = () => {
   }, [auth]);
 
 
+
+  btnHover();
+
+
   return (
     <div className="right-0 h-[calc(100dvh_-_5rem)] bg-[url('/assets/bg_img/home2.jpg')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] md:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)]  5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)]   portrait:xs:h-[calc(100dvh_-_5rem)] portrait:md:h-[calc(100dvh-_-110px)] portrait:lg:h-[calc(100dvh_-_140px)] portrait:w-full ">
       <div className='m-auto w-full max-w-sm  pt-14 '>
@@ -102,6 +111,7 @@ const Login = () => {
                   setEmail(evt.target.value);
                 }}
                 name='email'
+                autoComplete='email'
               />
               <p
                 className={
@@ -130,6 +140,7 @@ const Login = () => {
                   setPassword(evt.target.value);
                 }}
                 name='password'
+                autoComplete='password'
               />
               <p
                 className={
@@ -144,9 +155,12 @@ const Login = () => {
             <div className='flex items-center justify-between'>
               <button
                 type='submit'
-                className='mx-auto block w-full bg-green-gray py-2 text-[4vw] text-white hover:bg-primary-button-hover hover:transition-all md:text-[2.6vw] lg:py-1 lg:text-[2.1vw]  3xl:py-1 3xl:text-[2.2vw] 4xl:text-[1.6vw] 5xl:text-[1.2vw] 6xl:text-[1vw]'
+                className='btn mx-auto block w-full bg-green-gray py-2 text-[4vw] text-white hover:transition-all duration-700 md:text-[2.6vw] lg:py-1 lg:text-[2.1vw]  3xl:py-1 3xl:text-[2.2vw] 4xl:text-[1.6vw] 5xl:text-[1.2vw] 6xl:text-[1vw]'
               >
+                <span>
+                
                 {authLoading ? 'loading..' : 'login'}
+                </span>
               </button>
             </div>
           </form>
