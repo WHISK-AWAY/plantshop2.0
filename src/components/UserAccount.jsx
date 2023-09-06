@@ -45,13 +45,11 @@ const UserAccount = () => {
 
   return (
     <>
-    {/**
+      {/**
     <Spinner loading={loading} />
   */}
 
-      <div
-        className=" h-[calc(100dvh_-_5rem)] w-screen bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center font-outfit text-green-gray  md:h-[calc(100dvh_-_4rem)] portrait:md:h-[calc(100dvh_-_110px)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)] 6xl:h-[calc(100dvh_-_200px)] portrait:lg:h-[calc(100dvh_-_140px)] "
-      >
+      <div className=" h-[calc(100dvh_-_5rem)] w-screen bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center font-outfit text-green-gray  md:h-[calc(100dvh_-_4rem)] portrait:md:h-[calc(100dvh_-_110px)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)] 6xl:h-[calc(100dvh_-_200px)] portrait:lg:h-[calc(100dvh_-_140px)] ">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -91,9 +89,9 @@ const UserAccount = () => {
             {auth.isAdmin && (
               <Link
                 to={'/account/admin'}
-                className='  ease mb-2 rounded-lg border bg-white py-3 px-5 text-center transition-all duration-500 hover:bg-stone-200'
+                className='  ease mb-2 border bg-white py-3 px-5 text-center transition-all duration-500 hover:bg-stone-200'
               >
-                Admin Settings
+                ADMIN SETTINGS
               </Link>
             )}
 

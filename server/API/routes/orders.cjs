@@ -133,7 +133,7 @@ router.post('/checkout', async (req, res, next) => {
     cancel_url: `http://localhost:5173/confirmation?status=failed&orderid=${order.id}`,
   });
 
-  console.log('sessionURL', session.url);
+  // console.log('sessionURL', session.url);
   res.send(session.url);
 });
 
