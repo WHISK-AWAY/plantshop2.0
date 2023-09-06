@@ -180,10 +180,14 @@ const productSlice = createSlice({
 
       switch (sortKey) {
         case 'name-asc':
-          state.products.sort((a, b) => (a.name >= b.name ? 1 : -1));
+          state.products.sort((a, b) =>
+            a.name.toLowerCase() >= b.name.toLowerCase() ? 1 : -1
+          );
           break;
         case 'name-desc':
-          state.products.sort((a, b) => (a.name < b.name ? 1 : -1));
+          state.products.sort((a, b) =>
+            a.name.toLowerCase() < b.name.toLowerCase() ? 1 : -1
+          );
           break;
         case 'price-asc':
           state.products.sort((a, b) => a.price - b.price);
