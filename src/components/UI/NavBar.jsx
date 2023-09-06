@@ -115,7 +115,13 @@ const NavBar = (props) => {
             setExpand((prev) => !prev);
           }}
         >
-          <img src={menu} alt='dropdown menu icon' className=' w-12' />
+          <img
+            src={menu}
+            alt='dropdown menu icon'
+            className=' w-12'
+            height={24}
+            width={24}
+          />
         </button>
 
         {expand && <MobileNav expand={expand} setExpand={setExpand} />}
