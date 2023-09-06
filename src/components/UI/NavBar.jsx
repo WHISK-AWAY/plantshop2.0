@@ -84,24 +84,22 @@ const NavBar = (props) => {
       </div>
     */}
 
-          <ul className='flex gap-16 font-outfit md:text-[.7rem]  lg:text-[1.2vw] xl:gap-20 2xl:gap-28 4xl:text-[1.3rem] 5xl:text-[1.6rem] 6xl:gap-40 portrait:md:text-[2.6vw]'>
-            <Link to={`/products`}>
-              <li onClick={() => dispatch(adjustFilter(''))}>SHOP</li>
+          <div className='flex gap-16 font-outfit md:text-[.7rem]  lg:text-[1.2vw] xl:gap-20 2xl:gap-28 4xl:text-[1.3rem] 5xl:text-[1.6rem] 6xl:gap-40 portrait:md:text-[2.6vw]'>
+            <Link to={`/products`} onClick={() => dispatch(adjustFilter(''))}>
+              SHOP
             </Link>
             {auth.firstName ? (
               <Link to={'/account'} className='uppercase'>
-                <li>Hi, {auth.firstName} </li>
+                Hi, {auth.firstName}
               </Link>
             ) : (
-              <Link to={'/login'}>
-                <li>LOGIN</li>
-              </Link>
+              <Link to={'/login'}>LOGIN</Link>
             )}
             <Link to='/cart'>
               <CartLink cartQty={cart?.expandedCart?.length} />
               {/* <li>CART</li> */}
             </Link>
-          </ul>
+          </div>
         </div>
 
         {/**decorated navbar border */}
@@ -112,7 +110,7 @@ const NavBar = (props) => {
         {/**hamburger menu */}
 
         <button
-          className='z-30  md:hidden'
+          className='z-30 md:hidden'
           onClick={() => {
             setExpand((prev) => !prev);
           }}
