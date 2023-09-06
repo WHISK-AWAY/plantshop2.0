@@ -28,7 +28,7 @@ router.get('/:id', async (req, res, next) => {
 
 router.get('/byName/:promoName', async (req, res, next) => {
   try {
-    console.log('checking promo code name');
+    // console.log('checking promo code name');
     const singlePromo = await Promo_Code.findOne({
       where: { name: req.params.promoName },
       include: Order,
