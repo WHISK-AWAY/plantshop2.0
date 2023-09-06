@@ -26,22 +26,20 @@ const AllProducts = () => {
     };
   }, [dispatch]);
 
-
-
   return !productsLoading ? (
     <>
-      <div className='flex flex-col justify-center items-center'>
-      <FilterSection />
-      <Sort />
-      <AllProductsSection />
-      
-      <ProductPagination />
+      <div className='flex flex-col justify-between items-center md:min-h-[calc(100vh_-_4rem)]  lg:min-h-[calc(100dvh_-_82px)] xl:min-h-[calc(100dvh_-_100px)] 2xl:min-h-[calc(100dvh_-_105px)]  5xl:min-h-[calc(100dvh_-_159px)]  6xl:min-h-[calc(100dvh_-_200px)]   portrait:xs:min-h-[calc(100dvh_-_5rem)] portrait:md:min-h-[calc(100dvh_-_110px)] portrait:lg:min-h-[calc(100dvh_-_140px)] portrait:xxs:h-[calc(100dvh_-_5rem)]'>
+        <FilterSection />
+        <Sort />
+        <AllProductsSection />
+       
+        <ProductPagination />
+        
       </div>
-  
     </>
   ) : (
     <Spinner />
   );
-}
+};
 
 export default AllProducts;
