@@ -69,9 +69,8 @@ const Login = () => {
     }
   }, [auth]);
 
-
   return (
-    <div className="right-0 h-[calc(100dvh_-_5rem)] bg-[url('/assets/bg_img/home2.jpg')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] md:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)]  5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)]   portrait:xs:h-[calc(100dvh_-_5rem)] portrait:md:h-[calc(100dvh-_-110px)] portrait:lg:h-[calc(100dvh_-_140px)] portrait:w-full ">
+    <div className="right-0 h-[calc(100dvh_-_5rem)] bg-[url('/assets/bg_img/home2.webp')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] md:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)]  5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)]   portrait:xs:h-[calc(100dvh_-_5rem)] portrait:md:h-[calc(100dvh-_-110px)] portrait:lg:h-[calc(100dvh_-_140px)] portrait:w-full ">
       <div className='m-auto w-full max-w-sm  pt-14 '>
         <h2 className='text-center font-outfit text-[7vw] font-semibold tracking-wide md:text-[4vw] 3xl:text-[3vw] 5xl:text-[2vw]'>
           LOGIN
