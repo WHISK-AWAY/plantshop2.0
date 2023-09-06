@@ -134,20 +134,20 @@ const singleProduct = () => {
                   <LikedProduct />
                 </div>
 
-                <div className='mb-0 flex justify-between p-2 text-[2.5vw] md:mb-4 md:border-b-4 md:p-0 md:text-[1vw] 3xl:text-[.7vw] portrait:md:text-[1.5vw]'>
+                <div className='mb-0 flex justify-between p-2 text-[2.5vw] md:mb-4 md:border-b-4 md:p-0 md:text-[1vw] 3xl:text-[.7vw] portrait:md:text-[1.5vw] portrait:xxs:text-[3.3vw]'>
                   <p>
                     {singleProduct?.tags
                       ?.map(({ tagName }) => tagName)
                       .join(', ')}
                   </p>
                 </div>
-                <p className='mb-2 text-[3.7vw] font-bold text-[#212922] md:mb-4 md:text-[2vw] xl:text-[1.6vw] 4xl:text-[1.3vw] portrait:md:text-[2.7vw] portrait:xs:text-[4.9vw]'>
+                <p className='mb-2 text-[3.7vw] font-bold text-[#212922] md:mb-4 md:text-[2vw] portrait:xxs:text-[6vw] xl:text-[1.6vw] 4xl:text-[1.3vw] portrait:md:text-[2.7vw] portrait:xs:text-[4.9vw]'>
                   ${singleProduct.price}
                 </p>
 
                 {fullDescription && (
                   <p
-                    className='mb-8 min-w-full portrait:md:text-[1.8vw] cursor-pointer text-justify text-[2.8vw] leading-tight md:text-[1vw] 4xl:text-[.7vw] portrait:xs:text-[3.5vw]'
+                    className='mb-8 min-w-full portrait:md:text-[1.8vw] cursor-pointer text-justify text-[2.8vw] leading-tight md:text-[1vw] 4xl:text-[.7vw] portrait:xs:text-[3.5vw] portrait:xxs:text-[4vw]'
                     onClick={handleFullDescription}
                   >
                     {fullDescription}
@@ -166,7 +166,7 @@ const singleProduct = () => {
                       notify();
                       addToCart();
                     }}
-                    className='btn ease mx-auto block w-full transition-all duration-500 hover:scale-[1.02]  py-2 font-light font-outfit text-[3.8vw] text-white md:text-[2vw] lg:text-[1.7vw] 4xl:text-[1.5vw] 5xl:text-[1.2vw] portrait:md:text-[2.8vw]'
+                    className='btn ease mx-auto block w-full transition-all duration-500 hover:scale-[1.02]  py-2 font-light font-outfit text-[3.8vw] text-white md:text-[2vw] lg:text-[1.7vw] 4xl:text-[1.5vw] 5xl:text-[1.2vw] portrait:md:text-[2.8vw] portrait:xxs:text-[5vw]'
                   >
                     <span>ADD TO CART</span>
                   </button>
@@ -177,7 +177,7 @@ const singleProduct = () => {
                     alt='shipping box icon'
                     className='w-4 4xl:w-[6] portrait:md:w-6'
                   />
-                  <p className='text-[2.5vw] md:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.7vw] portrait:md:text-[1.6vw] portrait:lg:tex-[1.9vw]'>
+                  <p className='text-[2.5vw] md:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.7vw] portrait:md:text-[1.6vw] portrait:lg:tex-[1.9vw] portrait:xxs:text-[3.7vw]'>
                     Free shipping in the USA
                   </p>
                 </div>
