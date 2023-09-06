@@ -169,9 +169,12 @@ const OrderHistoryDetails = () => {
                 </div>
               </div>
               <div className=' m-auto flex items-center justify-center pb-5 '>
-                <button className='align-text-left transition-all border border-green-gray bg-white/80 px-10  align-baseline portrait:md:text-[3.7vw] text-[5.4vw] md:text-[1vw] duration-500 5xl:text-[.8vw] '>
-                  <Link to='/account/orderhistory'>back</Link>
-                </button>
+                <Link
+                  to='/account/orderhistory'
+                  className='align-text-left transition-all border border-green-gray bg-white/80 px-10  align-baseline portrait:md:text-[3.7vw] text-[5.4vw] md:text-[1vw] duration-500 5xl:text-[.8vw]'
+                >
+                  back
+                </Link>
               </div>
             </>
           ) : (
