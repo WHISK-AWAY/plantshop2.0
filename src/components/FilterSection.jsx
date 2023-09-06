@@ -24,9 +24,7 @@ const FilterSection = () => {
   };
 
   const handleHide = () => {
-    // timeout.current = setTimeout(() =>
     setDisplay('hidden');
-    // , 500);
   };
 
   const handleFilter = (filter) => {
@@ -35,24 +33,32 @@ const FilterSection = () => {
 
   return (
     <div className='relative my-[6%] flex items-center justify-center md:my-[3%] 5xl:mt-[4%] 6xl:mt-[3%]'>
-      <ul className='flex justify-center gap-12 font-raleway text-[4vw] md:text-[1.1vw] 3xl:text-[.9vw] 5xl:text-[.7vw] portrait:lg:text-[1.7vw] portrait:md:text-[2vw]'>
+      <section className='flex justify-center gap-12 font-raleway text-[4vw] md:text-[1.1vw] 3xl:text-[.9vw] 5xl:text-[.7vw] portrait:lg:text-[1.7vw] portrait:md:text-[2vw]'>
         <button onClick={() => handleFilter('')}>
-          <li>ALL</li>
+          <h2>ALL</h2>
         </button>
         <div
           onMouseEnter={handleHover}
           onMouseLeave={handleHide}
           className='group relative'
         >
-          <button>
-            <li className={`group relative uppercase`}>
+          <button
+            onClick={() => {
+              if (display === 'hidden') {
+                handleHover();
+              } else {
+                handleHide();
+              }
+            }}
+          >
+            <h2 className={`group relative uppercase`}>
               {useSearch
                 ? 'Filter By: Search Term'
                 : `Filter By: ${filters.length ? filters.join(', ') : 'All'}`}
-            </li>
+            </h2>
           </button>
         </div>
-      </ul>
+      </section>
 
       <FilterDropdownMenu
         handleHover={handleHover}
