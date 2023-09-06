@@ -60,7 +60,7 @@ const AllProductsSection = () => {
   }, [loading])
 
 
-  if(!searchedItems.length) return <p className='h-[50dvh] text-[2vw] font-outfit uppercase 5xl:h-[40dvh] portrait:md:h-screen'>no products match your search</p>
+  if(!searchedItems.length) return <p className='h-[50dvh] md:text-[2vw] font-outfit uppercase 5xl:h-[40dvh] portrait:md:h-[30dvh] '>no products match your search</p>
   return (
     !productsLoading && (
       <main className='mx-6 mb-4 grid max-w-7xl 2xl:max-w-[90rem] grid-cols-1 justify-items-center gap-x-4 gap-y-8 xs:grid-cols-2 sm:mx-12 md:grid-cols-3 md:gap-x-8 lg:grid-cols-4'>
