@@ -42,7 +42,6 @@ const NavBar = (props) => {
   };
 
 
-  console.log(searchedItems)
   return (
     <header>
       <nav className='relative z-50 flex h-20 w-screen items-center justify-between px-5 tracking-tighter text-green-gray  md:h-16 md:flex-col md:justify-around lg:h-[82px] xl:h-[100px] 2xl:h-[105px] 5xl:h-[159px]  6xl:h-[200px] portrait:md:h-[110px] portrait:lg:h-[140px]'>
