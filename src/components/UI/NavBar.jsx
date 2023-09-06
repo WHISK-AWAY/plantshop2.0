@@ -13,6 +13,8 @@ import {
 import menu from '../../assets/menu.svg';
 import MobileNav from './MobileNav.jsx';
 import CartLink from './CartLink.jsx';
+import searchIcon from '../../../public/assets/search-icon.svg';
+import searchIconReveal from '../../../public/assets/search-icon.svg';
 
 import { fetchCart, selectCart } from '../../slices/users/cartSlice';
 
@@ -25,6 +27,7 @@ const NavBar = (props) => {
   const searchedItems = useSelector(selectSearchedItems);
   const searchTerm = useSelector(selectSearchBy);
   const cart = useSelector(selectCart);
+  const [isSearchHidden, setIsSearchHidden] = useState(true);
 
   // useEffect(() => {
   //   dispatch(fetchCart());
@@ -67,22 +70,34 @@ const NavBar = (props) => {
         </Link>
 
         <div className='hidden gap-10 md:flex'>
-          {/**
-      <div className="flex gap-1 stroke-green-900">
-      <button onClick={handleSearch}>
-      <img src={searchIcon} alt="magnifying glass" className="w-6" />
-      </button>
-      <form onSubmit={handleSearch}>
-      <input
-      type="text"
-      placeholder="succulent..."
-      className="rounded-full border-2 border-green-700 pl-3"
-      value={searchTerm}
-      onChange={(e) => dispatch(adjustSearchBy(e.target.value))}
-      />
-      </form>
-      </div>
-    */}
+          {/**search section */}
+          <img
+            src={searchIconReveal}
+            alt='magnifying glass'
+            className='absolute bottom-2 left-10 flex  gap-1 stroke-green-900 self-start w-6 md:w-4'
+            onClick={() => setIsSearchHidden(false)}
+          />
+          {!isSearchHidden && (
+            <div className=' absolute bottom-2 left-10 flex  gap-1 stroke-green-900 self-start'>
+              <button onClick={handleSearch}>
+                <img
+                  src={searchIcon}
+                  alt='magnifying glass'
+                  className='w-6 md:w-4'
+                />
+              </button>
+              <form onSubmit={handleSearch} className='flex '>
+                <input
+                  type='text'
+                  placeholder='succulent...'
+                  className=' border border-green-gray pl-3 text-sm md:text-[1vw] h-4 appearance-none focus:outline-none bg-transparent'
+                  value={searchTerm}
+                  onChange={(e) => dispatch(adjustSearchBy(e.target.value))}
+                 
+                />
+              </form>
+            </div>
+          )}
 
           <div className='flex gap-16 font-outfit md:text-[.7rem]  lg:text-[1.2vw] xl:gap-20 2xl:gap-28 4xl:text-[1.3rem] 5xl:text-[1.6rem] 6xl:gap-40 portrait:md:text-[2.6vw]'>
             <Link to={`/products`} onClick={() => dispatch(adjustFilter(''))}>
