@@ -12,7 +12,7 @@ import {
 import LikedProduct from './UI/LikedProduct.jsx';
 import { addOneToCart } from '../slices/users/cartSlice.js';
 import SimilarProducts from './SimilarProducts.jsx';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import btnHover from '../style_utils.js';
 
 import Spinner from './UI/Spinner.jsx';
@@ -69,7 +69,6 @@ const singleProduct = () => {
   useEffect(() => {
     setLoading(true);
   }, [productId]);
-
 
   btnHover();
 

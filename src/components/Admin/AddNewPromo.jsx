@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {
   selectPromos,
   resetStatus as resetPromoStatus,
   addPromo,
 } from '../../slices/product/promoSlice';
-import {
-  selectAuth,
-  resetStatus as resetAuthStatus,
-} from '../../slices/users/authSlice';
+import { selectAuth } from '../../slices/users/authSlice';
 
 const AddNewPromo = () => {
   const dispatch = useDispatch();
@@ -50,11 +47,11 @@ const AddNewPromo = () => {
   }, [promo]);
 
   return (
-    <div className="flex flex-row">
-      <div className="h-[calc(100vh_-_5rem)] w-3/4 overflow-auto p-4">
-        <section className="flex w-full flex-col">
-          <form className="pl-10 pr-10" onSubmit={submitPromo}>
-            <div className="-mx-3 mb-6 flex flex-wrap">
+    <div className='flex flex-row'>
+      <div className='h-[calc(100vh_-_5rem)] w-3/4 overflow-auto p-4'>
+        <section className='flex w-full flex-col'>
+          <form className='pl-10 pr-10' onSubmit={submitPromo}>
+            <div className='-mx-3 mb-6 flex flex-wrap'>
               <div
                 className={
                   invalidName || invalidRate || invalidStatus
@@ -65,10 +62,10 @@ const AddNewPromo = () => {
                 <p>Submission Failed!</p>
                 <p> Please complete all required fields</p>
               </div>
-              <div className="w-full px-3">
+              <div className='w-full px-3'>
                 <label
-                  className="font-bold mb-2 block text-xs uppercase tracking-wide text-primary-deep-green"
-                  htmlFor="grid-name"
+                  className='font-bold mb-2 block text-xs uppercase tracking-wide text-primary-deep-green'
+                  htmlFor='grid-name'
                 >
                   Name
                 </label>
@@ -78,8 +75,8 @@ const AddNewPromo = () => {
                       ? invalidClass
                       : 'bg-white-200 block w-full appearance-none rounded border border-gray-200 py-3 px-4 leading-tight  text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none'
                   }
-                  id="grid-name"
-                  type="text"
+                  id='grid-name'
+                  type='text'
                   value={name}
                   onChange={(evt) => {
                     setInvalidName(false);
@@ -88,11 +85,11 @@ const AddNewPromo = () => {
                 />
               </div>
             </div>
-            <div className="-mx-3 mb-6 flex flex-wrap">
-              <div className="mb-6 w-full px-3 md:mb-0 md:w-1/2">
+            <div className='-mx-3 mb-6 flex flex-wrap'>
+              <div className='mb-6 w-full px-3 md:mb-0 md:w-1/2'>
                 <label
-                  className="font-bold mb-2 block text-xs uppercase tracking-wide text-primary-deep-green"
-                  htmlFor="grid-first-qty"
+                  className='font-bold mb-2 block text-xs uppercase tracking-wide text-primary-deep-green'
+                  htmlFor='grid-first-qty'
                 >
                   PROMO RATE
                 </label>
@@ -102,8 +99,8 @@ const AddNewPromo = () => {
                       ? invalidClass
                       : 'bg-white-200 block w-full appearance-none rounded border border-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none'
                   }
-                  id="grid-qty"
-                  type="number"
+                  id='grid-qty'
+                  type='number'
                   min={0}
                   max={1}
                   step={0.01}
@@ -114,10 +111,10 @@ const AddNewPromo = () => {
                   }}
                 />
               </div>
-              <div className="w-full px-3 md:w-1/2">
+              <div className='w-full px-3 md:w-1/2'>
                 <label
-                  className="font-bold mb-2 block text-xs uppercase tracking-wide text-primary-deep-green"
-                  htmlFor="grid-price"
+                  className='font-bold mb-2 block text-xs uppercase tracking-wide text-primary-deep-green'
+                  htmlFor='grid-price'
                 >
                   STATUS
                 </label>
@@ -127,15 +124,15 @@ const AddNewPromo = () => {
                       ? invalidClass
                       : 'bg-white-200 block w-full appearance-none rounded border border-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none'
                   }
-                  id="grid-price"
-                  type="text"
+                  id='grid-price'
+                  type='text'
                   value={status}
                   onChange={(evt) => {
                     setInvalidStatus(false);
                     setStatus(evt.target.value);
                   }}
                 >
-                  <option value="" disabled>
+                  <option value='' disabled>
                     select status
                   </option>
                   <option value={true}>true</option>
@@ -143,15 +140,15 @@ const AddNewPromo = () => {
                 </select>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-between">
+            <div className='flex flex-col items-center justify-between'>
               <button
-                type="submit"
-                className="mx-auto mt-5 block w-full rounded-lg bg-primary-deep-green py-2 text-xl text-white hover:bg-primary-button-hover hover:transition-all"
+                type='submit'
+                className='mx-auto mt-5 block w-full rounded-lg bg-primary-deep-green py-2 text-xl text-white hover:bg-primary-button-hover hover:transition-all'
               >
                 Add
               </button>
             </div>
-            <div className="flex justify-center"></div>
+            <div className='flex justify-center'></div>
           </form>
         </section>
       </div>

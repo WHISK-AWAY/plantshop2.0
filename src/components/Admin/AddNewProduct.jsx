@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {
   addProduct,
   resetStatusError as resetProductStatus,
@@ -53,11 +53,11 @@ const AddNewProduct = () => {
   }, [singleProduct]);
 
   return (
-    <div className="flex flex-row">
-      <div className="h-[calc(100vh_-_5rem)] w-3/4 overflow-auto p-4">
-        <section className="flex w-full flex-col">
-          <form className="w-full pl-10 pr-10" onSubmit={submitProduct}>
-            <div className="-mx-3 mb-6 flex flex-wrap">
+    <div className='flex flex-row'>
+      <div className='h-[calc(100vh_-_5rem)] w-3/4 overflow-auto p-4'>
+        <section className='flex w-full flex-col'>
+          <form className='w-full pl-10 pr-10' onSubmit={submitProduct}>
+            <div className='-mx-3 mb-6 flex flex-wrap'>
               <div
                 className={
                   invalidName ||
@@ -71,10 +71,10 @@ const AddNewProduct = () => {
                 <p>Submission Failed!</p>
                 <p> Please complete all required fields</p>
               </div>
-              <div className="w-full px-3">
+              <div className='w-full px-3'>
                 <label
-                  className="font-bold mb-2 block text-xs uppercase tracking-wide text-primary-deep-green"
-                  htmlFor="grid-name"
+                  className='font-bold mb-2 block text-xs uppercase tracking-wide text-primary-deep-green'
+                  htmlFor='grid-name'
                 >
                   Name
                 </label>
@@ -84,8 +84,8 @@ const AddNewProduct = () => {
                       ? invalidClass
                       : 'bg-white-200 block w-full appearance-none rounded border border-gray-200 py-3 px-4 leading-tight  text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none'
                   }
-                  id="grid-name"
-                  type="text"
+                  id='grid-name'
+                  type='text'
                   value={name}
                   onChange={(evt) => {
                     setInvalidName(false);
@@ -94,11 +94,11 @@ const AddNewProduct = () => {
                 />
               </div>
             </div>
-            <div className="-mx-3 mb-6 flex flex-wrap">
-              <div className="mb-6 w-full px-3 md:mb-0 md:w-1/2">
+            <div className='-mx-3 mb-6 flex flex-wrap'>
+              <div className='mb-6 w-full px-3 md:mb-0 md:w-1/2'>
                 <label
-                  className="font-bold mb-2 block text-xs uppercase tracking-wide text-primary-deep-green"
-                  htmlFor="grid-first-qty"
+                  className='font-bold mb-2 block text-xs uppercase tracking-wide text-primary-deep-green'
+                  htmlFor='grid-first-qty'
                 >
                   Quantity In Stock
                 </label>
@@ -108,10 +108,10 @@ const AddNewProduct = () => {
                       ? invalidClass
                       : 'bg-white-200 block w-full appearance-none rounded border border-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none'
                   }
-                  id="grid-qty"
-                  type="number"
+                  id='grid-qty'
+                  type='number'
                   min={1}
-                  placeholder="0"
+                  placeholder='0'
                   value={qty}
                   onChange={(evt) => {
                     setInvalidQty(false);
@@ -119,10 +119,10 @@ const AddNewProduct = () => {
                   }}
                 />
               </div>
-              <div className="w-full px-3 md:w-1/2">
+              <div className='w-full px-3 md:w-1/2'>
                 <label
-                  className="font-bold mb-2 block text-xs uppercase tracking-wide text-primary-deep-green"
-                  htmlFor="grid-price"
+                  className='font-bold mb-2 block text-xs uppercase tracking-wide text-primary-deep-green'
+                  htmlFor='grid-price'
                 >
                   Price
                 </label>
@@ -132,12 +132,12 @@ const AddNewProduct = () => {
                       ? invalidClass
                       : 'bg-white-200 block w-full appearance-none rounded border border-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none'
                   }
-                  id="grid-price"
-                  type="number"
+                  id='grid-price'
+                  type='number'
                   placeholder={0.0}
-                  min="0.00"
-                  max="10000.00"
-                  step="0.01"
+                  min='0.00'
+                  max='10000.00'
+                  step='0.01'
                   value={price}
                   onChange={(evt) => {
                     setInvalidPrice(false);
@@ -146,11 +146,11 @@ const AddNewProduct = () => {
                 />
               </div>
             </div>
-            <div className="-mx-3 mb-6 flex flex-wrap">
-              <div className="w-full px-3">
+            <div className='-mx-3 mb-6 flex flex-wrap'>
+              <div className='w-full px-3'>
                 <label
-                  className="font-bold mb-2 block text-xs uppercase tracking-wide text-primary-deep-green"
-                  htmlFor="grid-description"
+                  className='font-bold mb-2 block text-xs uppercase tracking-wide text-primary-deep-green'
+                  htmlFor='grid-description'
                 >
                   Description
                 </label>
@@ -160,9 +160,9 @@ const AddNewProduct = () => {
                       ? invalidClass
                       : 'bg-white-200 block w-full appearance-none rounded border border-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none'
                   }
-                  id="grid-description"
-                  type="text"
-                  rows="7"
+                  id='grid-description'
+                  type='text'
+                  rows='7'
                   value={description}
                   onChange={(evt) => {
                     setInvalidDescription(false);
@@ -171,31 +171,31 @@ const AddNewProduct = () => {
                 />
               </div>
             </div>
-            <div className="-mx-3 mb-6 flex flex-wrap">
-              <div className="w-full px-3">
+            <div className='-mx-3 mb-6 flex flex-wrap'>
+              <div className='w-full px-3'>
                 <label
-                  className="font-bold mb-2 block text-xs uppercase tracking-wide text-primary-deep-green"
-                  htmlFor="imageURL"
+                  className='font-bold mb-2 block text-xs uppercase tracking-wide text-primary-deep-green'
+                  htmlFor='imageURL'
                 >
                   Upload image
                 </label>
                 <input
-                  className="text-md block w-full cursor-pointer appearance-none rounded border border-gray-200 bg-primary-bright-white text-gray-700"
-                  id="imageURL"
-                  type="file"
+                  className='text-md block w-full cursor-pointer appearance-none rounded border border-gray-200 bg-primary-bright-white text-gray-700'
+                  id='imageURL'
+                  type='file'
                   onChange={(evt) => setImageURL(evt.target.value)}
                 />
               </div>
             </div>
-            <div className="flex flex-col items-center justify-between">
+            <div className='flex flex-col items-center justify-between'>
               <button
-                type="submit"
-                className="mx-auto mt-5 block w-full rounded-lg bg-primary-deep-green py-2 text-xl text-white hover:bg-primary-button-hover hover:transition-all"
+                type='submit'
+                className='mx-auto mt-5 block w-full rounded-lg bg-primary-deep-green py-2 text-xl text-white hover:bg-primary-button-hover hover:transition-all'
               >
                 Add
               </button>
             </div>
-            <div className="flex justify-center"></div>
+            <div className='flex justify-center'></div>
           </form>
         </section>
       </div>

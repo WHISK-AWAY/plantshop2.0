@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import {
   selectPromos,
   fetchSinglePromo,
   resetStatus as resetPromoStatus,
   editPromo,
-  deletePromo,
 } from '../../slices/product/promoSlice';
 import {
   selectAuth,
@@ -20,7 +19,7 @@ const EditProduct = () => {
   const { promoId } = useParams();
   const id = promoId;
   const { promo } = useSelector(selectPromos);
-  const { auth, token } = useSelector(selectAuth);
+  const { token } = useSelector(selectAuth);
 
   const [name, setName] = useState('');
   const [discountRate, setDiscountRate] = useState('');

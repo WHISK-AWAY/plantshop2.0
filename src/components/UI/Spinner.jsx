@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion';
 
 export default function Spinner({ loading }) {
   //prevent scroll on overflow when the menu is open
@@ -18,7 +18,6 @@ export default function Spinner({ loading }) {
       document.body.style.overflow = 'auto';
     }
   }, [loading]);
-
 
   return !loading ? (
     <div className='hidden'></div>

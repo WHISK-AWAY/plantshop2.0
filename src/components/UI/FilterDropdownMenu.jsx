@@ -33,9 +33,9 @@ const FilterDropdownMenu = (props) => {
         <div className=''>
           <FilterHeader>Type</FilterHeader>
           <FilterCategories>
-            <FilterTag>Small</FilterTag>
-            <FilterTag>Medium</FilterTag>
-            <FilterTag>Large</FilterTag>
+            <FilterTag>Pet safe</FilterTag>
+            <FilterTag>Air-purifying</FilterTag>
+            <FilterTag>Easy-care</FilterTag>
           </FilterCategories>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import decoratedLine from '../../assets/line.svg';
@@ -15,7 +15,7 @@ import CartLink from './CartLink.jsx';
 import searchIcon from '../../../src/assets/search-icon.svg';
 import searchIconReveal from '../../../src/assets/search-icon.svg';
 
-import { fetchCart, selectCart } from '../../slices/users/cartSlice';
+import { selectCart } from '../../slices/users/cartSlice';
 
 const NavBar = (props) => {
   const dispatch = useDispatch();
