@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 // import searchIcon from '../../assets/search-icon.svg';
 import { useDispatch, useSelector } from 'react-redux';
@@ -16,7 +16,7 @@ import CartLink from './CartLink.jsx';
 import searchIcon from '../../../public/assets/search-icon.svg';
 import searchIconReveal from '../../../public/assets/search-icon.svg';
 
-import { fetchCart, selectCart } from '../../slices/users/cartSlice';
+import { selectCart } from '../../slices/users/cartSlice';
 
 const NavBar = (props) => {
   const dispatch = useDispatch();
@@ -93,7 +93,6 @@ const NavBar = (props) => {
                   className=' border border-green-gray pl-3 text-sm md:text-[1vw] h-4 appearance-none focus:outline-none bg-transparent'
                   value={searchTerm}
                   onChange={(e) => dispatch(adjustSearchBy(e.target.value))}
-                 
                 />
               </form>
             </div>

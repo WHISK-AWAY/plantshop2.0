@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { signUp } from '../slices/users/authSlice';
 import { attemptTokenLogin } from '../slices/users/authSlice';
-import { selectAuth } from '../slices/users/authSlice';
 
-import btnHover from '../style_utils'
+import btnHover from '../style_utils';
 
 export default function Signup() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const auth = useSelector(selectAuth);
 
   const [isInvalid, setIsInvalid] = useState(false);
   const [isInvalidFirstName, setIsInvalidFirstName] = useState(false);
@@ -77,10 +75,7 @@ export default function Signup() {
     if (!isInvalid) dispatch(signUp(formData));
   };
 
-
-  btnHover()
-
-
+  btnHover();
 
   return (
     <div className="right-0 bg-[url('/assets/bg_img/home2.webp')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] md:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)]  portrait:xs:h-[calc(100dvh_-_5rem)] portrait:w-full portrait:md:h-[calc(100dvh_-_110px)] portrait:lg:h-[calc(100dvh_-_140px)] portrait:xxs:h-[calc(100dvh_-_5rem)]">
@@ -202,10 +197,7 @@ export default function Signup() {
                 className='btn block w-full  py-2 text-[4vw] text-white duration-700 hover:transition-all md:text-[2.6vw] lg:py-1 lg:text-[2.1vw]  3xl:py-1 3xl:text-[2.2vw] 4xl:text-[1.6vw] 5xl:text-[1.2vw] 6xl:text-[1vw] portrait:max-w-xs'
                 type='submit'
               >
-                
-              <span>
-              sign up
-              </span>
+                <span>sign up</span>
               </button>
             </div>
           </form>

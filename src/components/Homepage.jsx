@@ -5,14 +5,11 @@ import {
   resetStatus,
   selectLogoutMessage,
 } from '../slices/users/authSlice';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
-import btnHover from '../style_utils'
+import btnHover from '../style_utils';
 
-
-import {motion} from 'framer-motion'
-
-
+import { motion } from 'framer-motion';
 
 export default function Homepage() {
   const dispatch = useDispatch();
@@ -31,7 +28,7 @@ export default function Homepage() {
     return () => dispatch(resetStatus());
   }, []);
 
-  btnHover()
+  btnHover();
   return (
     <>
       <motion.div

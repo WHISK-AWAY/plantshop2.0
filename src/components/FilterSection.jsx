@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   adjustFilter,
@@ -6,8 +6,6 @@ import {
   selectUseSearch,
 } from '../slices/product/productSlice';
 import FilterDropdownMenu from './UI/FilterDropdownMenu.jsx';
-
-
 
 const FilterSection = () => {
   const dispatch = useDispatch();
@@ -17,7 +15,6 @@ const FilterSection = () => {
   const filters = useSelector(selectFilterBy);
   const useSearch = useSelector(selectUseSearch);
 
-
   const handleHover = () => {
     setDisplay('absolute');
     if (timeout.current) {
@@ -25,7 +22,6 @@ const FilterSection = () => {
       timeout.current = null;
     }
   };
-
 
   const handleHide = () => {
     // timeout.current = setTimeout(() =>
@@ -36,9 +32,6 @@ const FilterSection = () => {
   const handleFilter = (filter) => {
     dispatch(adjustFilter(filter));
   };
-
-
-
 
   return (
     <div className='relative my-[6%] flex items-center justify-center md:my-[3%] 5xl:mt-[4%] 6xl:mt-[3%]'>
@@ -60,13 +53,12 @@ const FilterSection = () => {
           </button>
         </div>
       </ul>
- 
-        <FilterDropdownMenu
-          handleHover={handleHover}
-          handleHide={handleHide}
-          display={display}
-        />
-    
+
+      <FilterDropdownMenu
+        handleHover={handleHover}
+        handleHide={handleHide}
+        display={display}
+      />
     </div>
   );
 };

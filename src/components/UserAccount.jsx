@@ -8,7 +8,6 @@ import {
   resetStatus,
 } from '../slices/users/authSlice';
 
-import Spinner from './UI/Spinner';
 import { motion } from 'framer-motion';
 
 const UserAccount = () => {
@@ -40,8 +39,6 @@ const UserAccount = () => {
       setLoading(false);
     };
   }, []);
-
-  // if (!auth) return <Spinner loading={loading} />;
 
   return (
     <>

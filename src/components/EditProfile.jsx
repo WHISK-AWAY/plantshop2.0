@@ -7,8 +7,8 @@ import {
   resetStatus,
 } from '../slices/users/authSlice';
 import { updateSingleUser, selectUsers } from '../slices/users/userSlice';
-import toast, { Toaster } from 'react-hot-toast';
-import btnHover from '../style_utils'
+import toast from 'react-hot-toast';
+import btnHover from '../style_utils';
 import { motion } from 'framer-motion';
 
 const EditProfile = () => {
@@ -50,7 +50,7 @@ const EditProfile = () => {
     navigate('/account');
   };
 
-  btnHover()
+  btnHover();
 
   return (
     <div className=" bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center font-outfit md:h-[calc(100dvh_-_4rem)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)]  2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)] 6xl:h-[calc(100dvh_-_200px)] portrait:h-[calc(100dvh_-_5rem)] portrait:md:h-[calc(100dvh_-_110px)] portrait:lg:h-[calc(100dvh_-_140px)] ">

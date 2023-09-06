@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import {
   selectWishlist,
   fetchWishlist,
@@ -8,11 +8,10 @@ import {
 } from '../../slices/users/wishlistSlice';
 import heartOutline from '../../assets/heart-outline.svg';
 import heartFilled from '../../assets/heart-filled.svg';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const LikedProduct = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const { productId } = useParams();
 
   const wishlist = useSelector(selectWishlist);
@@ -50,14 +49,14 @@ const LikedProduct = () => {
   return (
     <>
       <button
-        className="w-6 3xl:w-[8] 5xl:w-[11] 6xl:w-[20]"
+        className='w-6 3xl:w-[8] 5xl:w-[11] 6xl:w-[20]'
         onClick={() => {
           handleHeartClick();
         }}
       >
         <img
           src={productIsLiked ? heartFilled : heartOutline}
-          alt="heart outline icon"
+          alt='heart outline icon'
         />
       </button>
     </>

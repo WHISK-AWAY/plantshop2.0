@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 import {
   resetStatus as resetAuthStatus,
   selectAuth,
@@ -32,23 +31,23 @@ const AdminUserMgmt = () => {
   if (!users?.length) return <h2>Loading...</h2>;
 
   return (
-    <div className="overflow-auto">
-      <table id="productTable" className="w-full overflow-x-auto">
-        <thead className="sticky top-0 rounded-xl bg-green-900 text-sm uppercase text-primary-bright-white">
+    <div className='overflow-auto'>
+      <table id='productTable' className='w-full overflow-x-auto'>
+        <thead className='sticky top-0 rounded-xl bg-green-900 text-sm uppercase text-primary-bright-white'>
           <tr>
-            <th scope="col" className="sticky top-0 px-6 py-3">
+            <th scope='col' className='sticky top-0 px-6 py-3'>
               {'USER ID'}
             </th>
-            <th scope="col" className="sticky top-0 px-6 py-3 text-left">
+            <th scope='col' className='sticky top-0 px-6 py-3 text-left'>
               {'NAME'}
             </th>
-            <th scope="col" className="sticky top-0 px-6 py-3 text-left">
+            <th scope='col' className='sticky top-0 px-6 py-3 text-left'>
               {'EMAIL'}
             </th>
-            <th scope="col" className="sticky top-0 px-6 py-3 text-left">
+            <th scope='col' className='sticky top-0 px-6 py-3 text-left'>
               {'ROLE'}
             </th>
-            <th scope="col" className="sticky top-0 px-6 py-3">
+            <th scope='col' className='sticky top-0 px-6 py-3'>
               {'IS ADMIN'}
             </th>
           </tr>
@@ -58,21 +57,21 @@ const AdminUserMgmt = () => {
             return (
               <tr
                 key={user.id}
-                className="text-sm odd:bg-white even:bg-slate-50"
+                className='text-sm odd:bg-white even:bg-slate-50'
               >
-                <td scope="col" className="px-6 py-3 text-center">
+                <td scope='col' className='px-6 py-3 text-center'>
                   {user.id}
                 </td>
-                <td scope="col" className="px-6 py-3 text-left">
+                <td scope='col' className='px-6 py-3 text-left'>
                   {user.fullName}
                 </td>
-                <td scope="col" className="px-6 py-3 text-left">
+                <td scope='col' className='px-6 py-3 text-left'>
                   {user.email}
                 </td>
-                <td scope="col" className="px-6 py-3">
+                <td scope='col' className='px-6 py-3'>
                   {user.role}
                 </td>
-                <td scope="col" className="px-6 py-3 text-center">
+                <td scope='col' className='px-6 py-3 text-center'>
                   {user.isAdmin.toString()}
                 </td>
               </tr>
