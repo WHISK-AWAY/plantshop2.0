@@ -83,7 +83,7 @@ const MobileNav = ({ expand, setExpand }) => {
             <form onSubmit={handleSearch}>
               <input
                 type='text'
-                placeholder='succulent...'
+                placeholder=''
                 className='h-8 w-full rounded-full  bg-gray-100 pl-3 text-[3.8vw] text-[#121212] placeholder:text-[3.5vw]'
                 value={searchTerm}
                 onChange={(e) => dispatch(adjustSearchBy(e.target.value))}
