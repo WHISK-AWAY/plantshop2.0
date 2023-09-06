@@ -23,7 +23,6 @@ export default function CartView() {
   const [loading, setLoading] = useState(true);
   const [imgLoaded, setImgLoaded] = useState(false);
 
-  console.log(cart);
 
   useEffect(() => {
     dispatch(fetchCart())
