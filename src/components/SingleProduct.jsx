@@ -141,13 +141,13 @@ const singleProduct = () => {
                       .join(', ')}
                   </p>
                 </div>
-                <p className='mb-2 text-[3.7vw] font-bold text-[#212922] md:mb-4 md:text-[2vw] xl:text-[1.6vw] 4xl:text-[1.3vw] portrait:md:text-[2.7vw]'>
+                <p className='mb-2 text-[3.7vw] font-bold text-[#212922] md:mb-4 md:text-[2vw] xl:text-[1.6vw] 4xl:text-[1.3vw] portrait:md:text-[2.7vw] portrait:xs:text-[4.9vw]'>
                   ${singleProduct.price}
                 </p>
 
                 {fullDescription && (
                   <p
-                    className='mb-8 min-w-full portrait:md:text-[1.8vw] cursor-pointer text-justify text-[2.8vw] leading-tight md:text-[1vw] 4xl:text-[.7vw]'
+                    className='mb-8 min-w-full portrait:md:text-[1.8vw] cursor-pointer text-justify text-[2.8vw] leading-tight md:text-[1vw] 4xl:text-[.7vw] portrait:xs:text-[3.5vw]'
                     onClick={handleFullDescription}
                   >
                     {fullDescription}
