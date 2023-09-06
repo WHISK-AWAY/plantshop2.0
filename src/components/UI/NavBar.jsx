@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-// import searchIcon from '../../assets/search-icon.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import decoratedLine from '../../assets/line.svg';
 import { Toaster } from 'react-hot-toast';
@@ -13,8 +12,8 @@ import {
 import menu from '../../assets/menu.svg';
 import MobileNav from './MobileNav.jsx';
 import CartLink from './CartLink.jsx';
-import searchIcon from '../../../public/assets/search-icon.svg';
-import searchIconReveal from '../../../public/assets/search-icon.svg';
+import searchIcon from '../../../src/assets/search-icon.svg';
+import searchIconReveal from '../../../src/assets/search-icon.svg';
 
 import { fetchCart, selectCart } from '../../slices/users/cartSlice';
 
@@ -29,12 +28,6 @@ const NavBar = (props) => {
   const cart = useSelector(selectCart);
   const [isSearchHidden, setIsSearchHidden] = useState(true);
 
-  // useEffect(() => {
-  //   dispatch(fetchCart());
-  // }, []);
-
-
-  // console.log(adjustSearchBy)
   const handleSearch = (e) => {
     if (expand) {
       setExpand(false);
@@ -82,23 +75,23 @@ const NavBar = (props) => {
           <img
             src={searchIconReveal}
             alt='magnifying glass'
-            className='absolute portrait:md:bottom-[16%] bottom-2 lg:bottom-[15%] 5xl:bottom-[17%] 6xl:bottom-[19%] portrait:md:left-9 left-12 lg:left-14 flex xl:left-[6%]  gap-1 stroke-green-900 self-start w-6 md:w-4 2xl:w-6 4xl:w-7 6xl:w-8 portrait:md:w-5 portrait:lg:w-6'
+            className='absolute portrait:md:bottom-[16%] bottom-2 lg:bottom-[15%] 5xl:bottom-[17%] 6xl:bottom-[16%] portrait:md:left-9 left-12 lg:left-14 flex xl:left-[6%]  gap-1 stroke-green-900 self-start w-6 md:w-4 2xl:w-6 4xl:w-7 6xl:w-9 portrait:md:w-5 portrait:lg:w-6 xl:bottom-[19%] 2xl:bottom-[15%]'
             onClick={() => setIsSearchHidden(false)}
           />
           {!isSearchHidden && (
-            <div className='portrait:md:bottom-4 portrait:lg:bottom-[15%] absolute bottom-2 lg:bottom-[14%] 3xl:bottom-[15%] 6xl:bottom-[14%] portrait:md:left-9 left-12 flex xl:left-[6%] lg:left-14 gap-1 stroke-green-900 self-start'>
+            <div className='portrait:md:bottom-4 portrait:lg:bottom-[15%] absolute bottom-2 lg:bottom-[14%] 3xl:bottom-[15%] 6xl:bottom-[14%] portrait:md:left-9 left-12 flex xl:left-[6%] lg:left-14 gap-1 stroke-green-900 self-start '>
               <button onClick={handleSearch}>
                 <img
                   src={searchIcon}
                   alt='magnifying glass'
-                  className='w-6 md:w-4 2xl:w-6 4xl:w-7 6xl:w-8 portrait:md:w-5 portrait:lg:w-6'
+                  className='w-6 md:w-4 2xl:w-6 4xl:w-7 6xl:w-9 portrait:md:w-5 portrait:lg:w-6'
                 />
               </button>
               <form onSubmit={handleSearch} className='flex font-outfit'>
                 <input
                   type='text'
                   placeholder='cactus...'
-                  className=' border border-green-gray pl-3 text-sm md:text-[1vw] 6xl:h-9 5xl:h-7 4xl:h-6 xl:h-5 h-4 appearance-none focus:outline-none bg-transparent py-1 2xl:py-2 5xl:py-4 6xl:py-6 portrait:md:text-[1.4vw] portrait:md:h-6 portrait:lg:h-7'
+                  className=' border border-green-gray pl-3 text-sm md:text-[1vw] 6xl:h-9 5xl:h-7 4xl:h-6 xl:h-5 h-4 appearance-none focus:outline-none bg-transparent py-2 xl:py-3  5xl:py-4 6xl:py-5 portrait:md:text-[1.4vw] portrait:md:h-6 portrait:lg:h-7'
                   value={searchTerm}
                   onChange={(e) => dispatch(adjustSearchBy(e.target.value))}
                 />
