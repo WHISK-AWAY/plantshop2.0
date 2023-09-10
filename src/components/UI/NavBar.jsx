@@ -41,7 +41,7 @@ const NavBar = (props) => {
 
   return (
     <header>
-      <nav className='relative z-50 flex h-20 w-screen items-center justify-between px-5 tracking-tighter text-green-gray  md:h-16 md:flex-col md:justify-around lg:h-[82px] xl:h-[100px] 2xl:h-[105px] 5xl:h-[159px]  6xl:h-[200px] portrait:md:h-[110px] portrait:lg:h-[140px]'>
+      <nav className='fixed top-0 z-50 flex h-20 w-screen items-center justify-between px-5 tracking-tighter text-green-gray  md:h-16 md:flex-col md:justify-around landscape:lg:h-[82px] xl:h-[100px] 2xl:h-[105px] 5xl:h-[159px]  6xl:h-[200px] portrait:md:h-[110px] portrait:lg:h-[140px] bg-white landscape:h-[60px]'>
         <Toaster
           position='top-right'
           toastOptions={{
@@ -61,7 +61,7 @@ const NavBar = (props) => {
         />
 
         <Link to={'/'}>
-          <h1 className='mt-2 font-tabac text-[8vw] leading-none md:mt-3 md:text-[1.6rem] lg:mt-4 xl:mt-5 xl:text-[2.2rem]  2xl:mt-6 4xl:mt-5 5xl:mt-10 5xl:text-[2.5rem] 6xl:text-[3.1rem] portrait:md:text-[4.3vw] portrait:md:mt-6'>
+          <h1 className='mt-2 font-tabac text-[8vw] leading-none md:mt-3 md:text-[1.6rem] lg:mt-4 xl:mt-5 xl:text-[2.2rem]  2xl:mt-6 4xl:mt-5 5xl:mt-10 5xl:text-[2.5rem] 6xl:text-[3.1rem] portrait:md:text-[4.3vw] portrait:md:mt-6 landscape:text-[2rem]'>
             plants&co
           </h1>
         </Link>
