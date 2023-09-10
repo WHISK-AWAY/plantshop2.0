@@ -8,6 +8,8 @@ import {
   selectAuthLoading,
 } from '../slices/users/authSlice';
 
+// import btnHover from '../../'
+
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -24,10 +26,10 @@ const Login = () => {
   const { auth, status } = useSelector(selectAuth);
 
   const validClass =
-    'appearance-none border portrait:w-72 w-96 3xl:py-2 py-3 px-4 text-gray-700 text-[3vw] md:text-[1.3vw] 5xl:text-[1vw] 6xl:text-[.8vw] leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem]';
+    'appearance-none border portrait:w-72 w-96 3xl:py-2 py-3 px-4 text-gray-700 text-[3vw] md:text-[1.3vw] landscape:5xl:text-[1vw] landscape:xl:text-[.9rem] landscape:6xl:text-[.7vw] leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem]';
 
   const invalidClass =
-    'appearance-none border portrait:w-72 border-red-700 text-[3vw] md:text-[1.3vw] 5xl:text-[1vw] 6xl:text-[.8vw] w-96 py-3 3xl:py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem]';
+    'appearance-none border portrait:w-72 border-red-700 text-[3vw] md:text-[1.3vw] landscape:5xl:text-[1vw] landscape:6xl:text-[.8vw] w-96 py-3 landscape:3xl:py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem]';
 
   const validateEmail = (email) => {
     let res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -70,9 +72,9 @@ const Login = () => {
   }, [auth]);
 
   return (
-    <div className="right-0 h-[calc(100dvh_-_5rem)] bg-[url('/assets/bg_img/home2.jpg')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] md:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)]  5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)] portrait:absolute portrait:top-0 portrait:mt-20  portrait:w-full portrait:lg:mt-20 landscape:h-[100svh]">
-      <div className='m-auto w-full max-w-sm  pt-14 portrait:pt-10 '>
-        <h2 className='text-center font-outfit text-[7vw] landscape:text-[2.5vw] font-semibold tracking-wide md:text-[1.5rem] 3xl:text-[3vw] 5xl:text-[2vw] pt-5 landscape:pt-8'>
+    <div className="right-0 h-[calc(100dvh_-_5rem)] bg-[url('/assets/bg_img/home2.jpg')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] md:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)]  5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)] portrait:absolute portrait:top-0 portrait:mt-20  portrait:w-full portrait:lg:mt-20 landscape:h-[100svh] portrait:md:h-[calc(100dvh_-_80px)] ">
+      <div className='m-auto w-full max-w-sm pt-14 portrait:pt-10 portrait:md:pt-44 landscape:lg:pt-56 landscape:5xl:pt-64'>
+        <h2 className='text-center font-outfit text-[7vw] landscape:text-[2.5vw] font-semibold tracking-wide md:text-[1.5rem] landscape:3xl:text-[2.7vw] landscape:4xl:text-[2.7rem] landscape:5xl:text-[1.8vw] landscape:6xl:text-[2.7rem] pt-5 landscape:pt-8'>
           LOGIN
         </h2>
         <section className=' flex flex-col items-center justify-center  gap-5 landscape:gap-2'>
@@ -149,7 +151,7 @@ const Login = () => {
             <div className='flex items-center justify-between'>
               <button
                 type='submit'
-                className='mx-auto block w-full bg-green-gray py-2 text-[4vw] text-white hover:bg-primary-button-hover hover:transition-all md:text-[2.6vw] lg:py-1 lg:text-[2.1vw]  3xl:py-1 3xl:text-[2.2vw] 4xl:text-[1.6vw] 5xl:text-[1.2vw] 6xl:text-[1vw] landscape:pt-0 landscape:text-[1rem]'
+                className='mx-auto block w-full bg-green-gray py-2 text-[4vw] text-white hover:bg-primary-button-hover hover:transition-all md:text-[2.6vw] landscape:lg:py-2 landscape:lg:text-[2.1vw]  landscape:2xl:text-[1.4rem] landscape:3xl:py-1 landscape:3xl:text-[1.3rem] landscape:4xl:text-[1.4rem] landscape:5xl:text-[1.2vw] landscape:6xl:text-[1vw] landscape:pt-0 landscape:text-[1rem]'
               >
                 {authLoading ? 'loading..' : 'login'}
               </button>
