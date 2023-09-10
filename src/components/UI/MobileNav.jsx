@@ -39,24 +39,24 @@ const MobileNav = ({ expand, setExpand }) => {
 
   return (
     <div
-      className="absolute top-0 left-0 z-50 h-screen  w-screen bg-[url('/assets/bg_img/home1.jpg')] font-gloock  text-white   md:hidden"
+      className="absolute top-0 left-0 z-50 h-screen landscape:h-[100svh]  w-screen bg-[url('/assets/bg_img/home1.jpg')] font-gloock  text-white   lg:hidden"
       style={{
         right: `${expand ? '0' : '-18rem'}`,
       }}
     >
       {/**search section and X btn section*/}
       <div className="flex flex-row-reverse justify-between p-5">
-        <img src={whiteX} alt="x icon" className="w-6" onClick={handleClick} />
+        <img src={whiteX} alt="x icon" className="w-6 landscape:w-4" onClick={handleClick} />
 
-        <div className="flex h-9 flex-row-reverse  gap-2 ">
+        <div className="flex h-9 landscape:h-4 flex-row-reverse  gap-2 ">
           <button onClick={handleSearch}>
-            <img src={searchIcon} alt="magnifying glass" className="w-7 " />
+            <img src={searchIcon} alt="magnifying glass" className="w-7 landscape:w-5" />
           </button>
           <form onSubmit={handleSearch}>
             <input
               type="text"
               placeholder="succulent..."
-              className="h-8 w-full rounded-full  bg-gray-100 pl-3 text-[3.8vw] text-[#121212] placeholder:text-[3.5vw]"
+              className="h-8 w-full rounded-full landscape:h-5 bg-gray-100 pl-3 text-[3.8vw] text-[#121212] placeholder:text-[3.5vw] landscape:placeholder:text-[1rem]"
               value={searchTerm}
               onChange={(e) => dispatch(adjustSearchBy(e.target.value))}
             />
@@ -64,7 +64,7 @@ const MobileNav = ({ expand, setExpand }) => {
         </div>
       </div>
 
-      <ul className="flex  flex-col  pt-[50%] text-[6vw]">
+      <ul className="flex  flex-col  pt-[50%] text-[6vw] landscape:pt-20">
         <div
           className="w-full text-center transition-all"
           onClick={handleClick}
