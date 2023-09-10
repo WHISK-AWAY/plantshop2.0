@@ -41,7 +41,7 @@ const NavBar = (props) => {
 
   return (
     <header>
-      <nav className='fixed top-0 z-50 flex h-20 w-screen items-center justify-between px-5 tracking-tighter text-green-gray  md:h-16 md:flex-col md:justify-around landscape:lg:h-[82px] xl:h-[100px] 2xl:h-[105px] 5xl:h-[159px]  6xl:h-[200px] portrait:md:h-[110px] portrait:lg:h-[140px] bg-white landscape:h-[60px]'>
+      <nav className='fixed top-0 z-50 flex h-20 w-screen items-center justify-between px-5 tracking-tighter text-green-gray  md:h-16 lg:flex-col lg:justify-around landscape:lg:h-[82px] xl:h-[100px] landscape:2xl:h-[95px] landscape:5xl:h-[159px]  6xl:h-[200px] portrait:md:h-[80px] portrait:lg:h-[110px] bg-white landscape:h-[50px]'>
         <Toaster
           position='top-right'
           toastOptions={{
@@ -61,7 +61,7 @@ const NavBar = (props) => {
         />
 
         <Link to={'/'}>
-          <h1 className='mt-2 font-tabac text-[8vw] leading-none md:mt-3 md:text-[1.6rem] lg:mt-4 xl:mt-5 xl:text-[2.2rem]  2xl:mt-6 4xl:mt-5 5xl:mt-10 5xl:text-[2.5rem] 6xl:text-[3.1rem] portrait:md:text-[4.3vw] portrait:md:mt-6 landscape:text-[2rem]'>
+          <h1 className='mt-2 font-tabac text-[8vw] leading-none md:mt-3 md:text-[1.6rem] lg:mt-4 xl:mt-5 xl:text-[2.2rem]  2xl:mt-6 4xl:mt-5 5xl:mt-10 5xl:text-[2.5rem] 6xl:text-[3.1rem] portrait:md:text-[4.3vw] portrait:md:mt-2 landscape:text-[2rem]'>
             plants&co
           </h1>
         </Link>
@@ -84,7 +84,7 @@ const NavBar = (props) => {
       </div>
     */}
 
-          <ul className='flex gap-16 font-outfit md:text-[.7rem]  lg:text-[1.2vw] xl:gap-20 2xl:gap-28 4xl:text-[1.3rem] 5xl:text-[1.6rem] 6xl:gap-40 portrait:md:text-[2.6vw]'>
+          <ul className='lg:flex gap-16 font-outfit md:text-[.7rem] hidden lg:text-[1.2vw] xl:gap-20 2xl:gap-28 4xl:text-[1.3rem] 5xl:text-[1.6rem] 6xl:gap-40 portrait:lg:text-[1.4rem]'>
             <Link to={`/products`}>
               <li onClick={() => dispatch(adjustFilter(''))}>SHOP</li>
             </Link>
@@ -105,14 +105,14 @@ const NavBar = (props) => {
         </div>
 
         {/**decorated navbar border */}
-        <div className='relative hidden w-[90vw] md:flex'>
+        <div className='relative hidden w-[90vw] lg:flex'>
           <img src={decoratedLine} alt='' className='absolute w-full ' />
         </div>
 
         {/**hamburger menu */}
 
         <button
-          className='z-30  md:hidden'
+          className='z-30  lg:hidden'
           onClick={() => {
             setExpand((prev) => !prev);
           }}
