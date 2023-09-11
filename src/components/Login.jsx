@@ -29,10 +29,10 @@ const Login = () => {
   const { auth, status } = useSelector(selectAuth);
 
   const validClass =
-    'appearance-none border portrait:w-72 w-96 3xl:py-2 py-3 px-4 text-gray-700 text-[3vw] md:text-[1.3vw] landscape:5xl:text-[1vw] landscape:xl:text-[.9rem] landscape:6xl:text-[.7vw] leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem] portrait:md:text-[1rem]';
+    'appearance-none border portrait:w-72 portrait:lg:w-96 w-96 3xl:py-2 py-3 px-4 text-gray-700 text-[3vw] md:text-[1.3vw] landscape:5xl:text-[.8vw] landscape:xl:text-[.9rem] landscape:6xl:text-[.7vw] leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem] portrait:md:text-[1rem] landscape:short:py-2 landscape:6xl:w-[500px]';
 
   const invalidClass =
-    'appearance-none border portrait:w-72 border-red-700 text-[3vw] md:text-[1.3vw] landscape:5xl:text-[1vw] landscape:6xl:text-[.8vw] w-96 py-3 landscape:3xl:py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem]';
+    'appearance-none border portrait:w-72 border-red-700 text-[3vw] md:text-[1.3vw] landscape:5xl:text-[1vw] landscape:6xl:text-[.8vw] w-96 py-3 landscape:3xl:py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem] landscape:6xl:w-[500px]';
 
   const validateEmail = (email) => {
     let res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -81,8 +81,8 @@ const Login = () => {
 
   return (
     <div className="right-0 h-[calc(100dvh_-_5rem)] bg-[url('/assets/bg_img/home2.jpg')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] lg:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)]  5xl:h-[calc(100dvh_-_129px)]  6xl:h-[calc(100dvh_-_200px)] portrait:absolute portrait:top-0 portrait:mt-20  portrait:w-full portrait:lg:mt-20 landscape:h-[100svh] portrait:md:h-[calc(100dvh_-_80px)] ">
-      <div className='m-auto w-full max-w-sm pt-14 portrait:xs:pt-36 portrait:md:pt-44 landscape:lg:pt-56 landscape:5xl:pt-64'>
-        <h2 className='text-center font-outfit text-[7vw] landscape:text-[2.5vw] font-semibold tracking-wide md:text-[1.5rem] landscape:3xl:text-[2.7vw] landscape:4xl:text-[2.7rem] landscape:5xl:text-[1.8vw] landscape:6xl:text-[2.7rem] pt-5 landscape:pt-8 portrait:lg:text-[2rem]'>
+      <div className='m-auto w-full max-w-sm pt-14 portrait:xs:pt-36 portrait:md:pt-44  landscape:lg:pt-56 landscape:5xl:pt-64 landscape:6xl:pt-80 landscape:7xl:pt-[500px]'>
+        <h2 className='text-center font-outfit font-semibold tracking-wide  pt-5 landscape:pt-8 portrait:text-[1.4rem] landscape:sm:text-[1.5rem]  landscape:5xl:text-[2rem] landscape:7xl:text-[3rem]'>
           LOGIN
         </h2>
         <section className=' flex flex-col items-center justify-center  portrait:gap-2 landscape:gap-2'>
@@ -96,7 +96,7 @@ const Login = () => {
                 Invalid login credentials!
               </p>
               <label
-                className='mb-1 block text-sm landscape:text-xs portrait:lg:text-base'
+                className='mb-1 block text-sm landscape:text-xs portrait:lg:text-base landscape:6xl:text-[1rem]'
                 htmlFor='email'
               >
                 Email
@@ -127,7 +127,7 @@ const Login = () => {
 
             <div className='mb-6 landscape:mb-0'>
               <label
-                className='mb-1 block text-sm  landscape:text-xs portrait:lg:text-base'
+                className='mb-1 block text-sm  landscape:text-xs portrait:lg:text-base landscape:6xl:text-[1rem]'
                 htmlFor='password'
               >
                 Password
@@ -161,14 +161,14 @@ const Login = () => {
             <div className='flex items-center justify-between'>
               <button
                 type='submit'
-                className='btn mx-auto block w-full  py-2 text-[4vw] text-white duration-500 hover:transition-all md:text-[2.6vw] landscape:lg:py-2 landscape:lg:text-[2.1vw]  landscape:2xl:text-[1.4rem] landscape:3xl:py-1 landscape:3xl:text-[1.3rem] landscape:4xl:text-[1.4rem] landscape:5xl:text-[1.2vw] landscape:6xl:text-[1vw]  landscape:text-[1rem] landscape:pt-2 landscape:lg:pt-1 portrait:lg:pt-1 portrait:lg:text-[1.4rem]'
+                className='btn mx-auto block w-full  py-2 text-[4vw] text-white duration-500 hover:transition-all md:text-[2.6vw] landscape:lg:py-2 landscape:lg:text-[2vw]  landscape:2xl:text-[1rem] landscape:3xl:py-1 landscape:3xl:text-[1.3rem] landscape:4xl:text-[1.4rem] landscape:5xl:text-[1.2vw] landscape:6xl:text-[1vw]  landscape:text-[1rem] landscape:pt-2 landscape:lg:pt-1 portrait:lg:pt-1 portrait:lg:text-[1.4rem]  '
               >
                 <span>{authLoading ? 'loading..' : 'login'}</span>
               </button>
             </div>
           </form>
           <div className='flex justify-center'>
-            <button className='inline-block align-baseline text-[3vw] md:text-[1.6vw] landscape:xl:text-[1.2vw] landscape:3xl:text-[1vw] landscape:5xl:text-[.8vw] landscape:6xl:text-[.6vw] landscape:text-[.8rem]'>
+            <button className='inline-block align-baseline text-[3vw] md:text-[1.6vw] landscape:xl:text-[1vw] landscape:3xl:text-[1vw] landscape:5xl:text-[.7vw] landscape:6xl:text-[.6vw] landscape:text-[.8rem] landscape:short:text-[.8rem] '>
               don't have an account? sign up{' '}
               <Link to={'/signup'} className='underline '>
                 {' '}
