@@ -161,7 +161,7 @@ const Login = () => {
             <div className='flex items-center justify-between'>
               <button
                 type='submit'
-                className='mx-auto block w-full bg-green-gray py-2 text-[4vw] text-white hover:bg-primary-button-hover hover:transition-all md:text-[2.6vw] landscape:lg:py-2 landscape:lg:text-[2.1vw]  landscape:2xl:text-[1.4rem] landscape:3xl:py-1 landscape:3xl:text-[1.3rem] landscape:4xl:text-[1.4rem] landscape:5xl:text-[1.2vw] landscape:6xl:text-[1vw] landscape:pt-0 landscape:text-[1rem]'
+                className='btn mx-auto block w-full  py-2 text-[4vw] text-white duration-500 hover:transition-all md:text-[2.6vw] landscape:lg:py-2 landscape:lg:text-[2.1vw]  landscape:2xl:text-[1.4rem] landscape:3xl:py-1 landscape:3xl:text-[1.3rem] landscape:4xl:text-[1.4rem] landscape:5xl:text-[1.2vw] landscape:6xl:text-[1vw]  landscape:text-[1rem] landscape:pt-2 landscape:lg:pt-1'
               >
                 <span>{authLoading ? 'loading..' : 'login'}</span>
               </button>
