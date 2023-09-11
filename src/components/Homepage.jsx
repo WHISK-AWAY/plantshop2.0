@@ -43,9 +43,9 @@ export default function Homepage() {
         className={`absolute top-0 mx-auto  h-screen w-[100vw] bg-[url('/assets/bg_img/home1.webp')]  bg-cover text-white lg:bg-[url('/assets/bg_img/homepage13.webp')] md:bg-right lg:text-green-gray portrait:bg-[url('/assets/bg_img/home1.webp')] portrait:md:h-screen portrait:lg:h-screen landscape:h-[100svh] landscape:bg-center landscape:lg:bg-right`}
       >
         {/**homepage txt section */}
-        <div className='absolute top-64 landscape:lg:top-60 landscape:xl:top-72 landscape:2xl:top-80 left-1/2 w-[80vw] -translate-x-1/2 flex-col gap-5 text-center md:top-40 md:bottom-auto md:min-w-[500px] 4xl:top-80  lg:top-56 lg:left-32 lg:translate-x-0  portrait:lg:text-center portrait:lg:w-[80vw] portrait:xs:top-36 portrait:md:top-56 lg:text-left landscape:top-28 landscape:5xl:pl-44 landscape:4xl:pl-32 landscape:6xl:pl-[30rem]'>
+        <div className='absolute top-64 landscape:lg:top-60 landscape:xl:top-72 landscape:2xl:top-80 left-1/2 w-[80vw] -translate-x-1/2 flex-col gap-5 text-center md:top-40 md:bottom-auto md:min-w-[500px] 4xl:top-80  lg:top-56 lg:left-32 lg:translate-x-0  portrait:lg:text-center portrait:lg:w-[80vw] portrait:xs:top-36 portrait:md:top-56 lg:text-left landscape:top-28 landscape:5xl:pl-44 landscape:4xl:pl-32 landscape:6xl:top-[450px] landscape:6xl:pl-[30rem] landscape:short:top-64 landscape:7xl:top-[700px]'>
           <div className='mb-4 w-full  portrait:lg:w-full '>
-            <p className='mb-2 font-archivo  text-[9vw] font-bold uppercase leading-none md:font-outfit md:text-[7vw] landscape:5xl:text-[7rem] landscape:lg:text-[6vw] portrait:lg:font-archivo portrait:md:font-archivo portrait:lg:text-[7vw] landscape:text-[2.1rem] lg:text-green-gray/70 landscape:6xl:text-[10rem] '>
+            <p className='mb-2 font-archivo  text-[9vw] font-bold uppercase leading-none md:font-outfit md:text-[7vw] landscape:5xl:text-[7rem] landscape:lg:text-[6vw] portrait:lg:font-archivo portrait:md:font-archivo portrait:lg:text-[7vw] landscape:text-[2.1rem] lg:text-green-gray/70 landscape:6xl:text-[10rem] landscape:7xl:text-[13rem]'>
               Your perfect plant
             </p>
             <p className='text-[4vw] font-medium landscape:5xl:text-[.9vw] leading-none md:text-[1.5vw] portrait:md:text-[2.5vw] lg:mt-5 landscape:text-[.9rem] landscape:3xl:text-[1.1rem] landscape:6xl:text-[1.6rem]'>
