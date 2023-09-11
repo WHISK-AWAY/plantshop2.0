@@ -80,7 +80,7 @@ const Login = () => {
 
 
   return (
-    <div className="right-0 h-[calc(100dvh_-_5rem)] bg-[url('/assets/bg_img/home2.jpg')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] lg:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)]  5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)] portrait:absolute portrait:top-0 portrait:mt-20  portrait:w-full portrait:lg:mt-20 landscape:h-[100svh] portrait:md:h-[calc(100dvh_-_80px)] ">
+    <div className="right-0 h-[calc(100dvh_-_5rem)] bg-[url('/assets/bg_img/home2.jpg')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] lg:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)]  5xl:h-[calc(100dvh_-_129px)]  6xl:h-[calc(100dvh_-_200px)] portrait:absolute portrait:top-0 portrait:mt-20  portrait:w-full portrait:lg:mt-20 landscape:h-[100svh] portrait:md:h-[calc(100dvh_-_80px)] ">
       <div className='m-auto w-full max-w-sm pt-14 portrait:xs:pt-36 portrait:md:pt-44 landscape:lg:pt-56 landscape:5xl:pt-64'>
         <h2 className='text-center font-outfit text-[7vw] landscape:text-[2.5vw] font-semibold tracking-wide md:text-[1.5rem] landscape:3xl:text-[2.7vw] landscape:4xl:text-[2.7rem] landscape:5xl:text-[1.8vw] landscape:6xl:text-[2.7rem] pt-5 landscape:pt-8 '>
           LOGIN
@@ -168,7 +168,7 @@ const Login = () => {
             </div>
           </form>
           <div className='flex justify-center'>
-            <button className='inline-block align-baseline text-[3vw] md:text-[1.6vw] xl:text-[1.2vw] 3xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] landscape:text-[.8rem]'>
+            <button className='inline-block align-baseline text-[3vw] md:text-[1.6vw] landscape:xl:text-[1.2vw] landscape:3xl:text-[1vw] landscape:5xl:text-[.8vw] landscape:6xl:text-[.6vw] landscape:text-[.8rem]'>
               don't have an account? sign up{' '}
               <Link to={'/signup'} className='underline '>
                 {' '}
