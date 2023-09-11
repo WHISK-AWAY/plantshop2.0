@@ -82,7 +82,7 @@ const Login = () => {
   return (
     <div className="right-0 h-[calc(100dvh_-_5rem)] bg-[url('/assets/bg_img/home2.jpg')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] lg:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)]  5xl:h-[calc(100dvh_-_129px)]  6xl:h-[calc(100dvh_-_200px)] portrait:absolute portrait:top-0 portrait:mt-20  portrait:w-full portrait:lg:mt-20 landscape:h-[100svh] portrait:md:h-[calc(100dvh_-_80px)] ">
       <div className='m-auto w-full max-w-sm pt-14 portrait:xs:pt-36 portrait:md:pt-44 landscape:lg:pt-56 landscape:5xl:pt-64'>
-        <h2 className='text-center font-outfit text-[7vw] landscape:text-[2.5vw] font-semibold tracking-wide md:text-[1.5rem] landscape:3xl:text-[2.7vw] landscape:4xl:text-[2.7rem] landscape:5xl:text-[1.8vw] landscape:6xl:text-[2.7rem] pt-5 landscape:pt-8 '>
+        <h2 className='text-center font-outfit text-[7vw] landscape:text-[2.5vw] font-semibold tracking-wide md:text-[1.5rem] landscape:3xl:text-[2.7vw] landscape:4xl:text-[2.7rem] landscape:5xl:text-[1.8vw] landscape:6xl:text-[2.7rem] pt-5 landscape:pt-8 portrait:lg:text-[2rem]'>
           LOGIN
         </h2>
         <section className=' flex flex-col items-center justify-center  portrait:gap-2 landscape:gap-2'>
@@ -96,7 +96,7 @@ const Login = () => {
                 Invalid login credentials!
               </p>
               <label
-                className='mb-1 block text-sm landscape:text-xs'
+                className='mb-1 block text-sm landscape:text-xs portrait:lg:text-base'
                 htmlFor='email'
               >
                 Email
@@ -127,7 +127,7 @@ const Login = () => {
 
             <div className='mb-6 landscape:mb-0'>
               <label
-                className='mb-1 block text-sm  landscape:text-xs '
+                className='mb-1 block text-sm  landscape:text-xs portrait:lg:text-base'
                 htmlFor='password'
               >
                 Password
@@ -161,7 +161,7 @@ const Login = () => {
             <div className='flex items-center justify-between'>
               <button
                 type='submit'
-                className='btn mx-auto block w-full  py-2 text-[4vw] text-white duration-500 hover:transition-all md:text-[2.6vw] landscape:lg:py-2 landscape:lg:text-[2.1vw]  landscape:2xl:text-[1.4rem] landscape:3xl:py-1 landscape:3xl:text-[1.3rem] landscape:4xl:text-[1.4rem] landscape:5xl:text-[1.2vw] landscape:6xl:text-[1vw]  landscape:text-[1rem] landscape:pt-2 landscape:lg:pt-1'
+                className='btn mx-auto block w-full  py-2 text-[4vw] text-white duration-500 hover:transition-all md:text-[2.6vw] landscape:lg:py-2 landscape:lg:text-[2.1vw]  landscape:2xl:text-[1.4rem] landscape:3xl:py-1 landscape:3xl:text-[1.3rem] landscape:4xl:text-[1.4rem] landscape:5xl:text-[1.2vw] landscape:6xl:text-[1vw]  landscape:text-[1rem] landscape:pt-2 landscape:lg:pt-1 portrait:lg:pt-1 portrait:lg:text-[1.4rem]'
               >
                 <span>{authLoading ? 'loading..' : 'login'}</span>
               </button>

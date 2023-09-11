@@ -25,10 +25,10 @@ export default function Signup() {
   });
 
   const validClass =
-    'appearance-none border portrait:w-80 w-96 3xl:py-2 py-3 px-4 text-gray-700 text-[3vw] md:text-[1.3vw] 5xl:text-[1vw] 6xl:text-[.8vw] leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-xs landscape:py-2';
+    'appearance-none border portrait:w-80 w-96 3xl:py-2 py-3 px-4 text-gray-700 text-[3vw] md:text-[1.3vw] 5xl:text-[1vw] 6xl:text-[.8vw] leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-xs landscape:py-2 portrait:lg:w-[400px] portrait:lg:text-base';
 
   const invalidClass =
-    'appearance-none border portrait:w-72 border-red-700 text-[3vw] md:text-[1.3vw] 5xl:text-[1vw] 6xl:text-[.8vw] w-96 py-3 3xl:py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-xs landscape:py-2';
+    'appearance-none border portrait:w-72 border-red-700 text-[3vw] md:text-[1.3vw] 5xl:text-[1vw] 6xl:text-[.8vw] w-96 py-3 3xl:py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-xs landscape:py-2 portrait:lg:text-base';
 
   const token = window.localStorage.getItem('token');
   useEffect(() => {
@@ -80,16 +80,16 @@ export default function Signup() {
 
   
   return (
-    <div className="right-0  h-[calc(100dvh_-_5rem)]  bg-[url('/assets/bg_img/home2.webp')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] md:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)] portrait:w-full portrait:md:h-[calc(100dvh_-_110px)] portrait:lg:h-[calc(100dvh_-_140px)] landscape:h-full">
-      <div className='m-auto w-full max-w-sm pt-20 md:pt-5 xl:pt-16 '>
-        <h2 className='text-center font-outfit font-semibold text-[8vw] md:text-[3.1vw]  tracking-wide 3xl:text-[3vw] 5xl:text-[2vw] landscape:text-[1.2rem]'>
+    <div className="right-0  portrait:h-[100svh]  bg-[url('/assets/bg_img/home2.webp')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] landscape:lg:bg-[url('/assets/misc_bg/login.webp')] landscape:lg:h-[100dvh] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)] portrait:w-full   landscape:h-full ">
+      <div className='m-auto w-full max-w-sm pt-20 md:pt-5 xl:pt-16 landscape:sm:pt-24 portrait:pt-36 portrait:md:pt-56 portrait:lg:pt-72 portrait:xs:pt-44'>
+        <h2 className='text-center font-outfit font-semibold text-[1.4rem] md:text-[3.1vw]  tracking-wide 3xl:text-[3vw] 5xl:text-[2vw] landscape:text-[1.2rem] '>
           SIGN UP
         </h2>
         <section className='mt-2 flex flex-col items-center justify-center  gap-1'>
           <form onSubmit={handleSubmit} className=''>
             <div className='lg:mb-1'>
               <label
-                className='mb-1 block text-sm landscape:text-xs'
+                className='mb-1 block text-sm landscape:text-xs portrait:lg:text-lg'
                 htmlFor='firstName'
               >
                 First Name
@@ -109,7 +109,9 @@ export default function Signup() {
               />
               <p
                 className={
-                  isInvalidFirstName ? ' mt-1 text-xs text-red-700' : 'collapse '
+                  isInvalidFirstName
+                    ? ' mt-1 text-xs text-red-700'
+                    : 'collapse '
                 }
               >
                 Please enter your first name!
@@ -118,7 +120,7 @@ export default function Signup() {
 
             <div className='lg:mb-1'>
               <label
-                className='mb-1 block text-sm landscape:text-xs'
+                className='mb-1 block text-sm landscape:text-xs portrait:lg:text-lg'
                 htmlFor='lastName'
               >
                 Last Name
@@ -147,7 +149,7 @@ export default function Signup() {
 
             <div className='lg:mb-1'>
               <label
-                className='mb-1 block text-sm landscape:text-xs'
+                className='mb-1 block text-sm landscape:text-xs portrait:lg:text-lg'
                 htmlFor='email'
               >
                 Email
@@ -175,7 +177,7 @@ export default function Signup() {
 
             <div className='lg:mb-1'>
               <label
-                className='mb-1 block text-sm landscape:text-xs'
+                className='mb-1 block text-sm landscape:text-xs portrait:lg:text-lg'
                 htmlFor='password'
               >
                 Password
@@ -204,7 +206,7 @@ export default function Signup() {
 
             <div>
               <button
-                className='btn mx-auto block w-full duration-500 py-2 text-[4vw] text-white hover:transition-all md:text-[2.6vw] lg:py-1 lg:text-[2.1vw]  3xl:py-1 3xl:text-[2.2vw] 4xl:text-[1.6vw] 5xl:text-[1.2vw] 6xl:text-[1vw] landscape:text-[1rem]'
+                className='btn mx-auto block  w-full duration-500 py-2 text-[4vw] text-white hover:transition-all md:text-[2.6vw] lg:py-1 lg:text-[2.1vw]  3xl:py-1 3xl:text-[2.2vw] 4xl:text-[1.6vw] 5xl:text-[1.2vw] 6xl:text-[1vw] landscape:text-[1rem] portrait:lg:pt-2'
                 type='submit'
               >
                 <span>sign up</span>
