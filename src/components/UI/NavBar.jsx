@@ -45,7 +45,7 @@ const NavBar = (props) => {
   console.log(searchedItems)
   return (
     <header>
-      <nav className='fixed top-0 z-50 flex h-20 w-screen items-center justify-between px-5 tracking-tighter text-green-gray  lg:flex-col lg:justify-around landscape:lg:h-[82px] xl:h-[100px] landscape:2xl:h-[95px] landscape:5xl:h-[159px]  6xl:h-[200px] portrait:md:h-[80px] portrait:lg:h-[110px] bg-white landscape:h-[50px] '>
+      <nav className='fixed top-0 z-50 flex h-20 w-screen items-center justify-between px-5 tracking-tighter text-green-gray  landscape:lg:flex-col landscape:lg:justify-around landscape:lg:h-[78px] xl:h-[100px] landscape:2xl:h-[95px] landscape:5xl:h-[129px]  6xl:h-[200px] portrait:md:h-[80px] portrait:lg:h-[110px] bg-white landscape:h-[50px] '>
         <Toaster
           position='top-right'
           toastOptions={{
@@ -65,7 +65,7 @@ const NavBar = (props) => {
         />
 
         <Link to={'/'}>
-          <h1 className='mt-2 font-tabac text-[8vw] leading-none md:mt-3 md:text-[1.6rem] lg:mt-4 xl:mt-5 xl:text-[2.2rem]  2xl:mt-6 4xl:mt-5 5xl:mt-10 5xl:text-[2.5rem] 6xl:text-[3.1rem] portrait:md:text-[4.3vw] portrait:md:mt-2 landscape:text-[1.6rem]'>
+          <h1 className='mt-2 font-tabac text-[8vw] leading-none md:mt-3 md:text-[1.6rem] landscape:lg:mt-2 xl:mt-5 xl:text-[2.2rem]  2xl:mt-6 4xl:mt-5 landscape:5xl:mt-3 landscape:5xl:text-[2.5rem] landscapew:6xl:text-[3.1rem] portrait:md:text-[4.3vw] portrait:md:mt-2 landscape:text-[1.6rem] landscape:4xl:text-[2.1rem]'>
             plants&co
           </h1>
         </Link>
@@ -94,12 +94,12 @@ const NavBar = (props) => {
                   className=' border border-green-gray pl-3 text-sm md:text-[1vw] 6xl:h-9 5xl:h-7 4xl:h-6 xl:h-5 h-4 appearance-none focus:outline-none bg-transparent py-2 xl:py-3  5xl:py-4 6xl:py-5 portrait:md:text-[1.4vw] portrait:md:h-6 portrait:lg:h-7'
                   value={searchTerm}
                   onChange={(e) => dispatch(adjustSearchBy(e.target.value))}
-                />=
+                />
               </form>
             </div>
           )}
 
-          <div className='lg:flex gap-16 font-outfit md:text-[.7rem] hidden lg:text-[1.2vw] xl:gap-20 2xl:gap-28 4xl:text-[1.3rem] 5xl:text-[1.6rem] 6xl:gap-40 portrait:lg:text-[1.4rem]'>
+          <div className='landscape:lg:flex gap-16 font-outfit md:text-[.7rem] hidden landscape:lg:text-[1.2vw] xl:gap-20 2xl:gap-28 landscape:4xl:text-[1.2rem] 5xl:text-[1.6rem] 6xl:gap-40 portrait:lg:text-[1.4rem]'>
             <Link to={`/products`} onClick={() => dispatch(adjustFilter(''))}>
               SHOP
             </Link>
@@ -118,14 +118,14 @@ const NavBar = (props) => {
         </div>
 
         {/**decorated navbar border */}
-        <div className='relative hidden w-[90vw] lg:flex'>
+        <div className='relative hidden w-[90vw] landscape:lg:flex'>
           <img src={decoratedLine} alt='' className='absolute w-full ' />
         </div>
 
         {/**hamburger menu */}
 
         <button
-          className='z-30 lg:hidden'
+          className='z-30 landscape:lg:hidden'
           onClick={() => {
             setExpand((prev) => !prev);
           }}
