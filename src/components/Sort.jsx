@@ -9,8 +9,8 @@ const Sort = () => {
   };
 
   return (
-    <div className="mb-4  w-full flex gap-2 text-[4vw] md:text-[1.1vw] 3xl:text-[.9vw] 5xl:text-[.7vw] portrait:md:text-[1.6vw] self-start ">
-      <label className="ml-12  4xl:ml-[13%] 5xl:ml-[22%] 6xl:ml-[29%] font-raleway" htmlFor="sort">
+    <div className="mb-4  w-full flex gap-2 text-[4vw] md:text-[1.1vw] 3xl:text-[.9vw] 5xl:text-[.7vw] portrait:md:text-[1.6vw] self-start landscape:text-[.8rem]">
+      <label className="ml-14 landscape:xl:ml-[10rem] landscape:2xl:ml-[14rem] landscape:4xl:ml-[24%] landscape:5xl:ml-[30.5%] landscape:6xl:ml-[35%] font-raleway landscape:3xl:ml-[18%]" htmlFor="sort">
         SORT BY
       </label>
       <select name="sort" id="sort" onChange={handleSort}>
