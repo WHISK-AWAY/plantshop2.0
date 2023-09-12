@@ -65,7 +65,7 @@ const NavBar = (props) => {
         />
 
         <Link to={'/'}>
-          <h1 className='mt-2 font-tabac text-[8vw] leading-none md:mt-3 md:text-[1.6rem] landscape:lg:mt-2 xl:mt-5 xl:text-[2.2rem]  2xl:mt-6 4xl:mt-5 landscape:5xl:mt-3 landscape:5xl:text-[2.5rem] landscapew:6xl:text-[3.1rem] portrait:md:text-[4.3vw] portrait:md:mt-2 landscape:text-[1.6rem] landscape:4xl:text-[2.1rem] landscape:7xl:text-[3rem]'>
+          <h1 className='mt-2 font-tabac text-[8vw] leading-none md:mt-3 md:text-[1.6rem] landscape:lg:mt-2 xl:mt-5 xl:text-[2.2rem]  2xl:mt-6 4xl:mt-5 landscape:5xl:mt-3 landscape:5xl:text-[2.5rem] landscapew:6xl:text-[3.1rem] portrait:md:text-[4.3vw] portrait:md:mt-2 landscape:text-[1.6rem] landscape:4xl:text-[2.1rem] landscape:7xl:text-[3rem] portrait:md:pl-10'>
             plants&co
           </h1>
         </Link>
@@ -125,7 +125,7 @@ const NavBar = (props) => {
         {/**hamburger menu */}
 
         <button
-          className='z-30 landscape:lg:hidden'
+          className='z-30 landscape:lg:hidden portrait:md:pr-6'
           onClick={() => {
             setExpand((prev) => !prev);
           }}
@@ -133,7 +133,7 @@ const NavBar = (props) => {
           <img
             src={menu}
             alt='dropdown menu icon'
-            className=' w-12 landscape:w-9'
+            className=' w-12 landscape:w-9 '
             height={24}
             width={24}
           />
