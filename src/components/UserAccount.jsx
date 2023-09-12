@@ -56,7 +56,7 @@ const UserAccount = () => {
             duration: 0.5,
             ease: [0.17, 0.67, 0.83, 0.67],
           }}
-          className='mx-auto w-full max-w-sm  pt-36 landscape:pt-20 2xl:top-28 5xl:top-44 5xl:max-w-xl 6xl:top-64 portrait:lg:mt-16 h-full landscape:md:pt-28 landscape:lg:pt-44 landscape:5xl:pt-56 landscape:6xl:pt-72'
+          className='mx-auto w-full max-w-sm  pt-36 landscape:pt-20 2xl:top-28 5xl:top-44 5xl:max-w-xl 6xl:top-64 portrait:lg:mt-16 h-full landscape:md:pt-28 landscape:lg:pt-[12%]'
         >
           <p className='font-extrabold pb-2 text-center text-4xl font-bold text-white '>
             WELCOME BACK,
