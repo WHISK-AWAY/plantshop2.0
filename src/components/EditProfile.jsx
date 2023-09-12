@@ -134,7 +134,7 @@ const EditProfile = () => {
           </section>
           <div className='flex justify-center'>
             <button
-              className='inline-block w-full border border-white py-1 align-baseline text-sm text-white transition-all duration-500 hover:bg-primary-bright-white/20 portrait:w-[80%] portrait:md:w-full portrait:lg:w-full portrait:xxs:w-[80%] landscape:w-4/5 landscape:xs:w-full landscape:xs:mb-10 landscape:5xl:w-full'
+              className='inline-block w-full border border-white py-1 align-baseline text-sm text-white transition-all duration-500 hover:bg-primary-bright-white/20  portrait:md:w-full  portrait:w-[80%] landscape:w-4/5 landscape:xs:w-full landscape:xs:mb-10 landscape:5xl:w-full'
               onClick={goBack}
             >
               back
