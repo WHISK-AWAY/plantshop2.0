@@ -39,7 +39,7 @@ const OrderHistory = () => {
 
 
   return (
-    <div className=" portrait:h-[calc(100dvh_-_5rem)] portrait:lg:h-[calc(100dvh_-_140px)] h-[calc(100vh_-_5rem)] w-screen  bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center pt-36 font-outfit md:h-[calc(100dvh_-_4rem)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)] 6xl:h-[calc(100dvh_-_200px)]">
+    <div className="  w-screen  bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center pt-36 font-outfit portrait:h-[100svh] landscape:h-[100svh]">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -49,7 +49,7 @@ const OrderHistory = () => {
           duration: 0.5,
           ease: [0.17, 0.67, 0.83, 0.67],
         }}
-        className='min-w-xxs portrait:lg:mt-16 w-sm 5xl:min-w-xl  absolute  top-16 mx-auto  w-full pt-16 2xl:top-28 5xl:top-44 6xl:top-64  '
+        className='min-w-xxs  w-sm 5xl:min-w-xl  absolute  top-16 mx-auto  w-full pt-16 2xl:top-28 5xl:top-44 6xl:top-64  portrait:md:mt-[11%] landscape:lg:pt-[12%]'
       >
         <p className='font-extrabold pb-3 text-center text-xl font-bold text-white md:text-4xl'>
           PREVIOUS ORDERS
@@ -109,7 +109,7 @@ const OrderHistory = () => {
         <div className=' m-auto flex justify-center text-center pt-4'>
           <Link
             to='/account'
-            className='inline-block w-1/4 border border-white py-1 align-baseline text-sm text-white transition-all duration-500 hover:bg-primary-bright-white/20  portrait:xxs:w-[80%] portrait:md:w-2/5'
+            className='inline-block w-1/4 border border-white py-1 align-baseline text-sm text-white transition-all duration-500 hover:bg-primary-bright-white/20  portrait:xxs:w-[80%] portrait:md:w-2/5 landscape:5xl:w-1/5'
           >
             back
           </Link>
