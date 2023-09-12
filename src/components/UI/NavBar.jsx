@@ -45,7 +45,7 @@ const NavBar = (props) => {
   console.log(searchedItems)
   return (
     <header>
-      <nav className='fixed top-0 z-50 flex h-20 w-screen items-center justify-between px-5 tracking-tighter text-green-gray  landscape:lg:flex-col landscape:lg:justify-around landscape:lg:h-[78px] xl:h-[100px] landscape:2xl:h-[95px] landscape:5xl:h-[129px]  landscape:6xl:h-[150px] portrait:md:h-[80px] portrait:lg:h-[110px] bg-white landscape:h-[50px] landscape:7xl:h-[]'>
+      <nav className='fixed top-0 z-50 flex h-20 w-screen items-center justify-between px-5 tracking-tighter text-green-gray  landscape:lg:flex-col landscape:lg:justify-around landscape:lg:h-[78px] xl:h-[100px] landscape:2xl:h-[91px] landscape:5xl:h-[129px]  landscape:6xl:h-[150px] portrait:md:h-[80px] portrait:lg:h-[110px] bg-white landscape:h-[50px] landscape:7xl:h-[]'>
         <Toaster
           position='top-right'
           toastOptions={{
