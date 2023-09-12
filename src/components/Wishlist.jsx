@@ -49,11 +49,11 @@ export default function Wishlist() {
         <Spinner loading={loading} />
         <div className='relative  xl:pt-28 5xl:pt-44 6xl:pt-56'>
           <div className="absolute top-0 left-0 h-screen w-screen overflow-hidden bg-[url('/assets/bg_img/admin.webp')] bg-cover bg-fixed bg-bottom bg-no-repeat pt-3  font-outfit   portrait:w-full portrait:px-2 landscape:lg:pt-20 ">
-            <h1 className='mb-4 text-center text-[2.7vw] font-bold  text-green-gray  mix-blend-luminosity lg:text-[2.6vw] xl:text-[2.3vw] 3xl:text-[2.3vw] 3xl:text-white 4xl:text-[2.1vw] 5xl:text-[1.8vw] 6xl:text-[1.5vw] portrait:text-green-gray  portrait:md:text-[4vw] portrait:text-[5vw] pt-20 landscape:pt-10 portrait:lg:pt-28 landscape:md:pt-[9%] landscape:5xl:pt-28 landscape:6xl:pt-44 landscape::short:pt-24 landscape:xs:pt-10 '>
+            <h1 className='mb-4 text-center text-[2.7vw] font-bold  text-green-gray  mix-blend-luminosity lg:text-[2.6vw] xl:text-[2.3vw] 3xl:text-[2.3vw] 3xl:text-white 4xl:text-[2.1vw] 5xl:text-[1.8vw] 6xl:text-[1.5vw] portrait:text-green-gray  portrait:md:text-[4vw] portrait:text-[5vw] pt-20 landscape:pt-10 portrait:lg:pt-28 landscape:md:pt-[9%] landscape:5xl:pt-28 landscape:6xl:pt-44 landscape::short:pt-24 landscape:xs:pt-10 landscape:short:pt-28 landscape:short:text-[1.7rem] landscape:short:text-white'>
               WISHLIST
             </h1>
             <Link to={'/account'} className='flex justify-center '>
-              <p className='bottom-2 absolute transition-all duration-700 hover:bg-primary-bright-white border border-green-gray text-[1.5vw] text-green-gray bg-white/80 w-36 flex items-center justify-center xl:text-[1.5vw] 3xl:text-[1.2vw] 4xl:text-[1vw] 5xl:text-[.8vw] 4xl:w-48 6xl:w-52 5xl:bottom-12 portrait:text-[4vw] portrait:md:text-[2.4vw] portrait:md:bottom-7 portrait:md:w-52 portrait:lg:w-64 '>
+              <p className='bottom-2 absolute transition-all duration-700 hover:bg-primary-bright-white border border-green-gray text-[1.5vw] text-green-gray bg-white/80 w-36 flex items-center justify-center xl:text-[1.5vw] 3xl:text-[1.2vw] 4xl:text-[1vw] 5xl:text-[.8vw] 4xl:w-48 6xl:w-52 5xl:bottom-12 portrait:text-[4vw] portrait:md:text-[2.4vw] portrait:md:bottom-7 portrait:md:w-52 portrait:lg:w-64 landscape:short:text-[1rem]'>
                 go back
               </p>
             </Link>
