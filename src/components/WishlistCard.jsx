@@ -55,14 +55,14 @@ const WishlistCard = ({ product }) => {
         </picture>
         <div className=' min-w-48 flex flex-col  gap-2 justify-center items-center'>
           <Link to={`/products/${product.id}`}>
-            <h1 className='cursor-pointer text-[2vw] uppercase hover:underline landscape:xl:text-[1.3rem] 2xl:text-[1.2vw] 4xl:text-[1vw] landscape:5xl:text-[1.5rem] 6xl:text-[.6vw]   portrait:md:text-[1.4rem] portrait:lg:text-[1.4rem] portrait:text-center portrait:text-[4vw] portrait:xxs:w-full landscape:lg:text-[1rem]'>
+            <h1 className='cursor-pointer text-[2vw] uppercase hover:underline landscape:xl:text-[1rem] 2xl:text-[1.2vw] 4xl:text-[1vw] landscape:5xl:text-[1.5rem] 6xl:text-[.6vw]   portrait:md:text-[1.4rem] portrait:lg:text-[1.4rem] portrait:text-center portrait:text-[4vw] portrait:xxs:w-full landscape:lg:text-[1rem]'>
               {product.name}
             </h1>
           </Link>
           <p className='portrait:text-center text-[1.7vw] italic text-gray-600 landscape:xl:text-[1rem] 4xl:text-[.8vw] landscape:5xl:text-[1.2rem] 6xl:text-[.5vw] portrait:text-[3vw] portrait:xs:text-[3w] portrait:md:text-[2.5vw] landscape:lg:text-[.6rem]'>
             {product?.tags?.map(({ tagName }) => tagName).join(', ')}
           </p>
-          <p className='text-[2vw] landscape:xl:text-[1.3rem] 2xl:text-[1.1vw] 4xl:text-[1vw] landscape:5xl:text-[1.5rem] 6xl:text-[.6vw] portrait:md:text-[1.4rem]  portrait:text-center portrait:text-[3.6vw] portrait:lg:text-[1.7rem]'>
+          <p className='text-[2vw] landscape:xl:text-[1rem] 2xl:text-[1.1vw] 4xl:text-[1vw] landscape:5xl:text-[1.5rem] 6xl:text-[.6vw] portrait:md:text-[1.4rem]  portrait:text-center portrait:text-[3.6vw] portrait:lg:text-[1.7rem]'>
             ${product.price}
           </p>
         </div>
