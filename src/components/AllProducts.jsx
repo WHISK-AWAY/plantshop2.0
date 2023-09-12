@@ -28,7 +28,7 @@ const AllProducts = () => {
 
   return !productsLoading ? (
     <>
-      <div className='flex flex-col justify-between items-center md:min-h-[calc(100vh_-_4rem)]  lg:min-h-[calc(100dvh_-_82px)] xl:min-h-[calc(100dvh_-_100px)] 2xl:min-h-[calc(100dvh_-_105px)]  5xl:min-h-[calc(100dvh_-_159px)]  6xl:min-h-[calc(100dvh_-_200px)]   portrait:xs:min-h-[calc(100dvh_-_5rem)] portrait:md:min-h-[calc(100dvh_-_110px)] portrait:lg:min-h-[calc(100dvh_-_140px)] portrait:xxs:h-[calc(100dvh_-_5rem)]'>
+      <div className='flex flex-col justify-between items-center portrait:pt-20 landscape:pt-8 landscape:lg:pt-24'>
         <FilterSection />
         <Sort />
         <AllProductsSection />
