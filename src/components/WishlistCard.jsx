@@ -59,17 +59,17 @@ const WishlistCard = ({ product }) => {
               {product.name}
             </h1>
           </Link>
-          <p className='portrait:text-center text-[1.7vw] italic text-gray-600 landscape:xl:text-[1rem] 4xl:text-[.8vw] landscape:5xl:text-[1.2rem] 6xl:text-[.5vw] portrait:text-[3vw] portrait:xs:text-[3w] portrait:md:text-[2.5vw] landscape:lg:text-[.6rem]'>
+          <p className='portrait:text-center text-[1.7vw] italic text-gray-600 landscape:xl:text-[1rem] 4xl:text-[.8vw] landscape:5xl:text-[1.2rem] 6xl:text-[.5vw] portrait:text-[3vw] portrait:xs:text-[3w] portrait:md:text-[2.5vw] landscape:lg:text-[.7rem]'>
             {product?.tags?.map(({ tagName }) => tagName).join(', ')}
           </p>
-          <p className='text-[2vw] landscape:xl:text-[1rem] 2xl:text-[1.1vw] 4xl:text-[1vw] landscape:5xl:text-[1.5rem] 6xl:text-[.6vw] portrait:md:text-[1.4rem]  portrait:text-center portrait:text-[3.6vw] portrait:lg:text-[1.7rem]'>
+          <p className='text-[1.7vw] landscape:xl:text-[1rem] 2xl:text-[1.1vw] 4xl:text-[1vw] landscape:5xl:text-[1.5rem] 6xl:text-[.6vw] portrait:md:text-[1.4rem]  portrait:text-center portrait:text-[3.6vw] portrait:lg:text-[1.7rem]'>
             ${product.price}
           </p>
         </div>
         <div className='ml portrait:xxs:ml-1'>
           <button
             onClick={() => handleRemove(product.id)}
-            className='block   border border-green-gray/50 py-1 px-2 text-[1.9vw] landscape:lg:text-[.8rem] transition-all duration-500 hover:bg-gray-200 3xl:text-[1vw] 4xl:text-[.8vw] landscape:5xl:text-[1.5rem] 6xl:text-[.5vw]  portrait:md:text-[2.2vw] portrait:lg:text-[.8rem] portrait:text-[3vw] landscape:short:text-[1rem]'
+            className='block   border border-green-gray/50 py-1 px-2 text-[1.9vw] landscape:lg:text-[.8rem] transition-all duration-500 hover:bg-gray-200 3xl:text-[1vw] 4xl:text-[.8vw] landscape:5xl:text-[1.2rem] 6xl:text-[.5vw]  portrait:md:text-[2.2vw] portrait:lg:text-[.8rem] portrait:text-[3vw] landscape:short:text-[1rem]'
           >
             remove
           </button>
