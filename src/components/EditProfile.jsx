@@ -53,8 +53,8 @@ const EditProfile = () => {
   btnHover();
 
   return (
-    <div className=" bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center font-outfit portrait:h-[100svh] lansdcape:h-[100dvh] w-screen bg-no-repeat overflow-auto">
-      <div className='portrait:lg:h-[100dvh] landscape:md:h-[100vh] landscape:h-full left-1/2 mx-auto w-full max-w-sm pt-16 landscape:lg:pt-[12%] 2xl:top-28 5xl:top-44 5xl:max-w-xl 6xl:top-64 portrait:lg:mt-16 pb-10 portrait:sm:pt-24 '>
+    <div className=" bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center font-outfit portrait:h-[100svh] landscape:h-[100dvh] w-screen bg-no-repeat overflow-hidden landscape:overflow-y-auto">
+      <div className='portrait:lg:h-[100dvh] landscape:md:h-[100vh] landscape:h-full left-1/2 mx-auto w-full max-w-sm pt-16 landscape:lg:pt-[12%] 2xl:top-28 5xl:top-44 5xl:max-w-xl landscape:6xl:pt-56 portrait:lg:mt-16 pb-10 portrait:sm:pt-24 '>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -134,7 +134,7 @@ const EditProfile = () => {
           </section>
           <div className='flex justify-center'>
             <button
-              className='inline-block w-full border border-white py-1 align-baseline text-sm text-white transition-all duration-500 hover:bg-primary-bright-white/20  portrait:md:w-full  portrait:w-[80%] landscape:w-4/5 landscape:xs:w-full landscape:xs:mb-10 landscape:5xl:w-full'
+              className='inline-block w-full border border-white py-1 align-baseline text-sm text-white transition-all duration-500 hover:bg-primary-bright-white/20  portrait:md:w-full  portrait:w-[80%] landscape:w-4/5  landscape:xs:w-full landscape:xs:mb-10 landscape:5xl:w-full'
               onClick={goBack}
             >
               back
