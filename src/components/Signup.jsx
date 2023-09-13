@@ -110,7 +110,7 @@ export default function Signup() {
               <p
                 className={
                   isInvalidFirstName
-                    ? ' mt-1 text-xs text-red-700'
+                    ? ' mt-1 text-xs text-red-700 landscape:6xl:text-lg landscape:5xl:text-base'
                     : 'collapse '
                 }
               >
@@ -140,7 +140,9 @@ export default function Signup() {
               />
               <p
                 className={
-                  isInvalidLastName ? 'mt-1 text-xs text-red-700' : 'collapse '
+                  isInvalidLastName
+                    ? 'mt-1 text-xs text-red-700 landscape:6xl:text-lg landscape:5xl:text-base'
+                    : 'collapse '
                 }
               >
                 Please enter your last name!
@@ -168,7 +170,9 @@ export default function Signup() {
               />
               <p
                 className={
-                  isInvalidEmail ? 'mt-1 text-xs text-red-700' : 'collapse '
+                  isInvalidEmail
+                    ? 'mt-1 text-xs text-red-700 landscape:6xl:text-lg landscape:5xl:text-base'
+                    : 'collapse '
                 }
               >
                 Please enter a valid email!
@@ -198,7 +202,9 @@ export default function Signup() {
               />
               <p
                 className={
-                  isInvalidPassword ? 'mt-1 text-xs text-red-700' : 'collapse '
+                  isInvalidPassword
+                    ? 'mt-1 text-xs text-red-700 landscape:6xl:text-lg landscape:5xl:text-base'
+                    : 'collapse '
                 }
               >
                 Please enter a valid password (at least 8 chars)!

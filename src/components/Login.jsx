@@ -32,7 +32,7 @@ const Login = () => {
     'appearance-none border portrait:w-72 portrait:lg:w-96 w-96 3xl:py-2 py-3 px-4 text-gray-700 text-[3vw] md:text-[1.8vw] landscape:5xl:text-[.8vw] landscape:xl:text-[.9rem] landscape:6xl:text-[.7vw] leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem] portrait:md:text-[1rem] landscape:short:py-2 landscape:6xl:w-[500px] landscape:lg:w-72 landscape:lg:py-2 landscape:5xl:w-96';
 
   const invalidClass =
-    'appearance-none border portrait:w-72 portrait:lg:w-96 border-red-700 text-[3vw] md:text-[1.8vw] landscape:5xl:text-[1vw] landscape:6xl:text-[.8vw] w-96 py-3 landscape:3xl:py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem] landscape:6xl:w-[500px] landscape:lg:w-72 landscape:lg:py-2 landscape:xl:text-[.9rem] landscape:5xl:w-96 landscape:5xl:text-[.7vw]';
+    'appearance-none border portrait:w-72 portrait:lg:w-96 border-red-700 text-[3vw] md:text-[1.8vw] landscape:5xl:text-[1vw] landscape:6xl:text-[.8vw] w-96 py-3 landscape:3xl:py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem] landscape:6xl:w-[500px] landscape:lg:w-72 landscape:lg:py-2 landscape:xl:text-[.9rem] landscape:5xl:w-96 landscape:5xl:text-[.7vw] landscape:6xl:text-[.7vw]';
 
   const validateEmail = (email) => {
     let res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -91,7 +91,7 @@ const Login = () => {
               <p
                 className={
                   logInFail
-                    ? 'text-xs text-red-700 landscape:5xl:text-base'
+                    ? 'text-xs text-red-700 landscape:5xl:text-base landscape:6xl:text-lg'
                     : 'collapse text-xs'
                 }
               >
@@ -121,7 +121,7 @@ const Login = () => {
               <p
                 className={
                   isInvalidEmail
-                    ? 'text-xs text-red-700 landscape:5xl:text-base'
+                    ? 'text-xs text-red-700 landscape:5xl:text-base landscape:6xl:text-lg'
                     : 'collapse text-xs'
                 }
               >
