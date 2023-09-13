@@ -59,7 +59,7 @@ const MobileNav = ({ expand, setExpand }) => {
         animate={{ opacity: 1 }}
         // exit={{ opacity: 0 }}
         transition={{
-          duration: 0.2,
+          duration: 0.5,
           ease: [0.17, 0.67, 0.83, 0.67],
         }}
         className="absolute top-0 left-0 z-50 h-screen landscape:h-[100svh]  w-screen bg-[url('/assets/bg_img/home1.jpg')] font-gloock  text-white   landscape:lg:hidden"
