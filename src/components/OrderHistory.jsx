@@ -49,16 +49,16 @@ const OrderHistory = () => {
           duration: 0.5,
           ease: [0.17, 0.67, 0.83, 0.67],
         }}
-        className='min-w-xxs  w-sm 5xl:min-w-xl  absolute  top-16 mx-auto  w-full pt-16 2xl:top-28 5xl:top-44 6xl:top-64  portrait:md:mt-[11%] landscape:lg:pt-[12%]'
+        className='min-w-xxs  w-sm 5xl:min-w-xl landscape:2xl:w-3/5 landscape:5xl:w-2/5 landscape:5xl:translate-x-[70%] landscape:2xl:translate-x-[30%]  absolute  top-16 mx-auto  w-full pt-16 landscape:2xl:top-24 landscape:3xl:top-28 landscape:4xl:top-40 landscape:5xl:top-44 landscape:6xl:top-20 portrait:md:mt-[11%] landscape:lg:pt-[6%]'
       >
-        <p className='font-extrabold pb-3 text-center text-xl font-bold text-white md:text-4xl'>
+        <p className='font-extrabold pb-3 text-center text-xl font-bold text-white landscape:md:text-2xl landscape:5xl:text-[1.7rem]'>
           PREVIOUS ORDERS
         </p>
 
         {userOrders?.length > 0 ? (
           <div className=' flex  flex-col items-center justify-center  overflow-x-auto font-outfit font-thin '>
-            <table className='w-5/6  bg-white text-center text-xs text-gray-500 dark:text-gray-400'>
-              <thead className='bg-green-gray text-[2vw] uppercase text-white md:text-[1vw] '>
+            <table className='w-5/6  bg-white text-center text-xs text-gray-500 dark:text-gray-400 '>
+              <thead className='bg-green-gray text-[2vw] uppercase text-white md:text-[1vw] landscape:4xl:text-[1rem]'>
                 <tr className=''>
                   <th scope='col' className='px-6 py-3 '>
                     Order Id
