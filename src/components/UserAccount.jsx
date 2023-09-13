@@ -46,7 +46,7 @@ const UserAccount = () => {
     <Spinner loading={loading} />
   */}
 
-      <div className="  right-0  w-screen bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center bg-no-repeat font-outfit text-green-gray  portrait:h-[100svh]  landscape:h-full landscape:md:h-[100dvh]">
+      <div className="  right-0  w-screen bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center bg-no-repeat font-outfit text-green-gray  portrait:h-[100svh]  landscape:h-full h-[100vh] landscape:lg:h-[100vh]  ">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -56,7 +56,7 @@ const UserAccount = () => {
             duration: 0.5,
             ease: [0.17, 0.67, 0.83, 0.67],
           }}
-          className='mx-auto w-full max-w-sm  pt-36 landscape:pt-20 2xl:top-28 5xl:top-44 5xl:max-w-xl landscape:6xl:pt-64 portrait:lg:mt-16 h-full landscape:md:pt-28 landscape:lg:pt-[12%]'
+          className='mx-auto w-full max-w-sm  pt-36 landscape:pt-20 2xl:top-28 5xl:top-44 5xl:max-w-xl landscape:6xl:pt-64 portrait:lg:mt-16 h-full landscape:lg:pt-[12%]'
         >
           <p className='font-extrabold pb-2 text-center text-3xl font-bold text-white '>
             WELCOME BACK,
