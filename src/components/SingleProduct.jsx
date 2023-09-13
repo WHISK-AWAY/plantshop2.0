@@ -87,10 +87,10 @@ const singleProduct = () => {
           }}
           className='portrait:lg:flex portrait:lg:flex-col portrait:lg:gap-16 '
         >
-          <main className='flex justify-center font-raleway text-[#212922] md:h-[470px] landscape:3xl:mt-[1%] 4xl:mx-auto 4xl:min-h-[690px] 4xl:w-[1700px] 6xl:w-[2200px] portrait:px-4 portrait:md:mt-10 portrait:pt-16 landscape:pt-16 landscape:lg:pt-24 landscape:xl:pt-36 landscape:5xl:pt-44 portrait:h-[700px] portrait:lg:pt-36 landscape:short:pt-96'>
+          <main className='flex justify-center font-raleway text-[#212922] md:h-[470px] landscape:3xl:mt-[1%] 4xl:mx-auto 4xl:min-h-[690px] 4xl:w-[1700px] 6xl:w-[2200px] portrait:px-4  portrait:md:mt-10 portrait:pt-24 landscape:pt-16 landscape:lg:pt-24 landscape:xl:pt-32 landscape:5xl:pt-44 portrait:h-[700px] portrait:lg:pt-36 landscape:short:pt-28'>
             <div className='mt-8 flex flex-col justify-center md:flex-row md:gap-5 portrait:md:w-screen portrait:md:gap-4 portrait:lg:gap-20 portrait:md:mx-7'>
               {/**mobile header only */}
-              <div className='mx-auto w-fit md:mx-0 portrait:md:w-1/2 portrait:lg:w-fit'>
+              <div className='mx-auto w-fit md:mx-0 portrait:md:w-1/2 portrait:lg:w-fit '>
                 <header className='flex justify-center pb-4 text-center  font-outfit text-[4.9vw] landscape:text-[1.4rem] font-medium-light uppercase text-green-gray md:hidden '>
                   {singleProduct.name}
                 </header>
@@ -125,7 +125,7 @@ const singleProduct = () => {
                 </div>
               </div>
               {/**desktop header */}
-              <div className=' md:mx-0 md:w-1/3 portrait:md:w-3/6  portrait::w-full landscape:mx-12 '>
+              <div className=' md:mx-0 md:w-1/3 portrait:md:w-3/6  portrait:w-full landscape:lg:mx-12 landscape:mx-5'>
                 <div className='mb-[5%] hidden flex-col  items-end justify-center md:flex'>
                   <header className=' self-center pr-6 font-outfit text-[2.3vw] landscape:lg:text-[1.7vw] uppercase text-green-gray landscape:4xl:text-[1.5vw] portrait:md:text-[3vw] landscape:6xl:text-[2.4rem]'>
                     {singleProduct.name}
@@ -133,7 +133,7 @@ const singleProduct = () => {
                   <LikedProduct />
                 </div>
 
-                <div className='mb-0 flex justify-between p-2 text-[2.5vw] md:mb-4 md:border-b-4 md:p-0  md:text-[1vw] 3xl:text-[.7vw] portrait:md:text-[1.9vw] portrait:text-[3.3vw]'>
+                <div className='mb-0 flex justify-between p-2 text-[2.5vw] md:mb-4 md:border-b-4 md:p-0  md:text-[1vw] landscape:xs:text-[.7rem] 3xl:text-[.7vw] portrait:md:text-[1.9vw] portrait:text-[3.3vw] '>
                   <p>
                     {singleProduct?.tags
                       ?.map(({ tagName }) => tagName)
@@ -146,7 +146,7 @@ const singleProduct = () => {
 
                 {fullDescription && (
                   <p
-                    className='mb-8 min-w-full  cursor-pointer text-justify text-[2.8vw] leading-tight md:text-[1vw] 4xl:text-[.7vw] portrait:text-[3.5vw]  portrait:md:text-[1rem] portrait:lg:text-[1.1rem]'
+                    className='mb-8 min-w-full  cursor-pointer text-justify text-[2.8vw] leading-tight md:text-[1vw] 4xl:text-[.7vw] portrait:text-[3.5vw]  portrait:md:text-[1rem] portrait:lg:text-[1.1rem] landscape:text-[.7rem] landscape:xl:text-[.8rem]'
                     onClick={handleFullDescription}
                   >
                     {fullDescription}
@@ -176,7 +176,7 @@ const singleProduct = () => {
                     alt='shipping box icon'
                     className='w-4 4xl:w-[6] portrait:md:w-6'
                   />
-                  <p className='text-[2.5vw] md:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.7vw] portrait:md:text-[1.7vw] portrait:lg:tex-[1.9vw] portrait:text-[3.7vw]'>
+                  <p className='text-[2.5vw] md:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.7vw] portrait:md:text-[1.7vw] portrait:lg:tex-[1.9vw] portrait:text-[3.7vw] landscape:text-[.7rem]'>
                     Free shipping in the USA
                   </p>
                 </div>
