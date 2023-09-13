@@ -207,7 +207,7 @@ export default function Signup() {
 
             <div>
               <button
-                className='btn mx-auto block  w-full duration-500 py-2 text-[4vw] text-white hover:transition-all md:text-[2.6vw] lg:py-2 lg:text-[2.1vw]  3xl:py-1 landscape:4xl:text-[1.4rem] 4xl:text-[1.6vw] 5xl:text-[1.2vw] landscape:6xl:text-[1vw] landscape:text-[1rem] portrait:lg:text-[1.4rem] portrait:lg:pt-2'
+                className='btn mx-auto block  w-full duration-500 py-2 text-[4vw] text-white hover:transition-all md:text-[2.6vw] lg:py-2 lg:text-[2.1vw]  3xl:py-1 landscape:4xl:text-[1.4rem] 4xl:text-[1.6vw] 5xl:text-[1.2vw] landscape:6xl:text-[1vw] landscape:text-[1rem] landscape:3xl:text-[1.1rem] portrait:lg:text-[1.4rem] portrait:lg:pt-2'
                 type='submit'
               >
                 <span>sign up</span>
