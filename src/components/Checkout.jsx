@@ -223,23 +223,23 @@ export default function Checkout() {
   btnHover()
 
   return (
-    <div className="relative bg-[url('/assets/misc_bg/ship1.webp')] bg-cover bg-center bg-no-repeat font-outfit md:h-[calc(100vh_-_4rem)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)]  portrait:h-[calc(100dvh_-_5rem)] portrait:w-full portrait:md:h-[calc(100dvh_-_110px)] portrait:lg:h-[calc(100dvh_-_140px)] portrait:xxs:overflow-y-auto  portrait:xs:overflow-y-hidden">
-      <h2 className='pt-5 pb-1 text-center text-[2.3vw] 2xl:text-[2vw] 2xl:py-4 font-bold text-white lg:pb-5 xl:pt-9 5xl:text-[2vw] portrait:text-[5vw] portrait:pb-3 portrait:md:text-[3vw] portrait:lg:text-[4vw] '>
+    <div className="relative bg-[url('/assets/misc_bg/ship1.webp')] bg-cover bg-center bg-no-repeat font-outfit  portrait:w-full landscape:lg:h-[100svh] portrait:overflow-y-auto h-full portrait:h-[100svh]">
+      <h2 className='pt-5 pb-1 text-center text-[2.3vw] 2xl:text-[2vw] 2xl:py-4 font-bold text-white lg:pb-5 xl:pt-9 5xl:text-[2rem] portrait:text-[5vw] portrait:pb-3 portrait:md:text-[3vw] portrait:lg:text-[4vw] portrait:pt-28 landscape:pt-20 portrait:md:pt-44 landscape:lg:pt-28 landscape:xl:pt-[12%] landscape:short:pt-28 landscape:5xl:pt-56'>
         SHIPPING INFORMATION
       </h2>
-      <div className='flex w-full justify-center'>
-        <div className=' border border-white/80 bg-white bg-opacity-50  md:py-3 lg:py-5  px-10 6xl:py-8 5xl:py-5 md:w-2/5 3xl:w-3/12 5xl:w-5/6 5xl:max-w-2xl portrait:w-[90vw]  portrait:py-7 '>
+      <div className='flex w-full justify-center pb-10'>
+        <div className=' border border-white/80 bg-white bg-opacity-50  md:py-3 lg:py-5  px-10 6xl:py-8 5xl:py-5 md:w-2/5 3xl:w-3/12 5xl:w-5/6 5xl:max-w-2xl portrait:w-[95vw]  portrait:py-7 landscape:w-[60svw] landscape:py-3 portrait:md:w-[80svw] landscape:lg:w-[60dvh]'>
           <section className=' flex flex-col'>
             <form onSubmit={handleSubmit}>
-              <div className='mb-2 text-[1vw] 5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw] '>
+              <div className='mb-2 text-[1vw] 5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.3vw] '>
                 <label
-                  className='mb-[1px] block text-green-gray'
+                  className='mb-[1px] block text-green-gray landscape:text-[.7rem] landscape:5xl:text-[1rem]'
                   htmlFor='firstName'
                 >
                   First Name
                 </label>
                 <input
-                  className=' w-full appearance-none   py-1 px-2 leading-tight text-gray-700  shadow focus:outline-none'
+                  className=' w-full appearance-none   py-1 px-2 leading-tight text-gray-700  shadow focus:outline-none landscape:text-[.8rem] landscape:5xl:text-[1rem]'
                   id='firstName'
                   type='text'
                   name='firstName'
@@ -249,15 +249,15 @@ export default function Checkout() {
                 />
               </div>
 
-              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
+              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.3vw]'>
                 <label
-                  className='mb-[1px]  block  text-green-gray'
+                  className='mb-[1px]  block  text-green-gray landscape:text-[.7rem] landscape:5xl:text-[1rem]'
                   htmlFor='lastName'
                 >
                   Last Name
                 </label>
                 <input
-                  className='  w-full appearance-none  py-1 px-2 leading-tight text-gray-700 shadow  focus:outline-none'
+                  className='  w-full appearance-none  py-1 px-2 leading-tight text-gray-700 shadow  focus:outline-none landscape:text-[.8rem] landscape:5xl:text-[1rem]'
                   type='text'
                   name='lastName'
                   placeholder={isInvalid ? 'Enter your last name' : null}
@@ -267,15 +267,15 @@ export default function Checkout() {
                 />
               </div>
 
-              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
+              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.3vw]'>
                 <label
-                  className='mb-[1px]  block  text-green-gray'
+                  className='mb-[1px]  block  text-green-gray landscape:text-[.7rem] landscape:5xl:text-[1rem]'
                   htmlFor='email'
                 >
                   Email
                 </label>
                 <input
-                  className=' w-full appearance-none   py-1 px-2 leading-tight text-gray-700 shadow  focus:outline-none'
+                  className=' w-full appearance-none   py-1 px-2 leading-tight text-gray-700 shadow  focus:outline-none landscape:text-[.8rem] landscape:5xl:text-[1rem]'
                   type='email'
                   name='email'
                   placeholder={isInvalid ? invalidEmailMessage : null}
@@ -285,15 +285,15 @@ export default function Checkout() {
                 />
               </div>
 
-              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
+              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.3vw]'>
                 <label
-                  className='mb-[1px]  block  text-green-gray'
+                  className='mb-[1px]  block  text-green-gray landscape:text-[.7rem] landscape:5xl:text-[1rem]'
                   htmlFor='street1'
                 >
                   Street1
                 </label>
                 <input
-                  className=' w-full appearance-none   py-1 px-2 leading-tight text-gray-700 shadow focus:outline-none'
+                  className=' w-full appearance-none   py-1 px-2 leading-tight text-gray-700 shadow focus:outline-none landscape:text-[.8rem] landscape:5xl:text-[1rem]'
                   type='text'
                   name='street1'
                   placeholder={isInvalid ? 'Enter your address' : null}
@@ -303,15 +303,15 @@ export default function Checkout() {
                 />
               </div>
 
-              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
+              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.3vw]'>
                 <label
-                  className='mb-[1px]  block  text-green-gray'
+                  className='mb-[1px]  block  text-green-gray landscape:text-[.7rem] landscape:5xl:text-[1rem]'
                   htmlFor='street1'
                 >
                   Street2
                 </label>
                 <input
-                  className=' w-full appearance-none  py-1 px-2 leading-tight text-gray-700 shadow  focus:outline-none'
+                  className=' w-full appearance-none  py-1 px-2 leading-tight text-gray-700 shadow  focus:outline-none landscape:text-[.8rem] landscape:5xl:text-[1rem]'
                   type='text'
                   name='street2'
                   id='street2'
@@ -320,15 +320,15 @@ export default function Checkout() {
                 />
               </div>
 
-              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
+              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.3vw]'>
                 <label
-                  className='mb-[1px]  block  text-green-gray'
+                  className='mb-[1px]  block  text-green-gray landscape:text-[.7rem] landscape:5xl:text-[1rem]'
                   htmlFor='city'
                 >
                   City
                 </label>
                 <input
-                  className=' w-full appearance-none  py-1 px-2 leading-tight text-gray-700 shadow focus:outline-none'
+                  className=' w-full appearance-none  py-1 px-2 leading-tight text-gray-700 shadow focus:outline-none landscape:text-[.8rem] landscape:5xl:text-[1rem]'
                   type='text'
                   name='city'
                   placeholder={isInvalid ? 'Enter your city' : null}
@@ -338,15 +338,15 @@ export default function Checkout() {
                 />
               </div>
 
-              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
+              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.3vw]'>
                 <label
-                  className='mb-[1px]  block text-green-gray'
+                  className='mb-[1px]  block text-green-gray landscape:text-[.7rem] landscape:5xl:text-[1rem]'
                   htmlFor='state'
                 >
                   State
                 </label>
                 <select
-                  className=' w-full appearance-none  py-1 px-2 leading-tight text-gray-700 shadow focus:outline-none'
+                  className=' w-full appearance-none  py-1 px-2 leading-tight text-gray-700 shadow focus:outline-none landscape:text-[.8rem] landscape:5xl:text-[1rem]'
                   name='state'
                   id='state'
                   value={formData.state}
@@ -361,15 +361,15 @@ export default function Checkout() {
                 </select>
               </div>
 
-              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
+              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.3vw]'>
                 <label
-                  className='mb-[1px] block  text-green-gray'
+                  className='mb-[1px] block  text-green-gray landscape:text-[.7rem] landscape:5xl:text-[1rem]'
                   htmlFor='state'
                 >
                   Zip
                 </label>
                 <input
-                  className=' w-full appearance-none  py-1 px-2 leading-tight text-gray-700 shadow  focus:outline-none'
+                  className=' w-full appearance-none  py-1 px-2 leading-tight text-gray-700 shadow  focus:outline-none landscape:text-[.8rem] landscape:5xl:text-[1rem]'
                   type='text'
                   name='zip'
                   minLength='5'
@@ -381,15 +381,15 @@ export default function Checkout() {
                 />
               </div>
 
-              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.6vw]'>
+              <div className='mb-2 text-[1vw]  5xl:text-[.8vw] portrait:text-[3.8vw] portrait:md:text-[2.3vw]'>
                 <label
-                  className='mb-[1px] block  text-green-gray'
+                  className='mb-[1px] block  text-green-gray landscape:text-[.7rem] landscape:5xl:text-[1rem]'
                   htmlFor='state'
                 >
                   Promo Code
                 </label>
                 <input
-                  className=' w-full appearance-none  py-1 px-2 leading-tight text-gray-700 shadow  focus:outline-none'
+                  className=' w-full appearance-none  py-1 px-2 leading-tight text-gray-700 shadow  focus:outline-none landscape:text-[.8rem] landscape:5xl:text-[1rem]'
                   type='text'
                   name='promoCode'
                   id='promoCode'
@@ -406,14 +406,11 @@ export default function Checkout() {
 
             <div className='lg:pt-4 portrait:pt-4  self-center w-full'>
               <button
-                className='btn 5xl:text-[.9vw] text-[1.2vw]  mx-auto block  w-full  portrait:md:text-[2.9vw] py-1 text-white ease-out  transition-all duration-700 portrait:text-[4.3vw] '
+                className='btn 5xl:text-[.9vw] text-[1.2vw]  mx-auto block  w-full  portrait:md:text-[2.9vw] py-1 text-white ease-out  transition-all duration-700 portrait:text-[4.3vw] landscape:text-[.8rem] landscape:2xl:text-[1rem] landscape:5xl:text-[1.3rem]'
                 type='submit'
                 onClick={handleSubmit}
               >
-                <span>
-                proceed to payment
-                
-                </span>
+                <span>proceed to payment</span>
               </button>
             </div>
           </section>
