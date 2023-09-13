@@ -32,7 +32,7 @@ const Login = () => {
     'appearance-none border portrait:w-72 portrait:lg:w-96 w-96 3xl:py-2 py-3 px-4 text-gray-700 text-[3vw] md:text-[1.8vw] landscape:5xl:text-[.8vw] landscape:xl:text-[.9rem] landscape:6xl:text-[.7vw] leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem] portrait:md:text-[1rem] landscape:short:py-2 landscape:6xl:w-[500px] landscape:lg:w-72 landscape:lg:py-2';
 
   const invalidClass =
-    'appearance-none border portrait:w-72 portrait:lg:w-96 border-red-700 text-[3vw] md:text-[1.8vw] landscape:5xl:text-[1vw] landscape:6xl:text-[.8vw] w-96 py-3 landscape:3xl:py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem] landscape:6xl:w-[500px] landscape:lg:w-72 landscape:lg:py-2';
+    'appearance-none border portrait:w-72 portrait:lg:w-96 border-red-700 text-[3vw] md:text-[1.8vw] landscape:5xl:text-[1vw] landscape:6xl:text-[.8vw] w-96 py-3 landscape:3xl:py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem] landscape:6xl:w-[500px] landscape:lg:w-72 landscape:lg:py-2 landscape:xl:text-[.9rem]';
 
   const validateEmail = (email) => {
     let res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -161,7 +161,7 @@ const Login = () => {
             <div className='flex items-center justify-between'>
               <button
                 type='submit'
-                className='btn mx-auto block w-full  py-2 text-[4vw] text-white duration-500 hover:transition-all md:text-[2.6vw] landscape:lg:py-2 landscape:lg:text-[1.7vw]  landscape:2xl:text-[1rem] landscape:3xl:py-1 landscape:3xl:text-[1.3rem] landscape:4xl:text-[1.4rem] landscape:5xl:text-[1.2vw] landscape:6xl:text-[1vw]  landscape:text-[1rem] landscape:pt-2 landscape:lg:pt-1 portrait:lg:pt-1 portrait:lg:text-[1.4rem]  '
+                className='btn mx-auto block w-full  py-2 text-[4vw] text-white duration-500 hover:transition-all md:text-[2.6vw] landscape:lg:py-2 landscape:lg:text-[1.7vw] landscape:xl:text-[1.1rem]  landscape:2xl:text-[1rem] landscape:3xl:py-1 landscape:3xl:text-[1.3rem] landscape:4xl:text-[1.4rem] landscape:5xl:text-[1.2vw] landscape:6xl:text-[1vw]  landscape:text-[1rem] landscape:pt-2 landscape:lg:pt-1 portrait:lg:pt-1 portrait:lg:text-[1.4rem]  '
               >
                 <span>{authLoading ? 'loading..' : 'login'}</span>
               </button>
