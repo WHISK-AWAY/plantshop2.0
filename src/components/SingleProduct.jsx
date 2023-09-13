@@ -88,7 +88,7 @@ const singleProduct = () => {
           className='portrait:lg:flex portrait:lg:flex-col portrait:lg:gap-16 '
         >
           <main className='flex justify-center font-raleway text-[#212922] md:h-[470px] landscape:3xl:mt-[1%] 4xl:mx-auto 4xl:min-h-[690px] 4xl:w-[1700px] 6xl:w-[2200px] portrait:px-4  portrait:md:mt-10  landscape:pt-16 landscape:lg:pt-24 landscape:xl:pt-32 landscape:5xl:pt-44 portrait:lg:pt-36 landscape:short:pt-28 portrait:h-[100svh]'>
-            <div className='mt-8 portrait:mt-28 portrait:xs:mt-1 flex flex-col justify-center md:flex-row md:gap-5 portrait:md:w-screen portrait:md:gap-4 portrait:lg:gap-20 portrait:md:mx-7 portrait:h-[100svh]'>
+            <div className='pt-8 portrait:pt-44 portrait:xs:pt-10 flex flex-col justify-center md:flex-row md:gap-5 portrait:md:w-screen portrait:md:gap-4 portrait:lg:gap-20 portrait:md:mx-7 portrait:h-[100svh]'>
               {/**mobile header only */}
               <div className='mx-auto w-fit md:mx-0 portrait:md:w-1/2 portrait:lg:w-fit '>
                 <header className='flex justify-center pb-4 text-center  font-outfit text-[4.9vw] landscape:text-[1.4rem] font-medium-light uppercase text-green-gray md:hidden '>
