@@ -64,14 +64,14 @@ const CartCard = ({ product, item }) => {
         </picture>
         <div className='min-w-48 flex flex-col gap-2  justify-center items-center'>
           <Link to={`/products/${product.id}`}>
-            <h1 className='cursor-pointer text-[2vw] uppercase hover:underline landscape:xl:text-[1rem] 2xl:text-[1.2vw] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:text-center   portrait:md:text-[1.4rem] portrait:text-[4vw] landscape:lg:text-[1rem]'>
+            <h1 className='cursor-pointer text-[2vw] uppercase hover:underline landscape:xl:text-[1rem] 2xl:text-[1.2vw] 4xl:text-[1vw] landscape:5xl:text-[.7vw] landscape:6xl:text-[.6vw] portrait:text-center   portrait:md:text-[1.4rem] portrait:text-[4vw] landscape:lg:text-[1rem]'>
               {product.name}
             </h1>
           </Link>
-          <p className='text-center text-[1.7vw] italic text-gray-600 landscape:xl:text-[1rem] 4xl:text-[.8vw] 5xl:text-[.6vw] 6xl:text-[.5vw] portrait:text-center   portrait:md:text-[2.2vw] portrait:text-[2.7vw] landscape:lg:text-[.6rem] landscape:2xl:text-[.8rem]'>
+          <p className='text-center text-[1.7vw] italic text-gray-600 landscape:xl:text-[.8rem] 4xl:text-[.8vw] 5xl:text-[.6vw] landscape:6xl:text-[.5vw] portrait:text-center   portrait:md:text-[2.2vw] portrait:text-[2.9vw] landscape:lg:text-[.7rem]  landscape:2xl:text-[.8rem]'>
             {product?.tags.map(({ tagName }) => tagName).join(', ')}
           </p>
-          <p className='text-[2.2vw] xl:text-[1.3vw] landscape:2xl:text-[1rem] 4xl:text-[1vw] 5xl:text-[.8vw] 6xl:text-[.6vw] portrait:text-center portrait:text-[3.5vw] portrait:md:text-[2.5vw] landscape:lg:text-[1rem] '>
+          <p className='text-[2vw] xl:text-[1.3vw] landscape:2xl:text-[1rem] 4xl:text-[1vw] landscape:5xl:text-[.8vw] landscape:6xl:text-[.6vw] portrait:text-center portrait:text-[3.5vw] portrait:md:text-[2.5vw] landscape:lg:text-[1rem] '>
             ${product.price}
           </p>
           <div className='flex w-fit  gap-2 rounded-full border border-green-gray px-2 py-1 2xl:py-[3px] 4xl:py-[2px] portrait:self-center'>
@@ -82,7 +82,7 @@ const CartCard = ({ product, item }) => {
                 className='w-4 xl:w-3 4xl:w-4 portrait:xs:w-5 '
               />
             </button>
-            <p className='text-[3vw] 4xl:text-[.8vw] 5xl:text-[.6vw] 6xl:text-[.4vw]  portrait:xs:py-[1px] portrait:md:text-[2vw] portrait:md:px-2 landscape:lg:text-[.8rem] landscape:text-[.9rem]'>
+            <p className='text-[3.5vw] 4xl:text-[.8vw] landscape:5xl:text-[.6vw] landscape:6xl:text-[.4vw]  portrait:xs:py-[1px] portrait:md:text-[1.8vw] portrait:md:px-2 landscape:lg:text-[.8rem] landscape:text-[.7rem] landscape:sm:text-[.8rem]'>
               {item.qty}
             </p>
             <button onClick={() => incrementCart(product.id)}>
@@ -99,7 +99,7 @@ const CartCard = ({ product, item }) => {
             onClick={() => {
               removeFromCart(product.id);
             }}
-            className='block   border border-green-gray/50 py-1 px-2 text-[1.9vw] transition-all duration-500 hover:bg-gray-100 3xl:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.6vw] 6xl:text-[.5vw] portrait:text-[3vw]  portrait:md:text-[2.2vw] landscape:lg:text-[.8rem]'
+            className='block   border border-green-gray/50 py-1 px-2 text-[1.9vw] transition-all duration-500 hover:bg-gray-100 3xl:text-[1vw] 4xl:text-[.8vw] 5xl:text-[.6vw] landscape:6xl:text-[.5vw] portrait:text-[3vw]  portrait:md:text-[2.2vw] landscape:lg:text-[.8rem]'
           >
             remove
           </button>
