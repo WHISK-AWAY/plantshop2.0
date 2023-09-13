@@ -11,7 +11,7 @@ const FilterDropdownMenu = (props) => {
     <div
       onMouseEnter={handleHover}
       onMouseLeave={handleHide}
-      className={` absolute 6xl:top-8 top-5 3xl:top-5 5xl:top-6 md:top-3 lg:top-4 xl:top-6 h-[19dvh] md:h-[17dvh] 5xl:h-[16dvh] w-full portrait:w-screen md:w-[300px] lg:w-[400px] 2xl:w-[500px] 6xl:w-[700px] 5xl:w-[650px] ${display} z-10 flex justify-center gap-10 bg-green-gray/90 text-center font-outfit text-white font-light 4xl:h-[15dvh] 5xl:w-[45%] 6xl:w-[50%] portrait:md:top-7 `}
+      className={` absolute landscape:6xl:top-5 top-5 3xl:top-5 landscape:5xl:top-4  landscape:lg:top-4 landscape:xl:top-4 h-[19dvh] md:h-[17dvh] landscape:5xl:h-[16dvh] w-full portrait:w-screen md:w-[300px] landscape:lg:w-[400px] landscape:2xl:w-[500px] landscape:6xl:w-[700px] landscape:5xl:w-[650px] ${display} z-10 flex justify-center gap-10 bg-green-gray/90 text-center font-outfit text-white font-light landscape:4xl:h-[15dvh] landscape:5xl:w-[45%] landscape:6xl:w-[50%] portrait:md:top-7 landscape:w-screen landscape:h-36 landscape:top-6 landscape:md:top-4 portrait:sm:top-6 `}
     >
       <div className='flex  items-center justify-center gap-6 text-center'>
         <div className=''>
