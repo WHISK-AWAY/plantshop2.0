@@ -82,7 +82,7 @@ export default function Signup() {
   return (
     <div className="right-0  portrait:h-[100svh]  bg-[url('/assets/bg_img/home2.webp')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] landscape:lg:bg-[url('/assets/misc_bg/login.webp')] landscape:lg:h-[100dvh] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)] portrait:w-full    landscape:h-full landscape:md:h-[100dvh]">
       <div className='m-auto w-full max-w-sm pt-20 md:pt-5 xl:pt-16 landscape:sm:pt-20 portrait:pt-44 portrait:md:pt-56 portrait:lg:pt-80 landscape:lg:pt-36 landscape:xl:pt-52 landscape:6xl:pt-80 landscape:7xl:pt-[500px] '>
-        <h2 className='text-center font-outfit font-semibold  tracking-wide portrait:text-[1.4rem] landscape:sm:text-[1.5rem] landscape:5xl:text-[2rem] landscape:7xl:text-[3rem] portrait:lg:text-[2rem]'>
+        <h2 className='text-center font-outfit font-semibold  tracking-wide portrait:text-[1.4rem] landscape:sm:text-[1.5rem] landscape:5xl:text-[2rem] landscape:7xl:text-[3rem] portrait:lg:text-[2rem] landscape:lg:text-[1.3rem]'>
           SIGN UP
         </h2>
         <section className='mt-2 flex flex-col items-center justify-center  gap-1'>
@@ -207,7 +207,7 @@ export default function Signup() {
 
             <div>
               <button
-                className='btn mx-auto block  w-full duration-500 py-2 text-[4vw] text-white hover:transition-all md:text-[2.6vw] lg:py-2 lg:text-[2.1vw]  3xl:py-1 landscape:4xl:text-[1.4rem] 4xl:text-[1.6vw] 5xl:text-[1.2vw] landscape:6xl:text-[1vw] landscape:text-[1rem] portrait:lg:pt-2'
+                className='btn mx-auto block  w-full duration-500 py-2 text-[4vw] text-white hover:transition-all md:text-[2.6vw] lg:py-2 lg:text-[2.1vw]  3xl:py-1 landscape:4xl:text-[1.4rem] 4xl:text-[1.6vw] 5xl:text-[1.2vw] landscape:6xl:text-[1vw] landscape:text-[1rem] portrait:lg:text-[1.4rem] portrait:lg:pt-2'
                 type='submit'
               >
                 <span>sign up</span>
