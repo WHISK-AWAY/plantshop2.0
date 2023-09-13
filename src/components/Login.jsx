@@ -32,7 +32,7 @@ const Login = () => {
     'appearance-none border portrait:w-72 portrait:lg:w-96 w-96 3xl:py-2 py-3 px-4 text-gray-700 text-[3vw] md:text-[1.8vw] landscape:5xl:text-[.8vw] landscape:xl:text-[.9rem] landscape:6xl:text-[.7vw] leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem] portrait:md:text-[1rem] landscape:short:py-2 landscape:6xl:w-[500px]';
 
   const invalidClass =
-    'appearance-none border portrait:w-72 border-red-700 text-[3vw] md:text-[1.8vw] landscape:5xl:text-[1vw] landscape:6xl:text-[.8vw] w-96 py-3 landscape:3xl:py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem] landscape:6xl:w-[500px]';
+    'appearance-none border portrait:w-72 portrait:lg:w-96 border-red-700 text-[3vw] md:text-[1.8vw] landscape:5xl:text-[1vw] landscape:6xl:text-[.8vw] w-96 py-3 landscape:3xl:py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem] landscape:6xl:w-[500px]';
 
   const validateEmail = (email) => {
     let res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -80,9 +80,9 @@ const Login = () => {
 
 
   return (
-    <div className="right-0 h-[calc(100dvh_-_5rem)] bg-[url('/assets/bg_img/home2.jpg')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] lg:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)]  5xl:h-[calc(100dvh_-_129px)]  6xl:h-[calc(100dvh_-_200px)] portrait:absolute portrait:top-0 portrait:mt-20  portrait:w-full portrait:lg:mt-20 landscape:h-[100svh] portrait:md:h-[calc(100dvh_-_80px)] ">
-      <div className='m-auto w-full max-w-sm pt-10 portrait:xs:pt-36 portrait:md:pt-44  landscape:lg:pt-56 landscape:5xl:pt-64 landscape:6xl:pt-80 landscape:7xl:pt-[500px]'>
-        <h2 className='text-center font-outfit font-semibold tracking-wide  pt-5 landscape:pt-8 portrait:text-[1.4rem] landscape:sm:text-[1.5rem]  landscape:5xl:text-[2rem] landscape:7xl:text-[3rem]'>
+    <div className="right-0 h-[calc(100dvh_-_5rem)] bg-[url('/assets/bg_img/home2.jpg')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] landscape:lg:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)]  5xl:h-[calc(100dvh_-_129px)]  6xl:h-[calc(100dvh_-_200px)] portrait:absolute portrait:top-0 portrait:mt-20  portrait:w-full portrait:lg:mt-20 landscape:h-[100svh] portrait:md:h-[calc(100dvh_-_80px)] ">
+      <div className='m-auto w-full max-w-sm pt-10 portrait:pt-36 portrait:md:pt-44  landscape:lg:pt-56 landscape:5xl:pt-64 landscape:6xl:pt-80 landscape:7xl:pt-[500px] portrait:lg:pt-[15rem]'>
+        <h2 className='text-center font-outfit font-semibold tracking-wide  pt-5 landscape:pt-8 portrait:text-[1.4rem] landscape:sm:text-[1.5rem]  landscape:5xl:text-[2rem] landscape:7xl:text-[3rem] portrait:lg:text-[2rem]'>
           LOGIN
         </h2>
         <section className=' flex flex-col items-center justify-center  portrait:gap-2 landscape:gap-2'>
