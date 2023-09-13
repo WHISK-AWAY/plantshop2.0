@@ -81,7 +81,7 @@ export default function Signup() {
   
   return (
     <div className="right-0  portrait:h-[100svh]  bg-[url('/assets/bg_img/home2.webp')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] landscape:lg:bg-[url('/assets/misc_bg/login.webp')] landscape:lg:h-[100dvh] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)]  6xl:h-[calc(100dvh_-_200px)] portrait:w-full   landscape:h-full ">
-      <div className='m-auto w-full max-w-sm pt-20 md:pt-5 xl:pt-16 landscape:sm:pt-24 portrait:pt-36 portrait:md:pt-56 portrait:lg:pt-72 portrait:xs:pt-44 landscape:lg:pt-36 landscape:xl:pt-52 landscape:6xl:pt-80 landscape:7xl:pt-[500px]'>
+      <div className='m-auto w-full max-w-sm pt-20 md:pt-5 xl:pt-16 landscape:sm:pt-20 portrait:pt-36 portrait:md:pt-56 portrait:lg:pt-72 portrait:xs:pt-44 landscape:lg:pt-36 landscape:xl:pt-52 landscape:6xl:pt-80 landscape:7xl:pt-[500px]'>
         <h2 className='text-center font-outfit font-semibold  tracking-wide portrait:text-[1.4rem] landscape:sm:text-[1.5rem] landscape:5xl:text-[2rem] landscape:7xl:text-[3rem]'>
           SIGN UP
         </h2>

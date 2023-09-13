@@ -81,7 +81,7 @@ const Login = () => {
 
   return (
     <div className="right-0 h-[calc(100dvh_-_5rem)] bg-[url('/assets/bg_img/home2.jpg')] bg-cover bg-center bg-no-repeat font-outfit text-white md:h-[calc(100vh_-_4rem)] lg:bg-[url('/assets/misc_bg/login.webp')] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)]  5xl:h-[calc(100dvh_-_129px)]  6xl:h-[calc(100dvh_-_200px)] portrait:absolute portrait:top-0 portrait:mt-20  portrait:w-full portrait:lg:mt-20 landscape:h-[100svh] portrait:md:h-[calc(100dvh_-_80px)] ">
-      <div className='m-auto w-full max-w-sm pt-14 portrait:xs:pt-36 portrait:md:pt-44  landscape:lg:pt-56 landscape:5xl:pt-64 landscape:6xl:pt-80 landscape:7xl:pt-[500px]'>
+      <div className='m-auto w-full max-w-sm pt-10 portrait:xs:pt-36 portrait:md:pt-44  landscape:lg:pt-56 landscape:5xl:pt-64 landscape:6xl:pt-80 landscape:7xl:pt-[500px]'>
         <h2 className='text-center font-outfit font-semibold tracking-wide  pt-5 landscape:pt-8 portrait:text-[1.4rem] landscape:sm:text-[1.5rem]  landscape:5xl:text-[2rem] landscape:7xl:text-[3rem]'>
           LOGIN
         </h2>
