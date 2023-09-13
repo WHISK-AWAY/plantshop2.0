@@ -46,7 +46,7 @@ const UserAccount = () => {
     <Spinner loading={loading} />
   */}
 
-      <div className=" h-[calc(100dvh_-_5rem)] w-screen bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center font-outfit text-green-gray  md:h-[calc(100dvh_-_4rem)] portrait:md:h-[calc(100dvh_-_110px)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)] 6xl:h-[calc(100dvh_-_200px)] portrait:lg:h-[calc(100dvh_-_140px)] ">
+      <div className="  right-0  w-screen bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center bg-no-repeat font-outfit text-green-gray  portrait:h-[100svh]  landscape:h-full landscape:md:h-[100dvh]">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -56,15 +56,15 @@ const UserAccount = () => {
             duration: 0.5,
             ease: [0.17, 0.67, 0.83, 0.67],
           }}
-          className=' absolute top-16 left-1/2 mx-auto w-full max-w-sm -translate-x-1/2 pt-16 2xl:top-28 5xl:top-44 5xl:max-w-xl 6xl:top-64 portrait:lg:mt-16 '
+          className='mx-auto w-full max-w-sm  pt-36 landscape:pt-20 2xl:top-28 5xl:top-44 5xl:max-w-xl landscape:6xl:pt-64 portrait:lg:mt-16 h-full landscape:md:pt-28 landscape:lg:pt-[12%]'
         >
-          <p className='font-extrabold pb-2 text-center text-4xl font-bold text-white '>
+          <p className='font-extrabold pb-2 text-center text-3xl font-bold text-white '>
             WELCOME BACK,
           </p>
-          <p className=' text-center text-2xl font-xtralight uppercase text-white md:text-3xl'>
+          <p className=' text-center text-2xl font-xtralight uppercase text-white '>
             {auth.firstName}
           </p>
-          <div className='mt-8 flex flex-col gap-3'>
+          <div className='mt-8 flex flex-col gap-3 min-h-[300px] '>
             <Link
               to={'/account/editprofile'}
               className='  ease  mb-2 border bg-white py-3 px-5 text-center transition-all duration-500 hover:bg-stone-200'

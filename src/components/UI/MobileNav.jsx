@@ -62,7 +62,7 @@ const MobileNav = ({ expand, setExpand }) => {
           duration: 0.2,
           ease: [0.17, 0.67, 0.83, 0.67],
         }}
-        className="absolute top-0 left-0 z-50 h-screen  w-screen bg-[url('/assets/bg_img/home1.webp')] font-gloock  text-white   md:hidden"
+        className="absolute top-0 left-0 z-50 h-screen landscape:h-[100svh]  w-screen bg-[url('/assets/bg_img/home1.jpg')] font-gloock  text-white   lg:hidden"
         style={{
           right: `${expand ? '0' : '-18rem'}`,
         }}
@@ -76,7 +76,7 @@ const MobileNav = ({ expand, setExpand }) => {
             onClick={handleClick}
           />
 
-          <div className='flex h-9 flex-row-reverse  gap-2 '>
+          <div className='flex h-9 landscape:h-4 flex-row-reverse  gap-2  '>
             <button onClick={handleSearch}>
               <img src={searchIcon} alt='magnifying glass' className='w-7 ' />
             </button>
@@ -84,7 +84,7 @@ const MobileNav = ({ expand, setExpand }) => {
               <input
                 type='text'
                 placeholder=''
-                className='h-8 w-full rounded-full  bg-gray-100 pl-3 text-[3.8vw] text-[#121212] placeholder:text-[3.5vw]'
+                className='h-8 w-full rounded-full landscape:h-5 bg-gray-100 pl-3 text-[3.8vw] text-[#121212] placeholder:text-[3.5vw] landscape:placeholder:text-[1rem]'
                 value={searchTerm}
                 onChange={(e) => dispatch(adjustSearchBy(e.target.value))}
               />
@@ -101,7 +101,7 @@ const MobileNav = ({ expand, setExpand }) => {
             duration: 0.5,
             ease: [0.17, 0.67, 0.83, 0.67],
           }}
-          className='flex  flex-col  pt-[50%] text-[6vw]'
+          className='flex  flex-col  pt-[50%] text-[6vw] landscape:pt-20'
         >
           <div
             className='w-full text-center transition-all'

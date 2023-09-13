@@ -33,7 +33,7 @@ const FilterSection = () => {
 
   return (
     <div className='relative my-[6%] flex items-center justify-center md:my-[3%] 5xl:mt-[4%] 6xl:mt-[3%]'>
-      <section className='flex justify-center gap-12 font-raleway text-[4vw] md:text-[1.1vw] 3xl:text-[.9vw] 5xl:text-[.7vw] portrait:lg:text-[1.7vw] portrait:md:text-[2vw]'>
+      <ul className='flex justify-center gap-12 font-raleway text-[4vw] md:text-[1.1vw] 3xl:text-[.9vw] 5xl:text-[.7vw] portrait:lg:text-[1.7vw] portrait:md:text-[2vw] landscape:text-[.8rem]'>
         <button onClick={() => handleFilter('')}>
           <h2>ALL</h2>
         </button>

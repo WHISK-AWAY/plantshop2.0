@@ -42,6 +42,10 @@ export default {
       },
       display: ['group-hover'],
       screens: {
+        'short':   {'raw': '(max-height: 768px) and (min-width: 1440px)'} ,
+        // 'grande': {'raw': '(max-height: 360px)'},
+        // 'grande-tall': {'raw': '(max-height: 375px)'},
+        // 'tall': {'raw': '(max-height: 428px)'},
         xxs: '360px',
         xs: '375px',
         sm: '412px',
@@ -53,6 +57,7 @@ export default {
         '4xl': '1920px',
         '5xl': '2560px',
         '6xl': '3440px',
+        '7xl': '3840px'
       },
     },
   },

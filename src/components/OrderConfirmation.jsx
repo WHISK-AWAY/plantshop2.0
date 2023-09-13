@@ -23,27 +23,27 @@ export default function OrderConfirmation() {
   }, [orderId, status]);
 
   return (
-    <div className="relative bg-[url('/assets/bg_img/order_conf_page.webp')] bg-cover bg-center font-outfit md:h-[calc(100vh_-_4rem)]  lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)] 2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)] 6xl:h-[calc(100dvh_-_200px)] portrait:h-[calc(100dvh_-_5rem)] portrait:xs:h-[calc(100dvh_-_5rem)] portrait:md:h-[calc(100dvh_-_110px)] portrait:lg:h-[calc(100dvh_-_140px)]">
-      <div className='flex h-full items-center justify-center pb-20 xl:pb-36 5xl:pb-56 '>
-        <div className='relative z-10 w-4/6 bg-green-gray bg-opacity-60 p-[3%]  3xl:w-fit portrait:xs:w-full portrait:md:w-4/5 portrait:md:py-8'>
+    <div className="relative bg-[url('/assets/bg_img/order_conf_page.webp')] bg-cover bg-center font-outfit h-[100svh]">
+      <div className='flex h-full items-center justify-center pb-20 xl:pb-36 5xl:pb-56 landscape:pt-10'>
+        <div className='relative z-10 w-4/6 bg-green-gray bg-opacity-60 p-[3%]  3xl:w-fit portrait:w-full portrait:md:w-4/5 portrait:md:py-8 landscape:w-screen landscape:lg:w-fit'>
           {status && status === 'complete' ? (
             <>
               <div className=''>
-                <h1 className='pb-4 text-center text-[2.3vw] font-bold tracking-wide text-primary-bright-white  3xl:text-[2.1vw] 4xl:text-[1.9vw] portrait:xs:text-[6vw] portrait:md:text-[3vw] portrait:xxs:text-[5vw]'>
+                <h1 className='pb-4 text-center text-[2.3vw] font-bold tracking-wide text-primary-bright-white  3xl:text-[2.1vw] 4xl:text-[1.9vw]  portrait:md:text-[2rem] portrait:text-[5vw]'>
                   THANK YOU FOR YOUR PURCHASE!
                 </h1>
                 <div>
-                  <p className='text-center text-[1.5vw] tracking-wide text-primary-bright-white 3xl:text-[1.3vw] 4xl:text-[1.1vw] 5xl:text-[.8vw] portrait:xs:text-[3.8vw] portrait:md:text-[2vw] portrait:xxs:text-[4.3vw]'>
+                  <p className='text-center text-[1.5vw] tracking-wide text-primary-bright-white 3xl:text-[1.3vw] landscape:4xl:text-[1.1vw] 5xl:text-[.8vw]  portrait:md:text-[1.4rem] portrait:text-[4.3vw] landscape:text-[1rem]'>
                     Your order confirmation is #{orderId}
                   </p>
                 </div>
-                <p className='text-center text-[1.3vw] text-primary-bright-white 3xl:text-[1vw] 4xl:text-[.9vw] 5xl:text-[.7vw] portrait:xs:text-[3.8vw] portrait:md:text-[1.8vw] portrait:xxs:text-[3.5vw] portrait:xxs:pt-3'>
+                <p className='text-center text-[1.3vw] text-primary-bright-white 3xl:text-[1vw] landscape:4xl:text-[.9vw] 5xl:text-[.7vw]  portrait:md:text-[1.3rem] portrait:text-[3.8vw] portrait:xxs:pt-3 landscape:text-[.7rem] landscape:xl:text-[.9rem]'>
                   We are starting on your order right away, and you should
                   receive your order confirmation email shortly!
                 </p>
               </div>
 
-              <div className='mt-2 portrait:xs:mt-4 text-center text-[1.3vw] tracking-wide text-primary-bright-white 3xl:text-[1vw]  4xl:text-[.9vw] 5xl:text-[.7vw] portrait:md:text-[1.8vw] portrait:xs:text-[3.5vw] portrait:xxs:text-[3.5vw]'>
+              <div className='mt-2 portrait:xs:mt-4 text-center text-[1.3vw] tracking-wide text-primary-bright-white 3xl:text-[1vw]  landscape:4xl:text-[.9vw] 5xl:text-[.7vw] portrait:md:text-[1.3rem]  portrait:text-[3.8vw] landscape:text-[.6rem] landscape:xl:text-[.9rem]'>
                 <p className='font-light'>
                   While you are waiting on your order, take a look at our new{' '}
                   <Link to={'/products'} className='font-semibold underline'>

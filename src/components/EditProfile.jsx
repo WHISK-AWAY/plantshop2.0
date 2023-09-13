@@ -53,8 +53,8 @@ const EditProfile = () => {
   btnHover();
 
   return (
-    <div className=" bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center font-outfit md:h-[calc(100dvh_-_4rem)] lg:h-[calc(100dvh_-_82px)] xl:h-[calc(100dvh_-_100px)]  2xl:h-[calc(100dvh_-_105px)] 5xl:h-[calc(100dvh_-_159px)] 6xl:h-[calc(100dvh_-_200px)] portrait:h-[calc(100dvh_-_5rem)] portrait:md:h-[calc(100dvh_-_110px)] portrait:lg:h-[calc(100dvh_-_140px)] ">
-      <div className='absolute top-10 left-1/2 mx-auto w-full max-w-sm -translate-x-1/2 pt-16 2xl:top-28 5xl:top-44 5xl:max-w-xl 6xl:top-64 portrait:lg:mt-16'>
+    <div className=" bg-[url('/assets/misc_bg/acc5.webp')] bg-cover bg-center font-outfit portrait:h-[100svh] landscape:h-[100dvh] w-screen bg-no-repeat overflow-hidden landscape:overflow-y-auto">
+      <div className='portrait:lg:h-[100dvh] landscape:md:h-[100vh] landscape:h-full left-1/2 mx-auto w-full max-w-sm pt-16 landscape:lg:pt-[12%] 2xl:top-28 5xl:top-44 5xl:max-w-xl landscape:6xl:pt-56 portrait:lg:mt-16 pb-10 portrait:sm:pt-24 '>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -66,12 +66,12 @@ const EditProfile = () => {
           }}
           className='mt-8 flex flex-col gap-3'
         >
-          <h2 className='mt-3 mb-3 text-center text-3xl font-bold text-white'>
+          <h2 className='mt-3 mb-3 text-center text-3xl  font-bold text-white'>
             EDIT PROFILE
           </h2>
           <section className='flex justify-center gap-20  '>
             <form
-              className='w-[80%] max-w-lg  md:w-full '
+              className='w-[80%] landscape:5xl:w-full max-w-lg  landscape:5xl:max-w-xl md:w-full '
               onSubmit={updateUser}
             >
               <div className='-mx-3 mb-6 flex flex-wrap'>
@@ -134,7 +134,7 @@ const EditProfile = () => {
           </section>
           <div className='flex justify-center'>
             <button
-              className='inline-block w-full border border-white py-1 align-baseline text-sm text-white transition-all duration-500 hover:bg-primary-bright-white/20 portrait:w-[80%] portrait:md:w-full portrait:lg:w-full portrait:xxs:w-[80%]'
+              className='inline-block w-full border border-white py-1 align-baseline text-sm text-white transition-all duration-500 hover:bg-primary-bright-white/20  portrait:md:w-full  portrait:w-[80%] landscape:w-4/5  landscape:xs:w-full landscape:xs:mb-10 landscape:5xl:w-full'
               onClick={goBack}
             >
               back
