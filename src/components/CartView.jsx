@@ -58,7 +58,7 @@ export default function CartView() {
           <h1 className='mb-4 text-center text-[2.7vw] font-bold text-green-gray mix-blend-multiply lg:text-[2.6vw] xl:text-[2.3vw] 3xl:text-[2.3vw] 4xl:text-[2.1vw] 5xl:text-[1.8vw] 6xl:text-[1.5vw] portrait:text-center portrait:md:text-[4vw] portrait:pt-20 portrait:text-[5vw]  landscape:lg:pt-28 landscape:short:text-[1.7rem] landscape:short:pt-28 landscape:md:pt-[9%] landscape:5xl:pt-32 landscape:6xl:pt-44 landscape:pt-10 portrait:lg:pt-28 landscape:xs:pt-10'>
             CART
           </h1>
-          <div className='mx-auto max-h-[70vh]  w-fit max-w-[1200px] overflow-y-auto border border-green-gray bg-white/80 p-2 md:min-w-[700px] 4xl:min-w-[1000px] 5xl:max-h-[65vh] 5xl:min-w-[900px]  portrait:border-green-gray portrait:xs:min-h-[80vh] portrait:w-[96vw] portrait:xs:w-[94vw] portrait:xs:p-2 portrait:md:min-h-[80vh] portrait:lg:max-h-[70vh] portrait:h-[90svh] landscape:w-[95svw] landscape:h-[59svh] landscape:xs:h-[65svh] landscape:lg:w-[90svw] landscape:xl:h-[80svh] '>
+          <div className='mx-auto max-h-[70svh]  w-fit max-w-[1200px] overflow-y-auto border border-green-gray bg-white/80 p-2 md:min-w-[700px] 4xl:min-w-[1000px] 5xl:max-h-[65svh] 5xl:min-w-[900px]  portrait:border-green-gray portrait:xs:min-h-[80svh] portrait:w-[96svw] portrait:xs:w-[94svw] portrait:xs:p-2 portrait:md:min-h-[80svh] portrait:lg:max-h-[70svh] portrait:h-[90svh] landscape:w-[95svw] landscape:h-[59svh] landscape:xs:h-[65svh] landscape:lg:w-[90svw] landscape:xl:h-[80svh] '>
             {cart?.expandedCart && cart?.expandedCart.length > 0 ? (
               <>
                 <div className='h-full overflow-y-auto'>
