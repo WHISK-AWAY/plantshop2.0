@@ -48,7 +48,7 @@ export default function Homepage() {
             <motion.p
               initial={{ y: '-100vh', opacity: 0 }}
               animate={{ y: 0, opacity: 0.7 }}
-              transition={{ duration: 0.75, type: 'spring', ease: 'easeOut' }}
+              transition={{ duration: 1.25, type: 'spring', ease: 'easeOut' }}
               className='mb-2 font-archivo  text-[9vw] font-bold uppercase leading-none md:font-outfit md:text-[7vw] landscape:5xl:text-[7rem] landscape:lg:text-[6vw] portrait:lg:font-archivo portrait:md:font-archivo portrait:lg:text-[7vw] landscape:text-[2.1rem] lg:text-green-gray/70 landscape:6xl:text-[10rem] landscape:7xl:text-[13rem]'
             >
               Your perfect plant
@@ -59,10 +59,10 @@ export default function Homepage() {
               transition={{
                 type: 'spring',
                 ease: 'easeOut',
-                duration: 0.75,
+                duration: 1.25,
                 delay: 0.5,
               }}
-              className='text-[4vw] italic font-medium landscape:5xl:text-[.9vw] leading-none md:text-[1.5vw] portrait:md:text-[2.5vw] lg:mt-5 landscape:text-[.9rem] landscape:3xl:text-[1.1rem] landscape:6xl:text-[1.6rem]'
+              className='text-[4vw] font-medium landscape:5xl:text-[.9vw] leading-none md:text-[1.5vw] portrait:md:text-[2.5vw] lg:mt-5 landscape:text-[.9rem] landscape:3xl:text-[1.1rem] landscape:6xl:text-[1.6rem]'
             >
               one click away
             </motion.p>
@@ -76,7 +76,7 @@ export default function Homepage() {
             <motion.button
               initial={{ scale: 0.75, y: 20 }}
               animate={{ scale: 1.1, y: 0 }}
-              transition={{ duration: 0.75, ease: 'easeInOut', type: 'spring' }}
+              transition={{ duration: 1.25, ease: 'easeInOut', type: 'spring' }}
               className='btn w-full md:w-3/12 max-w-xs 5xl:max-w-md bg-green-gray py-2 font-outfit text-[1vw] tracking-widest text-white shadow-xl portrait:bg-[#6f9283] portrait:lg:py-5 portrait:md:text-[2.4vw] landscape:5xl:text-[.8vw] 5xl:py-3 6xl:py-4 portrait:xs:w-3/4 font-semibold landscape:2xl:text-[1vw] 6xl:text-[1vw] portrait:text-[3.2vw] hover:scale-[1.04] ease transition-all duration-700 landscape:text-[.8rem]'
             >
               <span>SHOP NOW</span>
