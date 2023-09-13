@@ -43,7 +43,7 @@ export default function Homepage() {
         className={`absolute top-0 mx-auto  h-screen w-[100vw] bg-[url('/assets/bg_img/home1.webp')]  bg-cover text-white lg:bg-[url('/assets/bg_img/homepage13.webp')] md:bg-right lg:text-green-gray portrait:bg-[url('/assets/bg_img/home1.webp')] portrait:md:h-screen portrait:lg:h-screen landscape:h-[100svh] landscape:bg-center landscape:lg:bg-right`}
       >
         {/**homepage txt section */}
-        <div className='absolute top-64 landscape:lg:top-60 landscape:xl:top-72 landscape:2xl:top-80 left-1/2 w-[80vw] -translate-x-1/2 flex-col gap-5 text-center md:top-40 md:bottom-auto md:min-w-[500px] 4xl:top-80  lg:top-56 lg:left-32 lg:translate-x-0  portrait:lg:text-center portrait:lg:w-[80vw] portrait:xs:top-36 portrait:md:top-56 lg:text-left landscape:top-28 landscape:5xl:pl-44 landscape:4xl:pl-32 landscape:6xl:top-[450px] landscape:6xl:pl-[30rem] landscape:short:top-64 landscape:7xl:top-[700px]'>
+        <div className='absolute top-64 landscape:lg:top-60 landscape:xl:top-72 landscape:2xl:top-80 landscape:3xl:top-72 left-1/2 w-[80vw] -translate-x-1/2 flex-col gap-5 text-center md:top-56 md:bottom-auto md:min-w-[500px] 4xl:top-80  lg:top-56 lg:left-32 lg:translate-x-0  portrait:lg:text-center portrait:lg:w-[80vw] portrait:top-36 portrait:md:top-64 lg:text-left landscape:top-28 landscape:5xl:pl-44 landscape:4xl:pl-32 landscape:6xl:top-[450px] landscape:3xl:pl-[3rem] landscape:6xl:pl-[30rem] landscape:short:top-56 landscape:7xl:top-[700px] landscape:short:pl-[3rem]'>
           <div className='mb-4 w-full  portrait:lg:w-full '>
             <p className='mb-2 font-archivo  text-[9vw] font-bold uppercase leading-none md:font-outfit md:text-[7vw] landscape:5xl:text-[7rem] landscape:lg:text-[6vw] portrait:lg:font-archivo portrait:md:font-archivo portrait:lg:text-[7vw] landscape:text-[2.1rem] lg:text-green-gray/70 landscape:6xl:text-[10rem] landscape:7xl:text-[13rem]'>
               Your perfect plant
@@ -52,7 +52,7 @@ export default function Homepage() {
               one click away
             </p>
           </div>
-          <div className='mb-[10%] lg:mt-12 flex flex-col  6xl:text-[1.2vw] 5xl:text-[1.5vw] text-[5vw] md:mt-0 md:mb-16 lg:mb-20  md:pt-0  md:text-[2vw]  md:font-light portrait:font-light portrait:md:text-[3.2vw] portrait:mt-16 portrait:xs:text-[6vw] landscape:text-[1.1rem] landscape:3xl:text-[1.3rem] landscape:5xl:text-[1.6rem] landscape:6xl:text-[1.9rem]'>
+          <div className='mb-[10%] lg:mt-12 flex flex-col  6xl:text-[1.2vw] 5xl:text-[1.5vw] text-[5vw] md:mt-0 md:mb-16 lg:mb-20  md:pt-0  md:text-[2vw]  md:font-light portrait:font-light portrait:md:text-[2rem] portrait:mt-16 portrait:text-[6vw] landscape:text-[1.1rem] landscape:3xl:text-[1.3rem] landscape:5xl:text-[1.6rem] landscape:6xl:text-[1.9rem]'>
             <p>transform your space,</p>
             <p>no green thumb needed</p>
           </div>
