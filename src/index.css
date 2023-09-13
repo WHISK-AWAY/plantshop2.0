@@ -9,6 +9,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body {
+  min-height: 100svh;
+  min-height: -webkit-fill-available;
+}
+html {
+  height: -webkit-fill-available;
+}
+
 @font-face {
   font-family: 'Tabac Big Glam Black';
   src: url('./fonts/Tabac_Big_Glam_Black.otf') format('opentype');
