@@ -29,10 +29,10 @@ const Login = () => {
   const { auth, status } = useSelector(selectAuth);
 
   const validClass =
-    'appearance-none border portrait:w-72 portrait:lg:w-96 w-96 3xl:py-2 py-3 px-4 text-gray-700 text-[3vw] md:text-[1.3vw] landscape:5xl:text-[.8vw] landscape:xl:text-[.9rem] landscape:6xl:text-[.7vw] leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem] portrait:md:text-[1rem] landscape:short:py-2 landscape:6xl:w-[500px]';
+    'appearance-none border portrait:w-72 portrait:lg:w-96 w-96 3xl:py-2 py-3 px-4 text-gray-700 text-[3vw] md:text-[1.8vw] landscape:5xl:text-[.8vw] landscape:xl:text-[.9rem] landscape:6xl:text-[.7vw] leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem] portrait:md:text-[1rem] landscape:short:py-2 landscape:6xl:w-[500px]';
 
   const invalidClass =
-    'appearance-none border portrait:w-72 border-red-700 text-[3vw] md:text-[1.3vw] landscape:5xl:text-[1vw] landscape:6xl:text-[.8vw] w-96 py-3 landscape:3xl:py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem] landscape:6xl:w-[500px]';
+    'appearance-none border portrait:w-72 border-red-700 text-[3vw] md:text-[1.8vw] landscape:5xl:text-[1vw] landscape:6xl:text-[.8vw] w-96 py-3 landscape:3xl:py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:shadow-outline landscape:text-[.8rem] landscape:6xl:w-[500px]';
 
   const validateEmail = (email) => {
     let res = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -168,7 +168,7 @@ const Login = () => {
             </div>
           </form>
           <div className='flex justify-center'>
-            <button className='inline-block align-baseline text-[3vw] md:text-[1.6vw] landscape:xl:text-[1vw] landscape:3xl:text-[1vw] landscape:5xl:text-[.7vw] landscape:6xl:text-[.6vw] landscape:text-[.8rem] landscape:short:text-[.8rem] '>
+            <button className='inline-block align-baseline text-[3vw] md:text-[1.9vw] landscape:xl:text-[1vw] landscape:3xl:text-[1vw] landscape:5xl:text-[.7vw] landscape:6xl:text-[.6vw] landscape:text-[.8rem] landscape:short:text-[.8rem] '>
               don't have an account? sign up{' '}
               <Link to={'/signup'} className='underline '>
                 {' '}
