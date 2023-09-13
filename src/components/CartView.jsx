@@ -73,14 +73,14 @@ export default function CartView() {
                 <CartSubtotal />
                 <div className='mx-auto my-3 mb-6 flex w-full  flex-col items-center md:w-2/5 lg:w-3/5 2xl:w-full portrait:md:w-4/5 portrait:lg:w-3/4'>
                   <Link
-                    className='btn mx-auto block w-full py-2 text-center text-[1.4vw] text-white duration-700 ease hover:scale-[1.04] transition-all md:w-3/4 2xl:w-2/4 5xl:w-2/4 5xl:text-[.8vw] 6xl:text-[.7vw] portrait:text-[4vw] portrait:md:text-[2.5vw] landscape:short:text-[1rem]'
+                    className='btn mx-auto block w-full py-2 text-center text-[1.4vw] text-white duration-700 ease hover:scale-[1.04] transition-all md:w-3/4 2xl:w-2/4 5xl:w-2/4 5xl:text-[.8vw] 6xl:text-[.7vw] portrait:text-[4vw] portrait:md:text-[2.5vw] landscape:short:text-[1rem] landscape:3xl:text-[1.1rem]'
                     to='/shipping'
                   >
                     <span>PROCEED TO PAYMENT</span>
                   </Link>
                   <button
                     onClick={emptyCart}
-                    className='text-[1.3vw] 5xl:text-[.8vw] 6xl:text-[.7vw]  portrait:md:text-[2.5vw] portrait:text-[4vw] portrait:pt-3 pt-2 landscape:short:text-[.9rem]'
+                    className='text-[1.3vw] landscape:4xl:text-[1.1rem] 5xl:text-[.8vw] 6xl:text-[.7vw]  portrait:md:text-[2.5vw] portrait:text-[4vw] portrait:pt-3 pt-2 landscape:short:text-[.9rem]'
                   >
                     empty cart
                   </button>
