@@ -63,7 +63,7 @@ const AllProductsSection = () => {
   if(!searchedItems.length) return <p className='h-[50dvh] md:text-[2vw] font-outfit uppercase 5xl:h-[40dvh] portrait:md:h-[30dvh] '>no products match your search</p>
   return (
     !productsLoading && (
-      <main className='mx-3 mb-4 grid max-w-4xl xl:max-w-5xl 2xl:max-w-[90rem] 6xl:w-[65rem] grid-cols-1 justify-items-center gap-x-4 gap-y-8 portrait:grid-cols-2 landscape:grid-cols-2 portrait:md:grid-cols-3 landscape:sm:grid-cols-3 sm:mx-5  md:gap-x-8 landscape:lg:grid-cols-4 '>
+      <main className='mx-3 mb-4 grid max-w-4xl xl:max-w-5xl 2xl:max-w-[90rem] 6xl:w-[65rem] grid-cols-1 justify-items-center gap-x-4 gap-y-8 portrait:grid-cols-2  portrait:md:grid-cols-3  sm:mx-5  md:gap-x-8 landscape:lg:grid-cols-4 landscape:grid-cols-2 landscape:md:grid-cols-3'>
         <Spinner loading={loading} />
 
         {productsPerPage.map((product) => {
