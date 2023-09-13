@@ -124,7 +124,7 @@ const NavBar = (props) => {
         {/**hamburger menu */}
 
         <button
-          className='z-30 landscape:lg:hidden portrait:md:pr-6'
+          className='z-30 landscape:lg:hidden portrait:md:pr-6 '
           onClick={() => {
             setExpand((prev) => !prev);
           }}
