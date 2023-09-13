@@ -11,7 +11,7 @@ const FilterTag = (props) => {
 
   return (
     <button
-      className="block hover:underline underline-offset-2  text-[3.8vw] md:text-[1vw] 3xl:text-[.9vw]  4xl:text-[.8vw] 5xl:text-[.7vw] 6xl:text-[.5vw] lowercase portrait:lg:text-[2.6vw] font-light text-center portrait:md:text-[1.7vw] portrait:lg:text-[1.5]"
+      className="block hover:underline underline-offset-2  text-[3.8vw] md:text-[1vw] 3xl:text-[.9vw]  4xl:text-[.8vw] landscape:5xl:text-[.6vw] landscape:6xl:text-[.5vw] lowercase portrait:lg:text-[2.3vw] font-light text-center portrait:md:text-[1.7vw]  landscape:text-[.9rem]"
       onClick={handleFilterClick}
     >
       <li>{props.children}</li>
