@@ -161,14 +161,14 @@ const Login = () => {
             <div className='flex items-center justify-between'>
               <button
                 type='submit'
-                className='btn mx-auto block w-full  py-2 text-[4vw] text-white duration-500 hover:transition-all md:text-[2.6vw] landscape:lg:py-2 landscape:lg:text-[1.7vw] landscape:xl:text-[1.1rem]  landscape:2xl:text-[1rem] landscape:3xl:py-1 landscape:3xl:text-[1.1rem] landscape:4xl:text-[1.4rem] landscape:5xl:text-[1.2vw] landscape:6xl:text-[1vw]  landscape:text-[1rem] landscape:pt-2 landscape:lg:pt-1 portrait:lg:pt-1 portrait:lg:text-[1.4rem]  '
+                className='btn mx-auto block w-full  py-2 text-[4vw] text-white duration-500 hover:transition-all md:text-[2.6vw] landscape:lg:py-2 landscape:lg:text-[1.7vw] landscape:xl:text-[1.1rem]  landscape:2xl:text-[1rem] landscape:3xl:py-1 landscape:3xl:text-[1.1rem] landscape:4xl:text-[1.2rem] landscape:5xl:text-[1.2vw] landscape:6xl:text-[1vw]  landscape:text-[1rem] landscape:pt-2 landscape:lg:pt-1 portrait:lg:pt-1 portrait:lg:text-[1.4rem]  '
               >
                 <span>{authLoading ? 'loading..' : 'login'}</span>
               </button>
             </div>
           </form>
           <div className='flex justify-center'>
-            <button className='inline-block align-baseline text-[3vw] md:text-[1.9vw] landscape:xl:text-[1vw] landscape:3xl:text-[.9vw] landscape:5xl:text-[.7vw] landscape:6xl:text-[.6vw] landscape:text-[.7rem] landscape:short:text-[.8rem] '>
+            <button className='inline-block align-baseline text-[3vw] md:text-[1.9vw] landscape:xl:text-[1vw] landscape:3xl:text-[.9vw] landscape:4xl:text-[.9rem] landscape:5xl:text-[.7vw] landscape:6xl:text-[.6vw] landscape:text-[.7rem] landscape:short:text-[.8rem] '>
               don't have an account? sign up{' '}
               <Link to={'/signup'} className='underline '>
                 {' '}
