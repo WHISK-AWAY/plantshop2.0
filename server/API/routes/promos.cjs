@@ -1,6 +1,5 @@
 // admin permissions to edit promo table
 const router = require('express').Router();
-const chalk = import('chalk');
 const { Promo_Code, Order } = require('../../DB/index.cjs');
 const { requireToken, isAdmin } = require('../authMiddleware.cjs');
 
@@ -9,7 +8,7 @@ router.get('/', requireToken, isAdmin, async (req, res, next) => {
     const allPromos = await Promo_Code.findAll({ include: Order });
     res.json(allPromos);
   } catch (e) {
-    console.error(chalk.bgRed('BACKEND ISSUE GETTING PROMO_CODES'));
+    console.error('BACKEND ISSUE GETTING PROMO_CODES');
     next(e);
   }
 });
@@ -21,7 +20,7 @@ router.get('/:id', async (req, res, next) => {
     });
     res.json(singlePromo);
   } catch (e) {
-    console.error(chalk.bgRed('BACKEND ISSUE GETTING PROMO_CODES'));
+    console.error('BACKEND ISSUE GETTING PROMO_CODES');
     next(e);
   }
 });
@@ -35,7 +34,7 @@ router.get('/byName/:promoName', async (req, res, next) => {
     });
     res.json(singlePromo);
   } catch (e) {
-    console.error(chalk.bgRed('BACKEND ISSUE GETTING PROMO_CODES'));
+    console.error('BACKEND ISSUE GETTING PROMO_CODES');
     next(e);
   }
 });
@@ -49,7 +48,7 @@ router.post('/', requireToken, isAdmin, async (req, res, next) => {
     if (!wasCreated) return res.status(409).send('Promo already exists');
     res.status(201).json(newPromo);
   } catch (e) {
-    console.error(chalk.bgRed('BACKEND ISSUE ADDING PROMO_CODE'));
+    console.error('BACKEND ISSUE ADDING PROMO_CODE');
     next(e);
   }
 });
@@ -61,7 +60,7 @@ router.put('/:id', requireToken, isAdmin, async (req, res, next) => {
     const updatedPromo = await promo.update(req.body);
     res.json(updatedPromo);
   } catch (e) {
-    console.error(chalk.bgRed('BACKEND ISSUE UPDATING PROMO_CODE'));
+    console.error('BACKEND ISSUE UPDATING PROMO_CODE');
     next(e);
   }
 });
@@ -73,7 +72,7 @@ router.delete('/:id', requireToken, isAdmin, async (req, res, next) => {
     await promo.destroy();
     res.json(promo);
   } catch (e) {
-    console.error(chalk.bgRed('BACKEND ISSUE DELETING PROMO_CODE'));
+    console.error('BACKEND ISSUE DELETING PROMO_CODE');
     next(e);
   }
 });

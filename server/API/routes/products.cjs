@@ -42,7 +42,7 @@ router.get('/:productId', async (req, res, next) => {
     }
     res.json(product);
   } catch (e) {
-    console.error(chalk.bgRed('BACKEND ISSUE FETCHING SINGLE PRODUCT'));
+    console.error('BACKEND ISSUE FETCHING SINGLE PRODUCT');
     next(e);
   }
 });
@@ -56,7 +56,7 @@ router.post('/', requireToken, isAdmin, async (req, res, next) => {
     if (!wasCreated) return res.status(409).send('Product already exists');
     res.status(201).json(newProduct);
   } catch (e) {
-    console.error(chalk.bgRed('BACKEND ISSUE ADDING NEW PROD'));
+    console.error('BACKEND ISSUE ADDING NEW PROD');
     next(e);
   }
 });
@@ -68,7 +68,7 @@ router.put('/:id', requireToken, isAdmin, async (req, res, next) => {
     const updatedProd = await prod.update(req.body);
     res.json(updatedProd);
   } catch (e) {
-    console.error(chalk.bgRed('BACKEND ISSUE UPDATING PRODUCT'));
+    console.error('BACKEND ISSUE UPDATING PRODUCT');
     next(e);
   }
 });
@@ -80,7 +80,7 @@ router.delete('/:id', requireToken, isAdmin, async (req, res, next) => {
     await prod.destroy();
     res.json(prod);
   } catch (e) {
-    console.error(chalk.bgRed('BACKEND ISSUE DELETING PRODUCT'));
+    console.error('BACKEND ISSUE DELETING PRODUCT');
     next(e);
   }
 });
