@@ -51,17 +51,19 @@ export const attemptTokenLogin = createAsyncThunk(
   }
 );
 
+const initialState = {
+  token: '',
+  auth: {},
+  error: '',
+  status: '',
+  loginMessage: false,
+  logoutMessage: false,
+  loading: false,
+};
+
 const authSlice = createSlice({
   name: 'auth',
-  initialState: {
-    token: '',
-    auth: {},
-    error: '',
-    status: '',
-    loginMessage: false,
-    logoutMessage: false,
-    loading: false,
-  },
+  initialState,
   reducers: {
     resetStatus: (state) => {
       state.status = '';
