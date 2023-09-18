@@ -48,7 +48,7 @@ export default function Wishlist() {
       <>
         <Spinner loading={loading} />
         <div className='relative  xl:pt-28 5xl:pt-44 6xl:pt-56'>
-          <div className="absolute top-0 left-0 h-screen w-screen overflow-hidden bg-[url('/assets/bg_img/admin.webp')] bg-cover bg-fixed bg-bottom bg-no-repeat pt-3  font-outfit   portrait:w-full portrait:px-2 landscape:lg:pt-20 ">
+          <div className="absolute top-0 left-0 h-[100svh] w-screen overflow-hidden bg-[url('/assets/bg_img/admin.webp')] bg-cover bg-fixed bg-bottom bg-no-repeat pt-3  font-outfit   portrait:w-full portrait:px-2 landscape:lg:pt-20 ">
             <h1 className='mb-4 text-center text-[2.7vw] font-bold  text-green-gray  mix-blend-luminosity lg:text-[2.6vw] xl:text-[2.3vw] 3xl:text-[2.3vw] 3xl:text-white 4xl:text-[2.1vw] 5xl:text-[1.8vw] 6xl:text-[1.5vw] portrait:text-green-gray  portrait:md:text-[4vw] portrait:text-[5vw] pt-20 landscape:pt-10 portrait:lg:pt-28 landscape:md:pt-[9%] landscape:5xl:pt-28 landscape:6xl:pt-44 landscape::short:pt-24 landscape:xs:pt-10 landscape:short:pt-28 landscape:short:text-[1.7rem] landscape:short:text-white'>
               WISHLIST
             </h1>
