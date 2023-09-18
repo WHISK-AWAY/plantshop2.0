@@ -34,7 +34,7 @@ export const signUp = createAsyncThunk(
 
 export const attemptTokenLogin = createAsyncThunk(
   'attemptTokenLogin',
-  async (x, { rejectWithValue }) => {
+  async (_, { rejectWithValue }) => {
     try {
       const token = localStorage.getItem('token');
       if (!token) return {};
@@ -45,7 +45,8 @@ export const attemptTokenLogin = createAsyncThunk(
       });
       return { data, token };
     } catch (err) {
-      return rejectWithValue(err);
+      localStorage.removeItem('token');
+      return rejectWithValue(err.response?.data || err.message || err);
     }
   }
 );
@@ -109,7 +110,7 @@ const authSlice = createSlice({
       })
       .addCase(attemptTokenLogin.rejected, (state, { payload }) => {
         state.status = 'failed';
-        state.error = payload.message;
+        state.error = payload;
         state.loading = false;
       })
       .addCase(signUp.fulfilled, (state, { payload }) => {
