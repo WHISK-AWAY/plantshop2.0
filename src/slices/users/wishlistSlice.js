@@ -10,63 +10,52 @@ const initialState = {
 
 export const fetchWishlist = createAsyncThunk(
   'wishlist/fetchWishlist',
-  async () => {
-    let res;
-    let userId;
+  async (_, { getState, rejectWithValue }) => {
+    try {
+      const { auth, token } = getState().auth;
 
-    const token = localStorage.getItem('token');
-    if (token) {
-      res = await axios.get(VITE_API_URL + `/api/auth`, {
-        headers: {
-          authorization: token,
-        },
-      });
-
-      // extract userId from token response
-      userId = +res.data.id;
-
-      // request wishlist from db
-      const { data } = await axios.get(
-        VITE_API_URL + `/api/users/${userId}/wishlists`,
-        {
-          headers: { authorization: token },
-        }
-      );
-      return data;
+      if (auth.id && token) {
+        // request wishlist from db
+        const { data } = await axios.get(
+          VITE_API_URL + `/api/users/${auth.id}/wishlists`,
+          {
+            headers: { authorization: token },
+          }
+        );
+        return data;
+      } else {
+        throw new Error('user is not logged in');
+      }
+    } catch (err) {
+      return rejectWithValue(err.response?.data || err.message || err);
     }
   }
 );
 
 export const adjustWishlist = createAsyncThunk(
   'wishlist/addOne',
-  async ({ productId, action, wishlistId }) => {
-    if (typeof productId === 'string') productId = parseInt(productId);
-    let res;
+  async ({ productId, action, wishlistId }, { getState, rejectWithValue }) => {
+    try {
+      if (typeof productId === 'string') productId = parseInt(productId);
 
-    const token = localStorage.getItem('token');
-    let userId = null;
+      const { auth, token } = getState().auth;
+      const userId = auth.id;
 
-    if (token) {
-      res = await axios.get(VITE_API_URL + `/api/auth`, {
-        headers: {
-          authorization: token,
-        },
-      });
-
-      // extract userId from token response
-      userId = res.data.id;
-
-      const { data } = await axios.put(
-        VITE_API_URL + `/api/users/${userId}/wishlists/${wishlistId}`,
-        {
-          productId: +productId,
-          action,
-        },
-        {
-          headers: { authorization: token },
-        }
-      );
-      return data;
+      if (userId && token) {
+        const { data } = await axios.put(
+          VITE_API_URL + `/api/users/${userId}/wishlists/${wishlistId}`,
+          {
+            productId: +productId,
+            action,
+          },
+          {
+            headers: { authorization: token },
+          }
+        );
+        return data;
+      } else throw new Error('user is not logged in');
+    } catch (err) {
+      return rejectWithValue(err.response?.data || err.message || err);
     }
   }
 );
@@ -80,8 +69,8 @@ const wishlistSlice = createSlice({
       state.wishlist = payload;
       state.loading = false;
     });
-    builder.addCase(fetchWishlist.rejected, (state, action) => {
-      console.log(action.error);
+    builder.addCase(fetchWishlist.rejected, (state, { payload }) => {
+      state.error = payload;
       state.loading = false;
     });
     builder.addCase(fetchWishlist.pending, (state, { payload }) => {
@@ -94,7 +83,7 @@ const wishlistSlice = createSlice({
 });
 
 export const selectWishlist = (state) => state.wishlist.wishlist;
-export const selectWishlistLoading = (state) => state.wishlist.loading
+export const selectWishlistLoading = (state) => state.wishlist.loading;
 
 export const {} = wishlistSlice.actions;
 
