@@ -33,14 +33,12 @@ const NavBar = (props) => {
       setExpand(false);
     }
     e.preventDefault();
-  dispatch(adjustSearchBy(searchTerm));
+    dispatch(adjustSearchBy(searchTerm));
 
     navigate('/products');
 
-    if(!searchedItems || !searchedItems.length) 
-    navigate('/*')
+    if (!searchedItems || !searchedItems.length) return;
   };
-
 
   return (
     <header>
