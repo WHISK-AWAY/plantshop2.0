@@ -57,7 +57,7 @@ export default function Wishlist() {
                 go back
               </p>
             </Link>
-            <div className='mx-auto max-h-[70svh] portrait:h-[80svh] landscape:2xl:max-h-[80svh] landscape:h-[65svh] landscape:4xl:h-[75svh] landscape:5xl:h-[65svh] landscape:short:h-[65svh] landscape:xl:h-[80svh] landscape:2xl:h-[70svh] w-fit max-w-[1200px] overflow-y-auto border border-green-gray bg-white/80 p-2 md:min-w-[700px] lg:text-[2.8vw] 4xl:min-w-[900px] 5xl:max-h-[65svh] 5xl:min-w-[900px]  portrait:w-[90vw] portrait:border-green-gray portrait:xxs:w-[96svw] portrait:xs:min-h-[78svh] portrait:xs:max-w-[90svw] portrait:md:min-h-[75svh] portrait:lg:h-[90svh] landscape:w-[90svw]'>
+            <div className='mx-auto max-h-[70svh] portrait:h-[75svh] landscape:2xl:max-h-[80svh] landscape:h-[65svh] landscape:4xl:h-[75svh] landscape:5xl:h-[65svh] landscape:short:h-[65svh] landscape:xl:h-[80svh] landscape:2xl:h-[70svh] w-fit max-w-[1200px] overflow-y-auto border border-green-gray bg-white/80 p-2 md:min-w-[700px] lg:text-[2.8vw] 4xl:min-w-[900px] 5xl:max-h-[65svh] 5xl:min-w-[900px]  portrait:w-[90vw] portrait:border-green-gray portrait:xxs:w-[96svw] portrait:xs:min-h-[75svh] portrait:xs:max-w-[90svw] portrait:md:min-h-[75svh] portrait:lg:h-[90svh] landscape:w-[90svw]'>
               {wishlist[0]?.products.length > 0 ? (
                 wishlist[0]?.products.map((product) => {
                   return <WishlistCard key={product.id} product={product} />;
