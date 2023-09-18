@@ -15,13 +15,14 @@ const LikedProduct = () => {
   const { productId } = useParams();
 
   const wishlist = useSelector(selectWishlist);
+  const authUser = useSelector((state) => state.auth.auth);
 
   useEffect(() => {
-    dispatch(fetchWishlist());
-  }, []);
+    if (authUser.id) dispatch(fetchWishlist());
+  }, [authUser.id]);
 
   const handleHeartClick = () => {
-    if (!wishlist) {
+    if (!authUser.id) {
       toast('Please login to mark favorites.', { duration: 2000 });
     } else {
       if (productIsLiked) {
