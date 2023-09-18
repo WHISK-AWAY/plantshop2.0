@@ -30,8 +30,7 @@ app.use('*', (req, res, next) => {
 
 // Default error handling
 app.use((err, req, res, next) => {
-  console.error(err);
-  console.error(err.stack);
+  // console.error(err.stack); // uncomment for debugging
   res.status(err.status || 500).send(err.message || 'Internal server error');
 });
 
