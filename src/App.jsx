@@ -66,40 +66,38 @@ export default function App() {
   const { auth } = useSelector(selectAuth);
 
   return (
-    <React.Fragment>
-      <div className='font-outfit text-green-gray'>
-        <NavBar auth={auth} />
-        <Cart />
-        <Routes>
-          <Route path='/' element={<Homepage />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/products' element={<AllProducts />} />
-          <Route path='/products/:productId' element={<SingleProduct />} />
-          <Route path='/account' element={<UserAccount />} />
-          <Route path='/signup' element={<Signup />} />
-          <Route path='/account/editprofile' element={<EditProfile />} />
-          <Route path='/account/orderhistory' element={<OrderHistory />} />
-          <Route path='/account/wishlist' element={<Wishlist />} />
-          <Route path='/cart' element={<CartView />} />
-          <Route path='/shipping' element={<Checkout />} />
-          <Route path='/confirmation' element={<OrderConfirmation />} />
-          <Route
-            path='/account/orderhistory/:orderId'
-            element={<OrderHistoryDetails />}
-          />
-          <Route path='/*' element={<NotFound />} />
-          <Route path='/account/admin' element={<AdminDashboard />}>
-            <Route path='products' element={<AdminProductView />} />
-            <Route path='addproduct' element={<AddNewProduct />} />
-            <Route path='promos' element={<AdminPromoCodeView />} />
-            <Route path='addpromo' element={<AddNewPromo />} />
-            <Route path='users' element={<AdminUserMgmt />} />
-            <Route path='editpromos/:promoId' element={<EditPromos />} />
-            <Route path='editproduct/:productId' element={<EditProduct />} />
-          </Route>
-        </Routes>
-      </div>
-    </React.Fragment>
+    <div className='font-outfit text-green-gray'>
+      <NavBar auth={auth} />
+      <Cart />
+      <Routes>
+        <Route path='/' element={<Homepage />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/products' element={<AllProducts />} />
+        <Route path='/products/:productId' element={<SingleProduct />} />
+        <Route path='/account' element={<UserAccount />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/account/editprofile' element={<EditProfile />} />
+        <Route path='/account/orderhistory' element={<OrderHistory />} />
+        <Route path='/account/wishlist' element={<Wishlist />} />
+        <Route path='/cart' element={<CartView />} />
+        <Route path='/shipping' element={<Checkout />} />
+        <Route path='/confirmation' element={<OrderConfirmation />} />
+        <Route
+          path='/account/orderhistory/:orderId'
+          element={<OrderHistoryDetails />}
+        />
+        <Route path='/*' element={<NotFound />} />
+        <Route path='/account/admin' element={<AdminDashboard />}>
+          <Route path='products' element={<AdminProductView />} />
+          <Route path='addproduct' element={<AddNewProduct />} />
+          <Route path='promos' element={<AdminPromoCodeView />} />
+          <Route path='addpromo' element={<AddNewPromo />} />
+          <Route path='users' element={<AdminUserMgmt />} />
+          <Route path='editpromos/:promoId' element={<EditPromos />} />
+          <Route path='editproduct/:productId' element={<EditProduct />} />
+        </Route>
+      </Routes>
+    </div>
   );
 }
 

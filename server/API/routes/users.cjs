@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const chalk = import('chalk');
 const { requireToken, isAdmin } = require('../authMiddleware.cjs');
 const {
   User,
@@ -356,7 +355,7 @@ router.get('/:id/cart', requireToken, async (req, res, next) => {
         );
     }
   } catch (e) {
-    console.error(chalk.bgRed('BACKEND ISSUE FETCHING USER CART'));
+    console.error('BACKEND ISSUE FETCHING USER CART');
     next(e);
   }
 });
@@ -430,7 +429,7 @@ router.put('/:id/cart', requireToken, async (req, res, next) => {
         );
     }
   } catch (e) {
-    console.error(chalk.bgRed('BACKEND ISSUE UPDATING USER CART ITEMS'));
+    console.error('BACKEND ISSUE UPDATING USER CART ITEMS');
     next(e);
   }
 });
@@ -462,7 +461,7 @@ router.delete('/:id/cart', requireToken, async (req, res, next) => {
         );
     }
   } catch (e) {
-    console.error(chalk.bgRed('BACKEND ISSUE DELETING USER CART ITEMS'));
+    console.error('BACKEND ISSUE DELETING USER CART ITEMS');
     next(e);
   }
 });

@@ -136,7 +136,12 @@ User.verifyByToken = async (token) => {
       throw error;
     }
   } catch (err) {
-    console.log('verification error: ', err);
+    // console.log('verification error: ', err);
+    if (err instanceof jwt.JsonWebTokenError) {
+      const error = new Error('bad credentials / bad token');
+      error.status = 401;
+      throw error;
+    } else throw err;
   }
 };
 

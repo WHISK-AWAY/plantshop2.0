@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { selectWishlist, fetchWishlist, selectWishlistLoading } from '../slices/users/wishlistSlice';
+import { Link, useNavigate } from 'react-router-dom';
+import {
+  selectWishlist,
+  fetchWishlist,
+  selectWishlistLoading,
+} from '../slices/users/wishlistSlice';
 import { selectProductLoading } from '../slices/product/productSlice';
 import WishlistCard from './WishlistCard.jsx';
 
@@ -10,15 +14,26 @@ import Spinner from './UI/Spinner';
 
 export default function Wishlist() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [loading, setLoading] = useState(true);
   const [imgLoaded, setImgLoaded] = useState(false);
   const productsLoading = useSelector(selectProductLoading);
-  const wishlistLoading = useSelector(selectWishlistLoading)
+  const wishlistLoading = useSelector(selectWishlistLoading);
+  const authUser = useSelector((state) => state.auth.auth);
 
   useEffect(() => {
-    dispatch(fetchWishlist());
-  }, []);
+    let timer;
 
+    if (!authUser.id) {
+      // if we wind up on this page without being logged in, wait a moment for that to change & then go back home
+      timer = setTimeout(() => navigate('/'), 1000);
+    } else {
+      dispatch(fetchWishlist());
+    }
+
+    return () => clearTimeout(timer);
+  }, [authUser.id]);
 
   const wishlist = useSelector(selectWishlist);
 
@@ -38,7 +53,6 @@ export default function Wishlist() {
   }, [imgLoaded, productsLoading, wishlistLoading]);
 
   btnHover();
-
 
   if (!wishlist || wishlistLoading) return <Spinner loading={loading} />;
 

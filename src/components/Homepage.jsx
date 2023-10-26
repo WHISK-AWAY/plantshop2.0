@@ -17,15 +17,15 @@ export default function Homepage() {
   const showLogoutMessage = useSelector(selectLogoutMessage);
   useEffect(() => {
     if (showLoginMessage === true) {
-      const loginToast = toast.success('Logged in!');
+      toast.success('Logged in!');
     } else {
       if (showLogoutMessage === true) toast.success('Logged out!');
     }
-    setTimeout(() => {
-      dispatch(resetStatus());
-      toast.dismiss();
-    }, 2000);
-    return () => dispatch(resetStatus());
+    // setTimeout(() => {
+    //   dispatch(resetStatus());
+    //   toast.dismiss();
+    // }, 2000);
+    // return () => dispatch(resetStatus());
   }, []);
 
   btnHover();
@@ -49,8 +49,8 @@ export default function Homepage() {
               initial={{ y: '-5vh', opacity: 0 }}
               animate={{ y: 0, opacity: 0.7 }}
               transition={{
-                duration: .6,
-                delay: .1,
+                duration: 0.6,
+                delay: 0.1,
                 ease: 'easeInOut',
               }}
               className='mb-2 font-archivo  text-[9vw] font-bold uppercase leading-none md:font-outfit md:text-[7vw] landscape:5xl:text-[7rem] landscape:lg:text-[6vw] portrait:lg:font-archivo portrait:md:font-archivo portrait:lg:text-[7vw] landscape:text-[2.1rem] lg:text-green-gray/70 landscape:6xl:text-[10rem] landscape:7xl:text-[13rem]'
@@ -58,7 +58,7 @@ export default function Homepage() {
               Your perfect plant
             </motion.p>
             <motion.p
-              initial={{ x: '-5vw', opacity:0 }}
+              initial={{ x: '-5vw', opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{
                 type: 'spring',
@@ -71,15 +71,16 @@ export default function Homepage() {
               one click away
             </motion.p>
           </div>
-          <motion.div 
-          initial={{opacity: 0}}
-          animate={{opacity: 1}}
-          transition={{
-            ease: 'easeInOut',
-            duration: .6,
-            delay: .8
-          }}
-          className='mb-[10%] lg:mt-12 flex flex-col  6xl:text-[1.2vw] 5xl:text-[1.5vw] text-[5vw] md:mt-0 md:mb-16 lg:mb-20  md:pt-0  md:text-[2vw]  md:font-light portrait:font-light portrait:md:text-[2rem] portrait:mt-16 portrait:text-[6vw] landscape:text-[1.1rem] landscape:3xl:text-[1.3rem] landscape:5xl:text-[1.6rem] landscape:6xl:text-[1.9rem]'>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              ease: 'easeInOut',
+              duration: 0.6,
+              delay: 0.8,
+            }}
+            className='mb-[10%] lg:mt-12 flex flex-col  6xl:text-[1.2vw] 5xl:text-[1.5vw] text-[5vw] md:mt-0 md:mb-16 lg:mb-20  md:pt-0  md:text-[2vw]  md:font-light portrait:font-light portrait:md:text-[2rem] portrait:mt-16 portrait:text-[6vw] landscape:text-[1.1rem] landscape:3xl:text-[1.3rem] landscape:5xl:text-[1.6rem] landscape:6xl:text-[1.9rem]'
+          >
             <p>transform your space,</p>
             <p>no green thumb needed</p>
           </motion.div>
@@ -88,7 +89,12 @@ export default function Homepage() {
             <motion.button
               initial={{ scale: 0, y: 20, opacity: 0 }}
               animate={{ scale: 1, y: 0, opacity: 1 }}
-              transition={{ duration: .1, ease: 'easeInOut', type: 'spring', delay:1 }}
+              transition={{
+                duration: 0.1,
+                ease: 'easeInOut',
+                type: 'spring',
+                delay: 1,
+              }}
               className='btn w-full md:w-3/12 max-w-xs 5xl:max-w-md bg-green-gray py-2 font-outfit text-[1vw] tracking-widest text-white shadow-xl portrait:bg-[#6f9283] portrait:lg:py-5 portrait:md:text-[2.4vw] landscape:5xl:text-[.8vw] 5xl:py-3 6xl:py-4 portrait:xs:w-3/4 font-semibold landscape:2xl:text-[1vw] 6xl:text-[1vw] portrait:text-[3.2vw] hover:scale-[1.04] ease transition-all duration-700 landscape:text-[.8rem]'
             >
               <span>SHOP NOW</span>
