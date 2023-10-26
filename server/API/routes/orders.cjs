@@ -129,8 +129,8 @@ router.post('/checkout', async (req, res, next) => {
   const session = await stripe.checkout.sessions.create({
     line_items,
     mode: 'payment',
-    success_url: `http://localhost:5173/confirmation?status=complete&orderid=${order.id}`,
-    cancel_url: `http://localhost:5173/confirmation?status=failed&orderid=${order.id}`,
+    success_url: `https://plantsandco.shop/confirmation?status=complete&orderid=${order.id}`,
+    cancel_url: `https://plantsandco.shop/confirmation?status=failed&orderid=${order.id}`,
   });
 
   // console.log('sessionURL', session.url);
